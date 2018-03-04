@@ -1,0 +1,11 @@
+{
+    "name": "My Extension",
+    "description": "Test extension",
+    "version": "1.0.0",
+    "options": [{
+        "name": "Sample option",
+        "type": "switch",
+        "id": "sample_option",
+        "default": true
+    }]
+}

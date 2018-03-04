@@ -1,0 +1,78 @@
+{
+    "name": "Cool project name",
+    "type": "ios",
+    "density": "1x",
+    "prefix": "cpn",
+    "colors": [
+        {
+            "r": 93,
+            "g": 121,
+            "b": 231,
+            "a": 1,
+            "name": "softBlue",
+            "_id": "5a5f48b83b50218116f2d3ba"
+        },
+        {
+            "r": 49,
+            "g": 128,
+            "b": 237,
+            "a": 1,
+            "name": "darkSkyBlue",
+            "_id": "5a5f48ba3b50218116f2d3bb"
+        },
+        {
+            "r": 144,
+            "g": 135,
+            "b": 230,
+            "a": 1,
+            "name": "perrywinkle",
+            "_id": "5a5f48bb3b50218116f2d3bc"
+        },
+        {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 1,
+            "name": "white",
+            "_id": "5a5f48c53b50218116f2d3bd"
+        }
+    ],
+    "textStyles": [
+        {
+            "name": "Text Style",
+            "fontFace": "Montserrat-Regular",
+            "fontSize": 20,
+            "color": {
+                "a": 1,
+                "b": 255,
+                "g": 255,
+                "r": 255
+            },
+            "_id": "5a5f48c73b50218116f2d3be"
+        },
+        {
+            "name": "Text Style 2",
+            "fontFace": "Montserrat-Regular",
+            "fontSize": 144,
+            "color": {
+                "a": 1,
+                "b": 18,
+                "g": 10,
+                "r": 8
+            },
+            "_id": "5a5f48c93b50218116f2d3bf"
+        },
+        {
+            "name": "Text Style 3",
+            "fontFace": "Montserrat-Regular",
+            "fontSize": 16,
+            "color": {
+                "a": 1,
+                "b": 208,
+                "g": 139,
+                "r": 124
+            },
+            "_id": "5a5f48ce3b50218116f2d3c0"
+        }
+    ]
+}

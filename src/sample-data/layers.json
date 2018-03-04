@@ -1,0 +1,2559 @@
+[
+    {
+        "_id": "5a0aa8a56796a71d209f9e03",
+        "name": "Money Lover Dark",
+        "opacity": 1,
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 414,
+            "height": 736
+        },
+        "type": "shape",
+        "fills": [
+            {
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "shadows": [],
+        "absoluteRect": {
+            "x": 0,
+            "y": 0,
+            "width": 414,
+            "height": 736
+        }
+    },
+    {
+        "sourceId": "0:1641",
+        "type": "text",
+        "name": "Añadir cuenta",
+        "content": "Añadir cuenta",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e0b",
+        "textStyles": [
+            {
+                "_id": "5a0aa8a56796a71d209f9e0c",
+                "style": {
+                    "fontFace": "Montserrat-Regular",
+                    "fontSize": 18,
+                    "color": {
+                        "r": 9,
+                        "g": 10,
+                        "b": 18,
+                        "a": 1
+                    }
+                },
+                "range": {
+                    "location": 0,
+                    "length": 13
+                }
+            }
+        ],
+        "shadows": [],
+        "fills": [],
+        "borders": [],
+        "rect": {
+            "x": 28,
+            "y": 252,
+            "width": 359,
+            "height": 22
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 28,
+            "y": 252,
+            "width": 359,
+            "height": 22
+        }
+    },
+    {
+        "sourceId": "0:1605",
+        "type": "shape",
+        "name": "footer bar",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e0d",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [],
+        "borders": [],
+        "rect": {
+            "x": 0,
+            "y": 666,
+            "width": 414,
+            "height": 70
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": true,
+        "absoluteRect": {
+            "x": 0,
+            "y": 666,
+            "width": 414,
+            "height": 70
+        }
+    },
+    {
+        "sourceId": "0:1639",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e0e",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e0f",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 292.8142910003662,
+            "y": 714.4881381988525,
+            "width": 3.9274837970733643,
+            "height": 1.6814930438995361
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 292.8142910003662,
+            "y": 714.4881381988525,
+            "width": 3.9274837970733643,
+            "height": 1.6814930438995361
+        }
+    },
+    {
+        "sourceId": "0:1638",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e10",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e11",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 292.8142910003662,
+            "y": 711.5735874176025,
+            "width": 3.9274837970733643,
+            "height": 1.6814930438995361
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 292.8142910003662,
+            "y": 711.5735874176025,
+            "width": 3.9274837970733643,
+            "height": 1.6814930438995361
+        }
+    },
+    {
+        "sourceId": "0:1637",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e12",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e13",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 279.4509139060974,
+            "y": 714.4881381988525,
+            "width": 8.37957763671875,
+            "height": 1.6814930438995361
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 279.4509139060974,
+            "y": 714.4881381988525,
+            "width": 8.37957763671875,
+            "height": 1.6814930438995361
+        }
+    },
+    {
+        "sourceId": "0:1636",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e14",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e15",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 279.4509139060974,
+            "y": 711.5735874176025,
+            "width": 10.612712860107422,
+            "height": 1.6814930438995361
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 279.4509139060974,
+            "y": 711.5735874176025,
+            "width": 10.612712860107422,
+            "height": 1.6814930438995361
+        }
+    },
+    {
+        "sourceId": "0:1635",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e16",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e17",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 292.8142910003662,
+            "y": 700.9100475311279,
+            "width": 3.9274837970733643,
+            "height": 1.6814930438995361
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 292.8142910003662,
+            "y": 700.9100475311279,
+            "width": 3.9274837970733643,
+            "height": 1.6814930438995361
+        }
+    },
+    {
+        "sourceId": "0:1634",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e18",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e19",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 292.8142910003662,
+            "y": 697.9954962730408,
+            "width": 3.9274837970733643,
+            "height": 1.6814930438995361
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 292.8142910003662,
+            "y": 697.9954962730408,
+            "width": 3.9274837970733643,
+            "height": 1.6814930438995361
+        }
+    },
+    {
+        "sourceId": "0:1633",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e1a",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e1b",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 279.4509139060974,
+            "y": 700.9100475311279,
+            "width": 8.37957763671875,
+            "height": 1.6814930438995361
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 279.4509139060974,
+            "y": 700.9100475311279,
+            "width": 8.37957763671875,
+            "height": 1.6814930438995361
+        }
+    },
+    {
+        "sourceId": "0:1632",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e1c",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e1d",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 279.4509139060974,
+            "y": 697.9954962730408,
+            "width": 10.612712860107422,
+            "height": 1.6814930438995361
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 279.4509139060974,
+            "y": 697.9954962730408,
+            "width": 10.612712860107422,
+            "height": 1.6814930438995361
+        }
+    },
+    {
+        "sourceId": "0:1631",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e1e",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e1f",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 292.8142910003662,
+            "y": 707.6640453338623,
+            "width": 3.9274837970733643,
+            "height": 1.6814930438995361
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 292.8142910003662,
+            "y": 707.6640453338623,
+            "width": 3.9274837970733643,
+            "height": 1.6814930438995361
+        }
+    },
+    {
+        "sourceId": "0:1630",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e20",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e21",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 292.8142910003662,
+            "y": 704.7424516677856,
+            "width": 3.9274837970733643,
+            "height": 1.6814930438995361
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 292.8142910003662,
+            "y": 704.7424516677856,
+            "width": 3.9274837970733643,
+            "height": 1.6814930438995361
+        }
+    },
+    {
+        "sourceId": "0:1629",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e22",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e23",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 279.4509139060974,
+            "y": 707.6640453338623,
+            "width": 8.37957763671875,
+            "height": 1.6814930438995361
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 279.4509139060974,
+            "y": 707.6640453338623,
+            "width": 8.37957763671875,
+            "height": 1.6814930438995361
+        }
+    },
+    {
+        "sourceId": "0:1628",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e24",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e25",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 279.4509139060974,
+            "y": 704.7424516677856,
+            "width": 10.612712860107422,
+            "height": 1.6814930438995361
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 279.4509139060974,
+            "y": 704.7424516677856,
+            "width": 10.612712860107422,
+            "height": 1.6814930438995361
+        }
+    },
+    {
+        "sourceId": "0:1627",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e26",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e27",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 272,
+            "y": 693,
+            "width": 32.185516357421875,
+            "height": 32.83816146850586
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 272,
+            "y": 693,
+            "width": 32.185516357421875,
+            "height": 32.83816146850586
+        }
+    },
+    {
+        "sourceId": "0:1623",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e28",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e29",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 111.36860609054565,
+            "y": 698.1850905418396,
+            "width": 3.058030366897583,
+            "height": 1.7283241748809814
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 111.36860609054565,
+            "y": 698.1850905418396,
+            "width": 3.058030366897583,
+            "height": 1.7283241748809814
+        }
+    },
+    {
+        "sourceId": "0:1622",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e2a",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e2b",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 107,
+            "y": 693,
+            "width": 38.44381332397461,
+            "height": 32.83816146850586
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 107,
+            "y": 693,
+            "width": 38.44381332397461,
+            "height": 32.83816146850586
+        }
+    },
+    {
+        "sourceId": "0:1621",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e2c",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e2d",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 133.21168518066406,
+            "y": 708.5550298690796,
+            "width": 6.989784240722656,
+            "height": 6.913296699523926
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 133.21168518066406,
+            "y": 708.5550298690796,
+            "width": 6.989784240722656,
+            "height": 6.913296699523926
+        }
+    },
+    {
+        "sourceId": "0:1616",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e2e",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e2f",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 351,
+            "y": 692,
+            "width": 33.118431091308594,
+            "height": 33.112483978271484
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 351,
+            "y": 692,
+            "width": 33.118431091308594,
+            "height": 33.112483978271484
+        }
+    },
+    {
+        "sourceId": "0:1613",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e30",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e31",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 29,
+            "y": 692,
+            "width": 32.505126953125,
+            "height": 33.725677490234375
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 29,
+            "y": 692,
+            "width": 32.505126953125,
+            "height": 33.725677490234375
+        }
+    },
+    {
+        "sourceId": "0:1609",
+        "type": "text",
+        "name": "+",
+        "content": "+",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e32",
+        "textStyles": [
+            {
+                "_id": "5a0aa8a56796a71d209f9e33",
+                "style": {
+                    "fontFace": "Montserrat-Regular",
+                    "fontSize": 64,
+                    "color": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255,
+                        "a": 1
+                    }
+                },
+                "range": {
+                    "location": 0,
+                    "length": 1
+                }
+            }
+        ],
+        "shadows": [],
+        "fills": [],
+        "borders": [],
+        "rect": {
+            "x": 191,
+            "y": 666,
+            "width": 27,
+            "height": 48
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 191,
+            "y": 666,
+            "width": 27,
+            "height": 48
+        }
+    },
+    {
+        "sourceId": "0:1608",
+        "type": "shape",
+        "name": "Rectangle 78",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e34",
+        "textStyles": [],
+        "shadows": [
+            {
+                "type": "outer",
+                "offsetX": 0,
+                "offsetY": 7,
+                "blurRadius": 20,
+                "_id": "5a0aa8a56796a71d209f9e35",
+                "blendMode": "normal",
+                "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0,
+                    "a": 0.25098039215686274
+                }
+            }
+        ],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e37",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 0,
+                    "g": 156,
+                    "b": 222,
+                    "a": 1
+                },
+                "type": "color"
+            },
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e36",
+                "blendMode": "normal",
+                "gradient": {
+                    "type": "linear",
+                    "colorStops": [
+                        {
+                            "position": 0,
+                            "color": {
+                                "r": 47,
+                                "g": 128,
+                                "b": 237,
+                                "a": 1
+                            }
+                        },
+                        {
+                            "position": 1,
+                            "color": {
+                                "r": 187,
+                                "g": 107,
+                                "b": 217,
+                                "a": 1
+                            }
+                        }
+                    ],
+                    "to": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "from": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                "type": "gradient"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 174,
+            "y": 683,
+            "width": 65,
+            "height": 53
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 174,
+            "y": 683,
+            "width": 65,
+            "height": 53
+        }
+    },
+    {
+        "sourceId": "0:1606",
+        "type": "shape",
+        "name": "Rectangle 35",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e38",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e39",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 48,
+                    "g": 55,
+                    "b": 87,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 0,
+            "y": 683,
+            "width": 414,
+            "height": 53
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 0,
+            "y": 683,
+            "width": 414,
+            "height": 53
+        }
+    },
+    {
+        "sourceId": "0:1597",
+        "type": "shape",
+        "name": "Signal",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e3a",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e3b",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 6.5,
+            "y": 7.5,
+            "width": 33.5,
+            "height": 5.5
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 6.5,
+            "y": 7.5,
+            "width": 33.5,
+            "height": 5.5
+        }
+    },
+    {
+        "sourceId": "0:1596",
+        "type": "text",
+        "name": "Time",
+        "content": "1:20 PM",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e3c",
+        "textStyles": [
+            {
+                "_id": "5a0aa8a56796a71d209f9e3d",
+                "style": {
+                    "fontFace": "SF UI Text-Semibold",
+                    "fontSize": 12,
+                    "color": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255,
+                        "a": 1
+                    }
+                },
+                "range": {
+                    "location": 0,
+                    "length": 7
+                }
+            }
+        ],
+        "shadows": [],
+        "fills": [],
+        "borders": [],
+        "rect": {
+            "x": 183,
+            "y": 3,
+            "width": 48,
+            "height": 16
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 183,
+            "y": 3,
+            "width": 48,
+            "height": 16
+        }
+    },
+    {
+        "sourceId": "0:1595",
+        "type": "text",
+        "name": "Carrier",
+        "content": "Carrier",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e3e",
+        "textStyles": [
+            {
+                "_id": "5a0aa8a56796a71d209f9e3f",
+                "style": {
+                    "fontFace": "SF UI Text",
+                    "fontSize": 12,
+                    "color": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255,
+                        "a": 1
+                    }
+                },
+                "range": {
+                    "location": 0,
+                    "length": 7
+                }
+            }
+        ],
+        "shadows": [],
+        "fills": [],
+        "borders": [],
+        "rect": {
+            "x": 44,
+            "y": 2,
+            "width": 39,
+            "height": 16
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 44,
+            "y": 2,
+            "width": 39,
+            "height": 16
+        }
+    },
+    {
+        "sourceId": "0:1591",
+        "type": "shape",
+        "name": "Wifi",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e40",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e41",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 89,
+            "y": 5.5,
+            "width": 12,
+            "height": 9
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 89,
+            "y": 5.5,
+            "width": 12,
+            "height": 9
+        }
+    },
+    {
+        "sourceId": "0:1587",
+        "type": "shape",
+        "name": "Bluetooth",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e42",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e43",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 333,
+            "y": 3,
+            "width": 8,
+            "height": 14
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 0.4000000059604645,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 333,
+            "y": 3,
+            "width": 8,
+            "height": 14
+        }
+    },
+    {
+        "sourceId": "0:1580",
+        "type": "shape",
+        "name": "Battery",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e44",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e45",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 381,
+            "y": 5.5,
+            "width": 24.5,
+            "height": 9.5
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 381,
+            "y": 5.5,
+            "width": 24.5,
+            "height": 9.5
+        }
+    },
+    {
+        "sourceId": "0:1579",
+        "type": "text",
+        "name": "100%",
+        "content": "100%",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e46",
+        "textStyles": [
+            {
+                "_id": "5a0aa8a56796a71d209f9e47",
+                "style": {
+                    "fontFace": "SF UI Text",
+                    "fontSize": 12,
+                    "color": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255,
+                        "a": 1
+                    }
+                },
+                "range": {
+                    "location": 0,
+                    "length": 4
+                }
+            }
+        ],
+        "shadows": [],
+        "fills": [],
+        "borders": [],
+        "rect": {
+            "x": 347,
+            "y": 2,
+            "width": 31,
+            "height": 16
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 347,
+            "y": 2,
+            "width": 31,
+            "height": 16
+        }
+    },
+    {
+        "sourceId": "0:1578",
+        "type": "shape",
+        "name": "Status Bar - Light",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e48",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e49",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 19,
+                    "g": 22,
+                    "b": 36,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 413,
+            "height": 22
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 0,
+            "y": 0,
+            "width": 413,
+            "height": 22
+        }
+    },
+    {
+        "sourceId": "0:1577",
+        "type": "text",
+        "name": "Carlos.",
+        "content": "Carlos.",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e4a",
+        "textStyles": [
+            {
+                "_id": "5a0aa8a56796a71d209f9e4b",
+                "style": {
+                    "fontFace": "Montserrat-Regular",
+                    "fontSize": 20,
+                    "color": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255,
+                        "a": 1
+                    }
+                },
+                "range": {
+                    "location": 0,
+                    "length": 7
+                }
+            }
+        ],
+        "shadows": [],
+        "fills": [],
+        "borders": [],
+        "rect": {
+            "x": 79,
+            "y": 48,
+            "width": 128,
+            "height": 21
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 79,
+            "y": 48,
+            "width": 128,
+            "height": 21
+        }
+    },
+    {
+        "sourceId": "0:1576",
+        "type": "shape",
+        "name": "image 24",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e4c",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [],
+        "borders": [],
+        "rect": {
+            "x": 21.944061875343323,
+            "y": 39.130959033966064,
+            "width": 40.79439163208008,
+            "height": 40.588233947753906
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 21.944061875343323,
+            "y": 39.130959033966064,
+            "width": 40.79439163208008,
+            "height": 40.588233947753906
+        }
+    },
+    {
+        "sourceId": "0:1574",
+        "type": "shape",
+        "name": "Ellipse 17",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e4d",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e4f",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 196,
+                    "g": 196,
+                    "b": 196,
+                    "a": 1
+                },
+                "type": "color"
+            },
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e4e",
+                "blendMode": "normal",
+                "gradient": {
+                    "type": "linear",
+                    "colorStops": [
+                        {
+                            "position": 0,
+                            "color": {
+                                "r": 48,
+                                "g": 128,
+                                "b": 237,
+                                "a": 1
+                            }
+                        },
+                        {
+                            "position": 1,
+                            "color": {
+                                "r": 193,
+                                "g": 127,
+                                "b": 223,
+                                "a": 1
+                            }
+                        }
+                    ],
+                    "to": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "from": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                "type": "gradient"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 20,
+            "y": 37,
+            "width": 45,
+            "height": 45
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 20,
+            "y": 37,
+            "width": 45,
+            "height": 45
+        }
+    },
+    {
+        "sourceId": "0:1572",
+        "type": "shape",
+        "name": "Rectangle 41",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e50",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e51",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 50,
+                    "g": 57,
+                    "b": 91,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 0,
+            "y": 380,
+            "width": 414,
+            "height": 1
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 0,
+            "y": 380,
+            "width": 414,
+            "height": 1
+        }
+    },
+    {
+        "sourceId": "0:1571",
+        "type": "text",
+        "name": "05/2017",
+        "content": "05/2017",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e52",
+        "textStyles": [
+            {
+                "_id": "5a0aa8a56796a71d209f9e53",
+                "style": {
+                    "fontFace": "Montserrat-Regular",
+                    "fontSize": 16,
+                    "color": {
+                        "r": 50,
+                        "g": 57,
+                        "b": 91,
+                        "a": 1
+                    }
+                },
+                "range": {
+                    "location": 0,
+                    "length": 7
+                }
+            }
+        ],
+        "shadows": [],
+        "fills": [],
+        "borders": [],
+        "rect": {
+            "x": 275,
+            "y": 349,
+            "width": 139,
+            "height": 24
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 275,
+            "y": 349,
+            "width": 139,
+            "height": 24
+        }
+    },
+    {
+        "sourceId": "0:1570",
+        "type": "text",
+        "name": "04/2017",
+        "content": "04/2017",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e54",
+        "textStyles": [
+            {
+                "_id": "5a0aa8a56796a71d209f9e55",
+                "style": {
+                    "fontFace": "Montserrat-Regular",
+                    "fontSize": 16,
+                    "color": {
+                        "r": 124,
+                        "g": 139,
+                        "b": 208,
+                        "a": 1
+                    }
+                },
+                "range": {
+                    "location": 0,
+                    "length": 7
+                }
+            }
+        ],
+        "shadows": [],
+        "fills": [],
+        "borders": [],
+        "rect": {
+            "x": 138,
+            "y": 349,
+            "width": 139,
+            "height": 24
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 138,
+            "y": 349,
+            "width": 139,
+            "height": 24
+        }
+    },
+    {
+        "sourceId": "0:1569",
+        "type": "text",
+        "name": "03/2017",
+        "content": "03/2017",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e56",
+        "textStyles": [
+            {
+                "_id": "5a0aa8a56796a71d209f9e57",
+                "style": {
+                    "fontFace": "Montserrat-Regular",
+                    "fontSize": 16,
+                    "color": {
+                        "r": 50,
+                        "g": 57,
+                        "b": 91,
+                        "a": 1
+                    }
+                },
+                "range": {
+                    "location": 0,
+                    "length": 7
+                }
+            }
+        ],
+        "shadows": [],
+        "fills": [],
+        "borders": [],
+        "rect": {
+            "x": 0,
+            "y": 349,
+            "width": 138,
+            "height": 24
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 0,
+            "y": 349,
+            "width": 138,
+            "height": 24
+        }
+    },
+    {
+        "sourceId": "0:1568",
+        "type": "shape",
+        "name": "Rectangle 40",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e58",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e59",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 124,
+                    "g": 139,
+                    "b": 208,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 138,
+            "y": 376,
+            "width": 138,
+            "height": 5
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 138,
+            "y": 376,
+            "width": 138,
+            "height": 5
+        }
+    },
+    {
+        "sourceId": "0:1567",
+        "type": "shape",
+        "name": "Ellipse 18",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e5a",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e5b",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 394,
+            "y": 66,
+            "width": 5,
+            "height": 5
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 394,
+            "y": 66,
+            "width": 5,
+            "height": 5
+        }
+    },
+    {
+        "sourceId": "0:1566",
+        "type": "shape",
+        "name": "Ellipse 18",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e5c",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e5d",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 394,
+            "y": 57,
+            "width": 5,
+            "height": 5
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 394,
+            "y": 57,
+            "width": 5,
+            "height": 5
+        }
+    },
+    {
+        "sourceId": "0:1565",
+        "type": "shape",
+        "name": "Ellipse 18",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e5e",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e5f",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 394,
+            "y": 48,
+            "width": 5,
+            "height": 5
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 394,
+            "y": 48,
+            "width": 5,
+            "height": 5
+        }
+    },
+    {
+        "sourceId": "0:1564",
+        "type": "shape",
+        "name": "Vector",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e60",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e61",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 354,
+            "y": 46,
+            "width": 24,
+            "height": 27
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 354,
+            "y": 46,
+            "width": 24,
+            "height": 27
+        }
+    },
+    {
+        "sourceId": "0:1560",
+        "type": "shape",
+        "name": "Rectangle 37",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e62",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e63",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 19,
+                    "g": 22,
+                    "b": 36,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 399,
+            "y": 112,
+            "width": 15,
+            "height": 200
+        },
+        "borderRadius": 5,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 399,
+            "y": 112,
+            "width": 15,
+            "height": 200
+        }
+    },
+    {
+        "sourceId": "0:1559",
+        "type": "shape",
+        "name": "Rectangle 37",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e64",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e66",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 19,
+                    "g": 22,
+                    "b": 36,
+                    "a": 1
+                },
+                "type": "color"
+            },
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e65",
+                "blendMode": "normal",
+                "gradient": {
+                    "type": "linear",
+                    "colorStops": [
+                        {
+                            "position": 0,
+                            "color": {
+                                "r": 43,
+                                "g": 43,
+                                "b": 43,
+                                "a": 1
+                            }
+                        },
+                        {
+                            "position": 0.988950252532959,
+                            "color": {
+                                "r": 0,
+                                "g": 0,
+                                "b": 0,
+                                "a": 1
+                            }
+                        }
+                    ],
+                    "to": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "from": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                "type": "gradient"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 0,
+            "y": 112,
+            "width": 16,
+            "height": 200
+        },
+        "borderRadius": 5,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 0,
+            "y": 112,
+            "width": 16,
+            "height": 200
+        }
+    },
+    {
+        "sourceId": "0:1558",
+        "type": "shape",
+        "name": "Polygon 2",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e67",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e68",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 317,
+            "y": 55,
+            "width": 13,
+            "height": 10
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 317,
+            "y": 55,
+            "width": 13,
+            "height": 10
+        }
+    },
+    {
+        "sourceId": "0:1557",
+        "type": "text",
+        "name": "Paypal",
+        "content": "Paypal",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e69",
+        "textStyles": [
+            {
+                "_id": "5a0aa8a56796a71d209f9e6a",
+                "style": {
+                    "fontFace": "Montserrat-Regular",
+                    "fontSize": 16,
+                    "color": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255,
+                        "a": 1
+                    }
+                },
+                "range": {
+                    "location": 0,
+                    "length": 6
+                }
+            }
+        ],
+        "shadows": [],
+        "fills": [],
+        "borders": [],
+        "rect": {
+            "x": 254,
+            "y": 49,
+            "width": 63,
+            "height": 25
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 254,
+            "y": 49,
+            "width": 63,
+            "height": 25
+        }
+    },
+    {
+        "sourceId": "0:1556",
+        "type": "shape",
+        "name": "Ellipse 13",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e6b",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e6d",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 93,
+                    "g": 121,
+                    "b": 231,
+                    "a": 1
+                },
+                "type": "color"
+            },
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e6c",
+                "blendMode": "normal",
+                "gradient": {
+                    "type": "linear",
+                    "colorStops": [
+                        {
+                            "position": 0,
+                            "color": {
+                                "r": 49,
+                                "g": 128,
+                                "b": 237,
+                                "a": 1
+                            }
+                        },
+                        {
+                            "position": 0.9944751262664795,
+                            "color": {
+                                "r": 144,
+                                "g": 135,
+                                "b": 230,
+                                "a": 1
+                            }
+                        }
+                    ],
+                    "to": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "from": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                "type": "gradient"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 228,
+            "y": 52,
+            "width": 15,
+            "height": 15
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 228,
+            "y": 52,
+            "width": 15,
+            "height": 15
+        }
+    },
+    {
+        "sourceId": "0:1555",
+        "type": "shape",
+        "name": "Rectangle 36",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e6e",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e6f",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 19,
+                    "g": 22,
+                    "b": 36,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 220,
+            "y": 46,
+            "width": 121,
+            "height": 27
+        },
+        "borderRadius": 100,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 220,
+            "y": 46,
+            "width": 121,
+            "height": 27
+        }
+    },
+    {
+        "sourceId": "0:1640",
+        "type": "text",
+        "name": "+",
+        "content": "+",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e70",
+        "textStyles": [
+            {
+                "_id": "5a0aa8a56796a71d209f9e71",
+                "style": {
+                    "fontFace": "Montserrat-Regular",
+                    "fontSize": 144,
+                    "color": {
+                        "r": 8,
+                        "g": 10,
+                        "b": 18,
+                        "a": 1
+                    }
+                },
+                "range": {
+                    "location": 0,
+                    "length": 1
+                }
+            }
+        ],
+        "shadows": [],
+        "fills": [],
+        "borders": [],
+        "rect": {
+            "x": 29,
+            "y": 101,
+            "width": 355,
+            "height": 173
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 29,
+            "y": 101,
+            "width": 355,
+            "height": 173
+        }
+    },
+    {
+        "sourceId": "0:1640",
+        "type": "text",
+        "name": "+",
+        "content": "+",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e70",
+        "textStyles": [
+            {
+                "_id": "5a0aa8a56796a71d209f9e71",
+                "style": {
+                    "fontFace": "Montserrat-Regular",
+                    "fontSize": 144,
+                    "color": {
+                        "r": 8,
+                        "g": 10,
+                        "b": 18,
+                        "a": 0.2
+                    }
+                },
+                "range": {
+                    "location": 0,
+                    "length": 1
+                }
+            }
+        ],
+        "shadows": [],
+        "fills": [],
+        "borders": [],
+        "rect": {
+            "x": 29,
+            "y": 101,
+            "width": 355,
+            "height": 173
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 29,
+            "y": 101,
+            "width": 355,
+            "height": 173
+        }
+    },
+    {
+        "sourceId": "0:1643",
+        "type": "shape",
+        "name": "Rectangle 34",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e72",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e74",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 19,
+                    "g": 22,
+                    "b": 36,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [
+            {
+                "_id": "5a0aa8a56796a71d209f9e73",
+                "position": "inside",
+                "thickness": 3,
+                "fill": {
+                    "type": "color",
+                    "opacity": 1,
+                    "blendMode": "normal",
+                    "gradient": {
+                        "colorStops": []
+                    },
+                    "color": {
+                        "r": 9,
+                        "g": 10,
+                        "b": 18,
+                        "a": 1
+                    }
+                }
+            }
+        ],
+        "rect": {
+            "x": 39,
+            "y": 113,
+            "width": 339,
+            "height": 199
+        },
+        "borderRadius": 8,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 39,
+            "y": 113,
+            "width": 339,
+            "height": 199
+        }
+    },
+    {
+        "sourceId": "0:1553",
+        "type": "shape",
+        "name": "Rectangle 34",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e75",
+        "textStyles": [],
+        "shadows": [
+            {
+                "type": "outer",
+                "offsetX": 0,
+                "offsetY": 7,
+                "blurRadius": 20,
+                "_id": "5a0aa8a56796a71d209f9e76",
+                "blendMode": "normal",
+                "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0,
+                    "a": 0.25098039215686274
+                }
+            }
+        ],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e77",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 19,
+                    "g": 22,
+                    "b": 36,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 28,
+            "y": 101,
+            "width": 359,
+            "height": 222
+        },
+        "borderRadius": 8,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 28,
+            "y": 101,
+            "width": 359,
+            "height": 222
+        }
+    },
+    {
+        "sourceId": "0:1551",
+        "type": "shape",
+        "name": "Rectangle 33",
+        "layers": [],
+        "_id": "5a0aa8a56796a71d209f9e78",
+        "textStyles": [],
+        "shadows": [],
+        "fills": [
+            {
+                "opacity": 1,
+                "_id": "5a0aa8a56796a71d209f9e79",
+                "blendMode": "normal",
+                "gradient": {
+                    "colorStops": []
+                },
+                "color": {
+                    "r": 35,
+                    "g": 40,
+                    "b": 64,
+                    "a": 1
+                },
+                "type": "color"
+            }
+        ],
+        "borders": [],
+        "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 414,
+            "height": 735.9999999999998
+        },
+        "borderRadius": 0,
+        "blendMode": "normal",
+        "opacity": 1,
+        "exportable": false,
+        "absoluteRect": {
+            "x": 0,
+            "y": 0,
+            "width": 414,
+            "height": 735.9999999999998
+        }
+    }
+]

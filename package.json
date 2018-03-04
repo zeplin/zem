@@ -1,0 +1,41 @@
+{
+  "name": "zeplin-extension-manager",
+  "version": "0.1.0",
+  "description": "Project starter for creating zeplin extensions",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "bin": {
+    "zeplin-extension-manager": "./src/index.js"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.3",
+    "babel-preset-env": "^1.6.1",
+    "chalk": "^2.3.1",
+    "commander": "^2.14.1",
+    "eslint": "^4.18.1",
+    "eslint-loader": "^2.0.0",
+    "fs-extra": "^5.0.0",
+    "prismjs": "^1.11.0",
+    "uglifyjs-webpack-plugin": "^1.2.2",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.2",
+    "webpack-merge": "^4.1.2",
+    "zeplin-extension-model": "git+ssh://git@github.com/zeplin/zeplin-extension-model.git#v1.x.x"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.1",
+    "@zeplin/eslint-config": "^1.2.2"
+  },
+  "eslintConfig": {
+    "extends": "@zeplin/eslint-config/node",
+    "rules": {
+      "no-process-exit": "off",
+      "no-sync": "off"
+    }
+  }
+}
