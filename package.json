@@ -36,5 +36,8 @@
       "no-process-exit": "off",
       "no-sync": "off"
     }
-  }
+  },
+  "eslintIgnore": [
+    "src/template/*"
+  ]
 }

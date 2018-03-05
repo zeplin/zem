@@ -1,25 +1,30 @@
+/**
+ * Export functions you want to work with, see documentation for details:
+ * https://github.com/zeplin/zeplin-extension-documentation
+ */
+
 function layer(context, selectedLayer) {
-    // return CodeData
+
 }
 
 function styleguideColors(context, colors) {
-    // return CodeData
+
 }
 
 function styleguideTextStyles(context, colors) {
-    // return CodeData
+
 }
 
 function exportStyleguideColors(context, colors) {
-    // return CodeExportData
+
 }
 
 function exportStyleguideTextStyles(context, colors) {
-    // return CodeExportData
+
 }
 
 function comment(context, text) {
-    // return comment
+
 }
 
 export default {

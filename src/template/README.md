@@ -1,1 +1,1 @@
-# Zeplin Extension
+# Sample Zeplin Extension
