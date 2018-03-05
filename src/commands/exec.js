@@ -1,10 +1,10 @@
 const fs = require("fs");
 const chalk = require("chalk");
 const build = require("./build");
-const { bundleName } = require("../config/constants");
-const { resolveBuildPath, resolveExtensionPath } = require("../utils/paths");
 const highlightSyntax = require("../utils/highlight-syntax");
 const sampleData = require("../sample-data");
+const { bundleName } = require("../config/constants");
+const { resolveBuildPath, resolveExtensionPath } = require("../utils/paths");
 const {
     Layer,
     Color,
@@ -45,14 +45,14 @@ function executeFunction(extension, fnName, context) {
         sampleData.layers.forEach(data => printCodeData(extension.layer(context, new Layer(data))));
     } else if (fnName === "styleguideColors" && typeof extension.styleguideColors === "function") {
         console.log("Colors:");
-        printCodeData(extension.styleguideColors(context, sampleData.colors.map(data => new Color(data))));
+        printCodeData(extension.styleguideColors(context, sampleData.project.colors.map(data => new Color(data))));
     } else if (fnName === "styleguideTextStyles" && typeof extension.styleguideTextStyles === "function") {
         console.log("Text styles:");
         printCodeData(
-            extension.styleguideTextStyles(context, sampleData.textStyles.map(data => new TextStyle(data)))
+            extension.styleguideTextStyles(context, sampleData.project.textStyles.map(data => new TextStyle(data)))
         );
     } else {
-        console.log(chalk.yellow(`Function ${fnName} is not defined!`));
+        console.log(chalk.yellow(`Function “${fnName}” not defined.`));
     }
 }
 
@@ -88,7 +88,7 @@ module.exports = function (webpackConfig, fnName, defaultOptions, shouldBuild) {
         try {
             const extension = require(extensionModulePath);
 
-            console.log(`Executing the extension${fnName ? ` function ${chalk.blue(fnName)}` : ""} on sample data`);
+            console.log(`Executing extension${fnName ? ` function ${chalk.blue(fnName)}` : ""} with sample data...`);
 
             executeExtension(extension, fnName, defaultOptions);
         } catch (error) {

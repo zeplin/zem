@@ -1,11 +1,7 @@
 const project = require("./project.json");
-const layers = require("./layers");
-const colors = require("./colors");
-const textStyles = require("./textStyles");
+const layers = require("./layers.json");
 
 module.exports = {
     project,
-    colors,
-    textStyles,
     layers
 };
