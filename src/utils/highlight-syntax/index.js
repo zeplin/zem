@@ -51,10 +51,16 @@ function tokenize(code, lang) {
     return [].concat(...tokens.map(flattenToken));
 }
 
-module.exports = function (code, language, customMapping = {}) {
-    const lines = groupTokensByLine(tokenize(code, language));
+function isSupported(language) {
+    return !!Prism.languages[language];
+}
 
-    return lines.map(line =>
+module.exports = function (code, language, customMapping = {}) {
+    if (!isSupported(language)) {
+        return code;
+    }
+
+    return groupTokensByLine(tokenize(code, language)).map(line =>
         line.map(({ token, type }) => colorize(token, type)).join("")
     ).join("\n");
 };
