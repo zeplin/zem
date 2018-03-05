@@ -23,7 +23,6 @@ function installDeps() {
 
 function create(root) {
     const extensionName = path.basename(root);
-    console.log(root);
 
     if (fs.existsSync(root)) {
         console.log(chalk.red("Creating extension failed, directory already exists."));
@@ -32,7 +31,6 @@ function create(root) {
 
     fs.mkdirpSync(root);
 
-    // TODO: Read version, description, author info from the user!
     const packageJson = {
         name: extensionName,
         version: "0.1.0",
@@ -53,7 +51,15 @@ function create(root) {
 
     process.chdir(root);
 
-    installDeps();
+    installDeps().then(() => {
+        console.log(`Your extension ${chalk.blue.bold(extensionName)} has been created!\n`);
+        console.log("To start development server that serves your extension");
+        console.log(`    cd ${root}`);
+        console.log("    npm run start\n");
+        console.log("Run `zeplin-extension-manager --help` inside the new extension");
+        console.log("for further instructions on how to modify, build, and run your extension.\n");
+        console.log("For more information, also visit https://github.com/zeplin/zeplin-extension-documentation");
+    });
 }
 
 module.exports = create;
