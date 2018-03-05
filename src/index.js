@@ -70,4 +70,8 @@ program
         exec(require("./config/webpack.dev"), fnName, defaultOptions, options.build);
     });
 
+program.on("command:*", () => {
+    program.outputHelp();
+});
+
 program.parse(process.argv);
