@@ -10,8 +10,8 @@ const { name, version } = require(path.join(__dirname, "../package.json"));
 const program = new commander.Command(name).version(version);
 
 program
-    .command("create <extension-dir>")
-    .description("Creates an initial Zeplin extension package on the given path")
+    .command("create <dir>")
+    .description("Create empty Zeplin extension at directory.")
     .action(extensionDir => {
         const create = require("./commands/create");
         const root = path.resolve(process.cwd(), extensionDir);
@@ -21,8 +21,8 @@ program
 
 program
     .command("build")
-    .description("Create a build targeting the prod environment")
-    .option("-d --dev", "Use config for development environment")
+    .description("Create build, targeting production environment.")
+    .option("-d --dev", "Target development environment")
     .action(options => {
         const build = require("./commands/build");
 
@@ -31,14 +31,14 @@ program
 
 program
     .command("clean")
-    .description("Clean the build directory")
+    .description("Clean build directory.")
     .action(() => {
         fs.remove(resolveBuildPath());
     });
 
 program
     .command("start")
-    .description("Start a local server to serve extension")
+    .description("Start local server, serving the extension.")
     .option("-h --host <host>", "Host name", defaultHostName)
     .option("-p --port <port>", "Port", defaultPort)
     .option("-a --allowed-hosts <allowed-hosts>", "Allowed hosts")
@@ -50,9 +50,9 @@ program
 
 program
     .command("exec [function-name]")
-    .description("Executes the extension on the sample data")
-    .option("--no-build", "Use existing build to run")
-    .option("--defaults <default-options>", `Default values for the extension options (e.g, flag=false,prefix=\\"pre\\")`)
+    .description("Execute extension function with sample data.")
+    .option("--no-build", "Use existing build.")
+    .option("--defaults <default-options>", `Set default extension option values (e.g, flag=false,prefix=\\"pre\\")`)
     .action((fnName, options) => {
         const exec = require("./commands/exec");
         let defaultOptions;

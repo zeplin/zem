@@ -1,3 +1,4 @@
+const chalk = require("chalk");
 const fs = require("fs-extra");
 const path = require("path");
 const { spawn } = require("child_process");
@@ -21,11 +22,11 @@ function installDeps() {
 }
 
 function create(root) {
-    const extensioName = path.basename(root);
+    const extensionName = path.basename(root);
     console.log(root);
 
     if (fs.existsSync(root)) {
-        console.log("Cannot create a project since the directory already exists");
+        console.log(chalk.red("Creating extension failed, directory already exists."));
         process.exit(1);
     }
 
@@ -33,9 +34,9 @@ function create(root) {
 
     // TODO: Read version, description, author info from the user!
     const packageJson = {
-        name: extensioName,
+        name: extensionName,
         version: "0.1.0",
-        description: "My Test extension",
+        description: "Sample Zeplin extension",
         scripts: {
             start: "zeplin-extension-manager start",
             build: "zeplin-extension-manager build",

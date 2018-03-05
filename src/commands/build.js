@@ -5,7 +5,7 @@ const transformConfig = require("../utils/webpack/transform-config");
 module.exports = function (webpackConfig, { throwOnError = false, printStats = true } = {}) {
     const compiler = webpack(transformConfig(webpackConfig));
 
-    console.log("Building the extension\n");
+    console.log("Building extension...\n");
 
     return new Promise((resolve, reject) => {
         compiler.run((err, stats) => {

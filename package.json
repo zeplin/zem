@@ -1,7 +1,7 @@
 {
   "name": "zeplin-extension-manager",
   "version": "0.1.0",
-  "description": "Project starter for creating zeplin extensions",
+  "description": "Create and test Zeplin extensions with no build configuration",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,7 +28,6 @@
     "zeplin-extension-model": "git+ssh://git@github.com/zeplin/zeplin-extension-model.git#v1.x.x"
   },
   "devDependencies": {
-    "eslint": "^4.18.1",
     "@zeplin/eslint-config": "^1.2.2"
   },
   "eslintConfig": {
