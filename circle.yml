@@ -1,0 +1,19 @@
+machine:
+  node:
+    version: 8.9.4
+dependencies:
+  pre:
+    - echo "@zeplin:registry=https://registry.npmjs.org/" >> ~/.npmrc
+    - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+  override:
+    - npm install
+test:
+  pre:
+    - npm run lint -- --quiet
+  override:
+    - exit 0
+deployment:
+  npm:
+    tag: /v[0-9]+(\.[0-9]+)*/
+    commands:
+      - npm publish --access public

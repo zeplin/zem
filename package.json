@@ -22,6 +22,9 @@
   "files": [
     "src"
   ],
+  "scripts": {
+    "lint": "eslint ./src"
+  },
   "dependencies": {
     "@zeplin/extension-model": "^1.1.1",
     "babel-core": "^6.26.0",
