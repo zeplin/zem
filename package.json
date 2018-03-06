@@ -1,9 +1,17 @@
 {
-  "name": "zeplin-extension-manager",
+  "name": "@zeplin/extension-manager",
   "version": "0.1.0",
   "description": "Create and test Zeplin extensions with no build configuration",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "https://zeplin.io",
+  "keywords": [
+    "zeplin",
+    "zeplin-extension",
+    "extension"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeplin/extension-manager.git"
   },
   "engines": {
     "node": ">=6"
@@ -11,6 +19,9 @@
   "bin": {
     "zeplin-extension-manager": "./src/index.js"
   },
+  "files": [
+    "src"
+  ],
   "dependencies": {
     "@zeplin/extension-model": "^1.1.1",
     "babel-core": "^6.26.0",
