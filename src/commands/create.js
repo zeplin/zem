@@ -52,13 +52,12 @@ function create(root) {
     process.chdir(root);
 
     installDeps().then(() => {
-        console.log(`Your extension ${chalk.blue.bold(extensionName)} has been created!\n`);
-        console.log("To start development server that serves your extension");
+        console.log(`Created extension at ${chalk.blue(root)}. ⚗️  🦄\n`);
+        console.log(`Start by running the development server:\n`);
         console.log(`    cd ${root}`);
-        console.log("    npm run start\n");
-        console.log("Run `zeplin-extension-manager --help` inside the new extension");
-        console.log("for further instructions on how to modify, build, and run your extension.\n");
-        console.log("For more information, also visit https://github.com/zeplin/zeplin-extension-documentation");
+        console.log(`    npm start\n`);
+        console.log(`Inside the directory, run \`zeplin-extension-manager --help\` for further instructions on how to update, test and run your extension.\n`);
+        console.log(`For more information, see documentation at https://github.com/zeplin/zeplin-extension-documentation.`);
     });
 }
 
