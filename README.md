@@ -7,14 +7,14 @@ Create and test Zeplin extensions with no build configuration. ⚗️🦄
 If you use npm 5.2+, you can run Zeplin Extension Manager directly to create an extension:
 
 ```sh
-npx zeplin-extension-manager create my-extension
+npx zem create my-extension
 ```
 
 Otherwise, you can install Zeplin Extension Manager globally and run it right after:
 
 ```sh
-npm install -g zeplin-extension-manager
-zeplin-extension-manager create my-extension
+npm install -g zem
+zem create my-extension
 ```
 
 ## Overview
@@ -30,7 +30,7 @@ Starts a local server, serving the extension (by default, at http://localhost:70
 Follow the [tutorial](https://github.com/zeplin/zeplin-extension-documentation/blob/master/tutorial.md#adding-a-local-extension) to learn how to add a local extension to a Zeplin project.
 
 ```
-Usage: zeplin-extension-manager start [options]
+Usage: npm start -- [options]
 
 Options:
 
@@ -44,7 +44,7 @@ Options:
 Builds extension source, creating resources targeting production environment.
 
 ```
-Usage: zeplin-extension-manager build [options]
+Usage: npm run build -- [options]
 
 Options:
 
@@ -58,7 +58,7 @@ Executes extension function(s) with sample data.
 This is a super useful script to debug and test your extension, without running in it Zeplin.
 
 ```
-Usage: zeplin-extension-manager exec [function-name] [options]
+Usage: npm run exec -- [function-name] [options]
 
 Options:
 

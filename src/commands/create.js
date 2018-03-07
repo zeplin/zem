@@ -3,7 +3,7 @@ const fs = require("fs-extra");
 const path = require("path");
 const { spawn } = require("child_process");
 
-const packageName = "git+ssh://git@github.com/dirtybit/zeplin-extension-manager.git#feature/zeplin-extension-manager";
+const packageName = "zem";
 
 function installDeps() {
     return new Promise((resolve, reject) => {
@@ -36,10 +36,10 @@ function create(root) {
         version: "0.1.0",
         description: "Sample Zeplin extension",
         scripts: {
-            start: "zeplin-extension-manager start",
-            build: "zeplin-extension-manager build",
-            clean: "zeplin-extension-manager clean",
-            exec: "zeplin-extension-manager exec"
+            start: "zem start",
+            build: "zem build",
+            clean: "zem clean",
+            exec: "zem exec"
         }
     };
 
@@ -56,7 +56,7 @@ function create(root) {
         console.log(`Start by running the development server:\n`);
         console.log(`    cd ${root}`);
         console.log(`    npm start\n`);
-        console.log(`Inside the directory, run \`zeplin-extension-manager --help\` for further instructions on how to update, test and run your extension.\n`);
+        console.log(`Inside the directory, run \`zem --help\` for further instructions on how to update, test and run your extension.\n`);
         console.log(`For more information, see documentation at https://github.com/zeplin/zeplin-extension-documentation.`);
     });
 }
