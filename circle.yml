@@ -3,7 +3,6 @@ machine:
     version: 8.9.4
 dependencies:
   pre:
-    - echo "@zeplin:registry=https://registry.npmjs.org/" >> ~/.npmrc
     - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
   override:
     - npm install
