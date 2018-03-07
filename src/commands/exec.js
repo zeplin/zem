@@ -11,7 +11,7 @@ const {
     Project,
     TextStyle,
     Context
-} = require("zeplin-extension-model");
+} = require("@zeplin/extension-model");
 
 function getManifestDefaults() {
     const manifest = require(resolveExtensionPath("dist/manifest.json"));
@@ -42,12 +42,20 @@ function printCodeData({ code, language } = {}) {
 function executeFunction(extension, fnName, context) {
     if (fnName === "layer" && typeof extension.layer === "function") {
         console.log("Layers:");
-        sampleData.layers.forEach(data => printCodeData(extension.layer(context, new Layer(data))));
+        console.log("=======");
+        sampleData.layers.forEach(data => {
+            const layer = new Layer(data);
+
+            console.log(`${layer.name}:`);
+            printCodeData(extension.layer(context, layer));
+        });
     } else if (fnName === "styleguideColors" && typeof extension.styleguideColors === "function") {
         console.log("Colors:");
+        console.log("=======");
         printCodeData(extension.styleguideColors(context, sampleData.project.colors.map(data => new Color(data))));
     } else if (fnName === "styleguideTextStyles" && typeof extension.styleguideTextStyles === "function") {
         console.log("Text styles:");
+        console.log("============");
         printCodeData(
             extension.styleguideTextStyles(context, sampleData.project.textStyles.map(data => new TextStyle(data)))
         );
