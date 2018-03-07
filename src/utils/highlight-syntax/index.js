@@ -1,11 +1,11 @@
 const Prism = require("prismjs");
 const colorize = require("./colorize");
 
-function flattenToken(token, type) {
+function flattenToken(token, type = "literal") {
     if (typeof token === "string") {
         return {
             token,
-            type: type || "literal"
+            type
         };
     }
 

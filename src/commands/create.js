@@ -34,12 +34,16 @@ function create(root) {
     const packageJson = {
         name: extensionName,
         version: "0.1.0",
-        description: "Sample Zeplin extension",
+        description: "Sample extension description.",
         scripts: {
             start: "zem start",
             build: "zem build",
             clean: "zem clean",
             exec: "zem exec"
+        },
+        zeplin: {
+            displayName: extensionName,
+            projectTypes: ["web"]
         }
     };
 
