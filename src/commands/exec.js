@@ -16,6 +16,10 @@ const {
 function getManifestDefaults() {
     const manifest = require(resolveExtensionPath("dist/manifest.json"));
 
+    if (!manifest.options) {
+        return {};
+    }
+
     return manifest.options.reduce((defaultOptions, option) => {
         defaultOptions[option.id] = option.default;
 
