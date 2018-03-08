@@ -23,17 +23,23 @@ function getManifestDefaults() {
     }, {});
 }
 
-function printCodeData({ code, language } = {}) {
-    if (!code) {
+function printCodeData(codeData) {
+    if (!codeData) {
         return;
     }
 
     let output;
 
-    try {
-        output = highlightSyntax(code, language);
-    } catch (error) {
-        output = code;
+    if (typeof codeData === "string") {
+        output = codeData;
+    } else {
+        const { code, language } = codeData;
+
+        try {
+            output = highlightSyntax(code, language);
+        } catch (error) {
+            output = code;
+        }
     }
 
     console.log(output);
@@ -41,21 +47,18 @@ function printCodeData({ code, language } = {}) {
 
 function executeFunction(extension, fnName, context) {
     if (fnName === "layer" && typeof extension.layer === "function") {
-        console.log("Layers:");
-        console.log("=======");
-        sampleData.layers.forEach(data => {
+        console.log(chalk.underline.bold("\nLayers:"));
+        sampleData.layers.forEach((data, index) => {
             const layer = new Layer(data);
 
-            console.log(`${layer.name}:`);
+            console.log(chalk.bold(`${index !== 0 ? "\n" : ""}${layer.name}:`));
             printCodeData(extension.layer(context, layer));
         });
     } else if (fnName === "styleguideColors" && typeof extension.styleguideColors === "function") {
-        console.log("Colors:");
-        console.log("=======");
+        console.log(chalk.underline.bold("\nColors:"));
         printCodeData(extension.styleguideColors(context, sampleData.project.colors.map(data => new Color(data))));
     } else if (fnName === "styleguideTextStyles" && typeof extension.styleguideTextStyles === "function") {
-        console.log("Text styles:");
-        console.log("============");
+        console.log(chalk.underline.bold("\nText styles:"));
         printCodeData(
             extension.styleguideTextStyles(context, sampleData.project.textStyles.map(data => new TextStyle(data)))
         );
