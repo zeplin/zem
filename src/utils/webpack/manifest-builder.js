@@ -1,6 +1,39 @@
 const fs = require("fs");
 const path = require("path");
 
+function parseShortcutRepoUrl(shortcutUrl) {
+    const match = shortcutUrl.match(/(?:([a-z]+):)?(.*)/i);
+
+    if (!match) {
+        return;
+    }
+
+    const [type, id] = match.slice(1);
+
+    switch (type) {
+        case "gist":
+            return `https://gist.github.com/${id}`;
+        case "bitbucket":
+            return `https://bitbucket.org/${id}`;
+        case "gitlab":
+            return `https://gitlab.com/${id}`;
+        case "github":
+            return `https://github.com/${id}`;
+        default:
+            if (/[^/]+\/[^/]+/.test(id)) {
+                return `https://github.com/${id}`;
+            }
+    }
+}
+
+function parseRepository(repoInfo) {
+    if (typeof repoInfo === "string") {
+        return parseShortcutRepoUrl(repoInfo);
+    }
+
+    return repoInfo.url;
+}
+
 class ManifestBuilder {
     constructor(extensionPath, bundleName) {
         this.extensionPath = extensionPath;
@@ -26,9 +59,12 @@ class ManifestBuilder {
             manifest.description = pkgInfo.description;
             manifest.version = pkgInfo.version;
             manifest.author = pkgInfo.author;
-            manifest.repository = pkgInfo.repository;
             manifest.options = pkgInfo.zeplin.options;
             manifest.moduleURL = `./${chunk.files[0]}`;
+
+            if (pkgInfo.repository) {
+                manifest.repository = parseRepository(pkgInfo.repository);
+            }
 
             if (fs.existsSync(path.join(this.extensionPath, "README.md"))) {
                 manifest.readmeURL = "./README.md";
