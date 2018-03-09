@@ -1,6 +1,6 @@
 {
   "name": "zem",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Create and test Zeplin extensions with no build configuration",
   "homepage": "https://zeplin.io",
   "keywords": [

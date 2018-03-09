@@ -74,3 +74,11 @@ Cleans build directory.
 
 - Modules are transpiled to target Safari 9.1, as extensions are run both on the Web app and on the Mac app using JavaScriptCore, supporting macOS El Capitan.
 - Add an ESLint configuration and the source code will automatically be linted before building.
+
+## Community solutions
+
+### Zero
+
+[baybara-pavel/zero](https://github.com/baybara-pavel/zero)
+
+Similar to zem, Zero lets you quickly start working on a Zeplin extension with Webpack.
