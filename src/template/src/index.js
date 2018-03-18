@@ -11,7 +11,7 @@ function styleguideColors(context, colors) {
 
 }
 
-function styleguideTextStyles(context, colors) {
+function styleguideTextStyles(context, textStyles) {
 
 }
 
@@ -19,7 +19,7 @@ function exportStyleguideColors(context, colors) {
 
 }
 
-function exportStyleguideTextStyles(context, colors) {
+function exportStyleguideTextStyles(context, textStyles) {
 
 }
 
