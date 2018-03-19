@@ -49,23 +49,48 @@ function printCodeData(codeData) {
     console.log(output);
 }
 
+function promisify(value) {
+    return Promise.resolve().then(() => value);
+}
+
 function executeFunction(extension, fnName, context) {
     if (fnName === "layer" && typeof extension.layer === "function") {
-        console.log(chalk.underline.bold("\nLayers:"));
-        sampleData.layers.forEach((data, index) => {
-            const layer = new Layer(data);
+        Promise.all(
+            sampleData.layers.map(
+                data => new Layer(data)
+            ).map(
+                (layer, index) => promisify(extension.layer(context, layer))
+                    .then(
+                        codeData => ({
+                            codeData,
+                            title: `${index !== 0 ? "\n" : ""}${layer.name}:`
+                        })
+                    )
+            )
+        ).then(results => {
+            console.log(chalk.underline.bold("\nLayers:"));
 
-            console.log(chalk.bold(`${index !== 0 ? "\n" : ""}${layer.name}:`));
-            printCodeData(extension.layer(context, layer));
+            results.forEach(({ codeData, title }) => {
+                console.log(chalk.bold(title));
+                printCodeData(codeData);
+            });
         });
     } else if (fnName === "styleguideColors" && typeof extension.styleguideColors === "function") {
-        console.log(chalk.underline.bold("\nColors:"));
-        printCodeData(extension.styleguideColors(context, sampleData.project.colors.map(data => new Color(data))));
+        promisify(
+            extension.styleguideColors(context, sampleData.project.colors.map(data => new Color(data)))
+        ).then(codeData => {
+            console.log(chalk.underline.bold("\nColors:"));
+
+            printCodeData(codeData);
+        });
     } else if (fnName === "styleguideTextStyles" && typeof extension.styleguideTextStyles === "function") {
-        console.log(chalk.underline.bold("\nText styles:"));
-        printCodeData(
+        promisify(
             extension.styleguideTextStyles(context, sampleData.project.textStyles.map(data => new TextStyle(data)))
-        );
+        ).then(codeData => {
+            console.log(chalk.underline.bold("\nText styles:"));
+
+            printCodeData(codeData);
+        });
     } else {
         console.log(chalk.yellow(`Function “${fnName}” not defined.`));
     }
