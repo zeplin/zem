@@ -50,7 +50,7 @@ function printCodeData(codeData) {
 }
 
 function promisify(value) {
-    return Promise.resolve().then(() => value);
+    return Promise.resolve(value);
 }
 
 function executeFunction(extension, fnName, context) {
