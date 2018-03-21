@@ -8,7 +8,7 @@ const packageName = "zem";
 function installDeps() {
     return new Promise((resolve, reject) => {
         const npmArgs = ["install", "--save", packageName];
-        const child = spawn("npm", npmArgs, { stdio: "inherit" });
+        const child = spawn(/^win/.test(process.platform) ? "npm.cmd" : "npm", npmArgs, { stdio: "inherit" });
 
         child.on("close", exitCode => {
             if (exitCode !== 0) {
