@@ -27,7 +27,11 @@ function getManifestDefaults() {
     }, {});
 }
 
-function printCodeData(codeData) {
+function printCodeData(codeData, title) {
+    if (title) {
+        console.log(chalk.bold(title));
+    }
+
     if (!codeData) {
         return;
     }
@@ -49,26 +53,68 @@ function printCodeData(codeData) {
     console.log(output);
 }
 
-function executeFunction(extension, fnName, context) {
-    if (fnName === "layer" && typeof extension.layer === "function") {
-        console.log(chalk.underline.bold("\nLayers:"));
-        sampleData.layers.forEach((data, index) => {
-            const layer = new Layer(data);
+function callExtensionFunction(extension, fnName, ...args) {
+    return Promise.resolve()
+        .then(() => {
+            if (typeof extension[fnName] !== "function") {
+                return;
+            }
 
-            console.log(chalk.bold(`${index !== 0 ? "\n" : ""}${layer.name}:`));
-            printCodeData(extension.layer(context, layer));
+            return extension[fnName](...args);
+        }).catch(error => {
+            return chalk.red(error.stack);
         });
-    } else if (fnName === "styleguideColors" && typeof extension.styleguideColors === "function") {
+}
+
+function executeLayer(extension, context) {
+    const layers = sampleData.layers.map(data => new Layer(data));
+
+    return Promise.all(
+        layers.map(layer => callExtensionFunction(extension, "layer", context, layer))
+    ).then(results => {
+        console.log(chalk.underline.bold("\nLayers:"));
+
+        results.forEach((codeData, index) => {
+            printCodeData(codeData, `${layers[index].name}:`);
+        });
+    });
+}
+
+function executeStyleguideColors(extension, context) {
+    const colors = sampleData.project.colors.map(data => new Color(data));
+
+    return callExtensionFunction(extension, "styleguideColors", context, colors).then(codeData => {
         console.log(chalk.underline.bold("\nColors:"));
-        printCodeData(extension.styleguideColors(context, sampleData.project.colors.map(data => new Color(data))));
-    } else if (fnName === "styleguideTextStyles" && typeof extension.styleguideTextStyles === "function") {
+
+        printCodeData(codeData);
+    });
+}
+
+function executeStyleguideTextStyles(extension, context) {
+    const textStyles = sampleData.project.textStyles.map(data => new TextStyle(data));
+
+    return callExtensionFunction(extension, "styleguideTextStyles", context, textStyles).then(codeData => {
         console.log(chalk.underline.bold("\nText styles:"));
-        printCodeData(
-            extension.styleguideTextStyles(context, sampleData.project.textStyles.map(data => new TextStyle(data)))
-        );
-    } else {
+
+        printCodeData(codeData);
+    });
+}
+
+const EXTENSION_FUNCTIONS = {
+    layer: executeLayer,
+    styleguideColors: executeStyleguideColors,
+    styleguideTextStyles: executeStyleguideTextStyles
+};
+
+function executeFunction(extension, fnName, context) {
+    const fn = EXTENSION_FUNCTIONS[fnName];
+
+    if (!fn) {
         console.log(chalk.yellow(`Function “${fnName}” not defined.`));
+        return;
     }
+
+    fn(extension, context);
 }
 
 function executeExtension(extension, fnName, defaultOptions = {}) {
