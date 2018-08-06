@@ -1,0 +1,43 @@
+version: 2
+jobs:
+  build_and_test:
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run: npm run lint -- --quiet
+
+  publish:
+      docker:
+      - image: circleci/node:8
+      steps:
+        - checkout
+        - run:
+            name: Publish to NPM
+            command: |
+              echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+              npm publish --access public
+
+workflows:
+  version: 2
+  build_test_and_publish:
+    jobs:
+      # Run the build_and_test for all branches
+      - build_and_test
+      - publish:
+          requires:
+            - build_and_test
+          filters:
+            # Ignore any commit on any branch
+            branches:
+              ignore: /.*/
+            # Run the job only on version tags
+            tags:
+              only: /v[0-9]+(\.[0-9]+)*/
