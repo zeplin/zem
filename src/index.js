@@ -70,6 +70,16 @@ program
         exec(require("./config/webpack.dev"), fnName, defaultOptions, options.build);
     });
 
+program
+    .command("publish")
+    .description("Publish extension.")
+    .option("--path <build-path>", `Path to the extension build to be published.`)
+    .action(command => {
+        const publish = require("./commands/publish");
+
+        publish(command.path);
+    });
+
 program.on("command:*", () => {
     program.outputHelp();
 });
