@@ -152,7 +152,7 @@ class API {
         if (response.statusCode >= 400) {
             if (response.statusCode === 401) {
                 this.removeToken();
-        }
+            }
 
             throw createError(response);
         }
