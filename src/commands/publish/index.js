@@ -40,7 +40,7 @@ function parseManifest() {
 function createArchive() {
     const archive = new Zip();
 
-    archive.addLocalFolder(pathResolver.resolve("./"), "package");
+    archive.addLocalFolder(pathResolver.resolve("./"), "./");
 
     return archive;
 }
