@@ -70,6 +70,19 @@ Options:
 
 Cleans build directory.
 
+
+#### `npm run publish`
+
+Publish extension build to the zem's registry.
+
+```
+Usage: npm run publish -- [options]
+
+Options:
+
+  --path <build-path>           Path to look for extension build files. It uses the path used by build command by default.
+```
+
 ## Tidbits
 
 - Modules are transpiled to target Safari 9.1, as extensions are run both on the Web app and on the Mac app using JavaScriptCore, supporting macOS El Capitan.
