@@ -1,6 +1,6 @@
 # Zeplin Extension Manager
 
-Create and test Zeplin extensions with no build configuration. ⚗️🦄
+Create, test and publish Zeplin extensions with no build configuration. ⚗️🦄
 
 ## Getting started
 
@@ -19,7 +19,7 @@ zem create my-extension
 
 ## Overview
 
-Extensions created using the manager have built-in scripts to ease development, build and test proceses. No need to setup tools like Webpack or Babel—they are preconfigured and hidden by the manager.
+Extensions created using the manager have built-in scripts to ease development, build, test and publish processes. No need to setup tools like Webpack or Babel—they are preconfigured and hidden by the manager.
 
 ### Scripts
 
