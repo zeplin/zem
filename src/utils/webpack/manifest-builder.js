@@ -55,11 +55,13 @@ class ManifestBuilder {
             delete require.cache[require.resolve(pkgInfoPath)];
             const pkgInfo = require(pkgInfoPath);
 
+            manifest.packageName = pkgInfo.name;
             manifest.name = pkgInfo.zeplin.displayName || pkgInfo.name;
             manifest.description = pkgInfo.description;
             manifest.version = pkgInfo.version;
             manifest.author = pkgInfo.author;
             manifest.options = pkgInfo.zeplin.options;
+            manifest.projectTypes = pkgInfo.zeplin.projectTypes;
             manifest.moduleURL = `./${chunk.files[0]}`;
 
             if (pkgInfo.repository) {
