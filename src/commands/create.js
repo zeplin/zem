@@ -39,7 +39,8 @@ function create(root) {
             start: "zem start",
             build: "zem build",
             clean: "zem clean",
-            exec: "zem exec"
+            exec: "zem exec",
+            publish: "zem publish"
         },
         zeplin: {
             displayName: extensionName,

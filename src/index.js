@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const fs = require("fs-extra");
 const path = require("path");
+const chalk = require("chalk");
 
 const commander = require("commander");
 const { resolveBuildPath } = require("./utils/paths");
@@ -68,6 +69,16 @@ program
         }
 
         exec(require("./config/webpack.dev"), fnName, defaultOptions, options.build);
+    });
+
+program
+    .command("publish")
+    .description(`Publish extension, submitting it for review to be listed on ${chalk.underline("https://extensions.zeplin.io.")}`)
+    .option("--path <build-path>", `Path for the extension build to be published`)
+    .action(command => {
+        const publish = require("./commands/publish");
+
+        publish(command.path);
     });
 
 program.on("command:*", () => {

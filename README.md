@@ -1,6 +1,6 @@
 # Zeplin Extension Manager
 
-Create and test Zeplin extensions with no build configuration. ⚗️🦄
+Create, test and publish Zeplin extensions with no build configuration. ⚗️🦄
 
 ## Getting started
 
@@ -19,7 +19,7 @@ zem create my-extension
 
 ## Overview
 
-Extensions created using the manager have built-in scripts to ease development, build and test proceses. No need to setup tools like Webpack or Babel—they are preconfigured and hidden by the manager.
+Extensions created using the manager have built-in scripts to ease development, build, test and publish processes. No need to setup tools like Webpack or Babel—they are preconfigured and hidden by the manager.
 
 ### Scripts
 
@@ -69,6 +69,19 @@ Options:
 #### `npm run clean`
 
 Cleans build directory.
+
+
+#### `npm run publish`
+
+Publish extension, sending it for review to be listed on [extensions.zeplin.io](https://extensions.zeplin.io).
+
+```
+Usage: npm run publish -- [options]
+
+Options:
+
+  --path <build-path>           Path for the extension build to publish (default: Path used by the build command)
+```
 
 ## Tidbits
 
