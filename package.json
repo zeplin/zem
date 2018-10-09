@@ -1,7 +1,7 @@
 {
   "name": "zem",
-  "version": "0.2.0",
-  "description": "Create and test Zeplin extensions with no build configuration",
+  "version": "0.3.0",
+  "description": "Create, test and publish Zeplin extensions with no build configuration",
   "homepage": "https://zeplin.io",
   "keywords": [
     "zeplin",
