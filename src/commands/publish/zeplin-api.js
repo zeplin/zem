@@ -11,7 +11,7 @@ const REQUEST_DEFAULT_OPTS = {
     json: true
 };
 
-const AUTH_URL = "https://app.zeplin.io/oauth/authorize/zem";
+const AUTH_URL = "https://extensions.zeplin.io/authorize";
 
 class ClientError extends Error {
     constructor(status, msg, extra) {
