@@ -73,14 +73,14 @@ Cleans build directory.
 
 #### `npm run publish`
 
-Publish extension build to the zem's registry.
+Publish extension, sending it for review to be listed on [extensions.zeplin.io](https://extensions.zeplin.io).
 
 ```
 Usage: npm run publish -- [options]
 
 Options:
 
-  --path <build-path>           Path to look for extension build files. It uses the path used by build command by default.
+  --path <build-path>           Path for the extension build to publish (default: Path used by the build command)
 ```
 
 ## Tidbits

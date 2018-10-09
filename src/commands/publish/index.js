@@ -24,14 +24,14 @@ function parseManifest() {
     const manifestPath = pathResolver.resolve("./manifest.json");
 
     if (!fs.existsSync(manifestPath)) {
-        throw new Error("Could not find manifest.json file!");
+        throw new Error("Locating manifest.json failed. Please make sure that you run `npm run build` first!");
     }
 
     const manifest = JSON.parse(fs.readFileSync(manifestPath));
     const { valid, validationErrors } = manifestValidator(manifest);
 
     if (!valid) {
-        throw new Error(`Invalid manifest.json file:\n${validationErrors}`);
+        throw new Error(`Validating manifest.json failed:\n${validationErrors}`);
     }
 
     return manifest;
@@ -109,14 +109,15 @@ module.exports = async function (buildPath) {
                 projectTypes: projectTypes.join(","),
                 packageBuffer
             });
+            console.log(`${chalk.bold(name)} (${version}) is now submitted. 🏄‍♂️\n`);
         } else {
             await apiClient.createExtensionVersion(extension._id, version, packageBuffer);
+            console.log(`Version ${chalk.bold(version)} of ${chalk.bold(name)} is now submitted. 🏄‍♂️\n`);
         }
 
-        console.log(chalk.blue(`${packageName}@${version} is submitted!\n`));
-        console.log("You'll be notified once it's published on extensions.zeplin.io.");
+        console.log(`Big hugs for your contribution, you'll be notified via email once it's published on ${chalk.underline("https://extensions.zeplin.io")}.`);
     } catch (error) {
-        console.log(chalk.red("Couldn't publish the extension:"));
+        console.log(chalk.red("Publishing extension failed:"));
         console.error(error.message || error);
     }
 };
