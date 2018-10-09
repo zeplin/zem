@@ -70,15 +70,14 @@ function readToken() {
 
 function saveToken(token) {
     const rcFilePath = paths.getRcFilePath();
+    let rcContent = {};
 
-    let rcFile = {};
     if (fs.existsSync(rcFilePath)) {
-        rcFile = JSON.parse(fs.readFileSync(rcFilePath));
-
-        rcFile.token = token;
+        rcContent = JSON.parse(fs.readFileSync(rcFilePath));
     }
 
-    fs.writeFileSync(rcFilePath, JSON.stringify(rcFile));
+    rcContent.token = token;
+    fs.writeFileSync(rcFilePath, JSON.stringify(rcContent));
 }
 
 function removeToken() {
