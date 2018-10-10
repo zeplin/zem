@@ -6,6 +6,7 @@ const prompts = require("prompts");
 const paths = require("../../utils/paths");
 const manifestValidator = require("./manifest-validator");
 const apiClient = require("./zeplin-api");
+const { version: packageVersion } = require(paths.resolveExtensionPath("./package.json"));
 
 const pathResolver = {
     init(root) {
@@ -32,6 +33,13 @@ function parseManifest() {
 
     if (!valid) {
         throw new Error(`Validating manifest.json failed:\n${validationErrors}`);
+    }
+
+    if (packageVersion !== manifest.version) {
+        throw new Error(
+            "Validating manifest.json failed: Extension version does not match the version in manifest.json.\n" +
+            "Please make sure that you run `npm run build` first!"
+        );
     }
 
     return manifest;
