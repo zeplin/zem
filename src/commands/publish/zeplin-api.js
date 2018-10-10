@@ -15,7 +15,7 @@ const AUTH_URL = "https://extensions.zeplin.io/authorize";
 
 class ClientError extends Error {
     constructor(status, msg, extra) {
-        const message = `(${status}) ${msg || "Client error"}`;
+        const message = `${msg || "Client error"}`;
         super(message);
 
         Error.captureStackTrace(this, this.constructor);
@@ -46,7 +46,9 @@ function createError(response) {
     const extra = { response: response.toJSON() };
 
     if (statusCode >= 400 && statusCode < 500) {
-        return new ClientError(statusCode, body.title, extra);
+        const { message, title } = body;
+
+        return new ClientError(statusCode, `${title}${message ? `: ${message}` : ""}`, extra);
     }
 
     if (statusCode >= 500 && statusCode < 600) {
