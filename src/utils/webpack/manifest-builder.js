@@ -2,6 +2,10 @@ const fs = require("fs");
 const path = require("path");
 
 function parseShortcutRepoUrl(shortcutUrl) {
+    if (shortcutUrl.startsWith("http")) {
+        return shortcutUrl;
+    }
+
     const match = shortcutUrl.match(/(?:([a-z]+):)?(.*)/i);
 
     if (!match) {
