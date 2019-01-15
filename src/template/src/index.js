@@ -7,6 +7,14 @@ function layer(context, selectedLayer) {
 
 }
 
+function screen(context, selectedVersion, selectedScreen) {
+
+}
+
+function component(context, selectedVersion, selectedComponent) {
+
+}
+
 function styleguideColors(context, colors) {
 
 }
@@ -29,6 +37,8 @@ function comment(context, text) {
 
 export default {
     layer,
+    screen,
+    component,
     styleguideColors,
     styleguideTextStyles,
     exportStyleguideColors,
