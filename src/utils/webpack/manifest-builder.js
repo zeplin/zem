@@ -39,9 +39,10 @@ function parseRepository(repoInfo) {
 }
 
 class ManifestBuilder {
-    constructor(extensionPath, bundleName) {
+    constructor(extensionPath, bundleName, developmentMode = false) {
         this.extensionPath = extensionPath;
         this.bundleName = bundleName;
+        this.developmentMode = developmentMode;
     }
 
     apply(compiler) {
@@ -62,11 +63,17 @@ class ManifestBuilder {
             manifest.packageName = pkgInfo.name;
             manifest.name = pkgInfo.zeplin.displayName || pkgInfo.name;
             manifest.description = pkgInfo.description;
-            manifest.version = pkgInfo.version;
             manifest.author = pkgInfo.author;
             manifest.options = pkgInfo.zeplin.options;
             manifest.projectTypes = pkgInfo.zeplin.projectTypes;
             manifest.moduleURL = `./${chunk.files[0]}`;
+
+            if (this.developmentMode) {
+                // Add hash because you're in the middle of dev and you want the "Reload Local Plugins" to detect a change
+                manifest.version = `${pkgInfo.version}-pre.${compilation.hash}`;
+            } else {
+                manifest.version = pkgInfo.version;
+            }
 
             if (pkgInfo.repository) {
                 manifest.repository = parseRepository(pkgInfo.repository);

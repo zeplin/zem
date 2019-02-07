@@ -1,5 +1,4 @@
 const fs = require("fs");
-const ManifestBuilder = require("../utils/webpack/manifest-builder");
 const SimpleCopyPlugin = require("../utils/webpack/simple-copy-plugin");
 const WatchExtraFilesPlugin = require("../utils/webpack/watch-extra-files");
 const { resolveBuildPath, resolveExtensionPath } = require("../utils/paths");
@@ -52,7 +51,6 @@ module.exports = {
         new SimpleCopyPlugin(copies),
         new WatchExtraFilesPlugin({
             files: [resolveExtensionPath("package.json"), readmePath]
-        }),
-        new ManifestBuilder(extensionPath, bundleName)
+        })
     ]
 };
