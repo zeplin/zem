@@ -81,20 +81,16 @@ function executeLayer(extension, context) {
 }
 
 function executeStyleguideColors(extension, context) {
-    const colors = sampleData.project.colors.map(data => new Color(data));
-
-    return callExtensionFunction(extension, "styleguideColors", context, colors).then(codeData => {
-        console.log(chalk.underline.bold("\nColors:"));
+    return callExtensionFunction(extension, "colors", context).then(codeData => {
+        console.log(chalk.underline.bold("\nColors (Project):"));
 
         printCodeData(codeData);
     });
 }
 
 function executeStyleguideTextStyles(extension, context) {
-    const textStyles = sampleData.project.textStyles.map(data => new TextStyle(data));
-
-    return callExtensionFunction(extension, "styleguideTextStyles", context, textStyles).then(codeData => {
-        console.log(chalk.underline.bold("\nText styles:"));
+    return callExtensionFunction(extension, "textStyles", context).then(codeData => {
+        console.log(chalk.underline.bold("\nText styles (Project):"));
 
         printCodeData(codeData);
     });
@@ -131,8 +127,8 @@ function executeExtension(extension, fnName, defaultOptions = {}) {
     }
 
     executeFunction(extension, "layer", context);
-    executeFunction(extension, "styleguideColors", context);
-    executeFunction(extension, "styleguideTextStyles", context);
+    executeFunction(extension, "colors", context);
+    executeFunction(extension, "textStyles", context);
 }
 
 module.exports = function (webpackConfig, fnName, defaultOptions, shouldBuild) {
