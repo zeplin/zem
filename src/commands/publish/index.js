@@ -105,7 +105,7 @@ module.exports = async function (buildPath) {
             version,
             name,
             description,
-            projectTypes
+            platforms
         } = manifest;
 
         if (!extension) {
@@ -114,7 +114,7 @@ module.exports = async function (buildPath) {
                 version,
                 name,
                 description,
-                projectTypes: projectTypes.join(","),
+                platforms: platforms.join(","),
                 packageBuffer
             });
             console.log(`${chalk.bold(name)} (${version}) is now submitted. 🏄‍♂️\n`);
