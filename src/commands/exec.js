@@ -7,9 +7,7 @@ const { bundleName } = require("../config/constants");
 const { resolveBuildPath, resolveExtensionPath } = require("../utils/paths");
 const {
     Layer,
-    Color,
     Project,
-    TextStyle,
     Context
 } = require("@zeplin/extension-model");
 
