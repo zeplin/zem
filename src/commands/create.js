@@ -44,7 +44,7 @@ function create(root) {
         },
         zeplin: {
             displayName: extensionName,
-            projectTypes: ["web"]
+            platforms: ["web"]
         }
     };
 
