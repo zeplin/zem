@@ -15,6 +15,28 @@ function component(context, selectedVersion, selectedComponent) {
 
 }
 
+function colors(context) {
+
+}
+
+function textStyles(context) {
+
+}
+
+function exportColors(context) {
+
+}
+
+function exportTextStyles(context) {
+
+}
+
+/**
+ * The following functions will be deprecated. Your extensions can export them to support old versions of Zeplin's macOS app.
+ * See Zeplin Extensions migration guide for details:
+ * URL_HERE
+ */
+
 function styleguideColors(context, colors) {
 
 }
@@ -39,6 +61,10 @@ export default {
     layer,
     screen,
     component,
+    colors,
+    textStyles,
+    exportColors,
+    exportTextStyles,
     styleguideColors,
     styleguideTextStyles,
     exportStyleguideColors,

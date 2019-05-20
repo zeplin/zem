@@ -219,7 +219,7 @@ class API {
             packageName,
             name,
             description,
-            projectTypes,
+            platforms,
             version,
             packageBuffer
         } = data;
@@ -232,7 +232,7 @@ class API {
                 packageName,
                 name,
                 description,
-                projectTypes,
+                projectTypes: platforms,
                 package: {
                     options: {
                         filename: "package.zip"

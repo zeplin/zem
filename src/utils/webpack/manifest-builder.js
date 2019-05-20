@@ -65,7 +65,7 @@ class ManifestBuilder {
             manifest.version = pkgInfo.version;
             manifest.author = pkgInfo.author;
             manifest.options = pkgInfo.zeplin.options;
-            manifest.projectTypes = pkgInfo.zeplin.projectTypes;
+            manifest.platforms = pkgInfo.zeplin.platforms || pkgInfo.zeplin.projectTypes;
             manifest.moduleURL = `./${chunk.files[0]}`;
 
             if (pkgInfo.repository) {
