@@ -23,8 +23,9 @@
     "src"
   ],
   "scripts": {
-    "lint": "eslint ./src"
+    "lint": "eslint ./src && tsc src/types/index.d.ts"
   },
+  "types": "./src/types/index.d.ts",
   "dependencies": {
     "@zeplin/extension-model": "^1.1.1",
     "adm-zip": "^0.4.11",
@@ -47,7 +48,8 @@
     "webpack-merge": "^4.1.2"
   },
   "devDependencies": {
-    "@zeplin/eslint-config": "^1.2.2"
+    "@zeplin/eslint-config": "^1.2.2",
+    "typescript": "^3.5.3"
   },
   "eslintConfig": {
     "extends": "@zeplin/eslint-config/node",
