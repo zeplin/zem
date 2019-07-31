@@ -78,7 +78,7 @@ function executeLayer(extension, context) {
     });
 }
 
-function executeStyleguideColors(extension, context) {
+function executeColors(extension, context) {
     return callExtensionFunction(extension, "colors", context).then(codeData => {
         console.log(chalk.underline.bold("\nColors (Project):"));
 
@@ -86,7 +86,7 @@ function executeStyleguideColors(extension, context) {
     });
 }
 
-function executeStyleguideTextStyles(extension, context) {
+function executeTextStyles(extension, context) {
     return callExtensionFunction(extension, "textStyles", context).then(codeData => {
         console.log(chalk.underline.bold("\nText styles (Project):"));
 
@@ -96,8 +96,8 @@ function executeStyleguideTextStyles(extension, context) {
 
 const EXTENSION_FUNCTIONS = {
     layer: executeLayer,
-    styleguideColors: executeStyleguideColors,
-    styleguideTextStyles: executeStyleguideTextStyles
+    colors: executeColors,
+    textStyles: executeTextStyles
 };
 
 function executeFunction(extension, fnName, context) {
