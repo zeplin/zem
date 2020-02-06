@@ -3,31 +3,31 @@
  * https://github.com/zeplin/zeplin-extension-documentation
  */
 
-function layer(context, selectedLayer) {
+export function layer(context, selectedLayer) {
 
 }
 
-function screen(context, selectedVersion, selectedScreen) {
+export function screen(context, selectedVersion, selectedScreen) {
 
 }
 
-function component(context, selectedVersion, selectedComponent) {
+export function component(context, selectedVersion, selectedComponent) {
 
 }
 
-function colors(context) {
+export function colors(context) {
 
 }
 
-function textStyles(context) {
+export function textStyles(context) {
 
 }
 
-function exportColors(context) {
+export function exportColors(context) {
 
 }
 
-function exportTextStyles(context) {
+export function exportTextStyles(context) {
 
 }
 
@@ -37,37 +37,22 @@ function exportTextStyles(context) {
  * https://zpl.io/shared-styleguides-extensions-migration-guide
  */
 
-function styleguideColors(context, colors) {
+export function styleguideColors(context, colors) {
 
 }
 
-function styleguideTextStyles(context, textStyles) {
+export function styleguideTextStyles(context, textStyles) {
 
 }
 
-function exportStyleguideColors(context, colors) {
+export function exportStyleguideColors(context, colors) {
 
 }
 
-function exportStyleguideTextStyles(context, textStyles) {
+export function exportStyleguideTextStyles(context, textStyles) {
 
 }
 
-function comment(context, text) {
+export function comment(context, text) {
 
 }
-
-export default {
-    layer,
-    screen,
-    component,
-    colors,
-    textStyles,
-    exportColors,
-    exportTextStyles,
-    styleguideColors,
-    styleguideTextStyles,
-    exportStyleguideColors,
-    exportStyleguideTextStyles,
-    comment
-};

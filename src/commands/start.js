@@ -2,7 +2,7 @@ const chalk = require("chalk");
 const WebpackDevServer = require("webpack-dev-server");
 const webpack = require("webpack");
 const webpackConfig = require("../config/webpack.dev");
-const devServerConfig = require("../config/webpack.dev.server");
+const devServerConfig = require("../config/dev-server");
 const transformConfig = require("../utils/webpack/transform-config");
 
 function createCompiler(config) {

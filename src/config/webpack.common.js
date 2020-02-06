@@ -20,9 +20,11 @@ const jsLoaders = [{
     loader: require.resolve("babel-loader"),
     options: {
         presets: [
-            [require.resolve("babel-preset-env"), {
+            [require.resolve("@babel/preset-env"), {
                 targets: {
-                    browsers: ["chrome >= 45", "safari >= 9.1", "firefox >= 45"]
+                    chrome: 45,
+                    safari: 9.1,
+                    firefox: 45
                 }
             }]
         ]
@@ -34,6 +36,7 @@ if (eslintEnabled) {
 }
 
 module.exports = {
+    mode: "none",
     entry: { [bundleName]: entryPoint || "./src/index.js" },
     output: {
         path: buildPath,

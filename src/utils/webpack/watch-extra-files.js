@@ -5,7 +5,7 @@ class WatchExtraFilesPlugin {
 
     apply(compiler) {
         compiler.plugin("after-compile", (compilation, callback) => {
-            this.files.map(f => compilation.fileDependencies.push(f));
+            this.files.map(f => compilation.fileDependencies.add(f));
             callback();
         });
     }
