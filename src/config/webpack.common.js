@@ -23,7 +23,7 @@ const jsLoaders = [{
             [require.resolve("@babel/preset-env"), {
                 targets: {
                     chrome: 45,
-                    safari: 9.1,
+                    safari: "9.1",
                     firefox: 45
                 }
             }]
@@ -42,7 +42,8 @@ module.exports = {
         path: buildPath,
         library: "extension",
         libraryExport: "default",
-        libraryTarget: "umd"
+        libraryTarget: "umd",
+        globalObject: "typeof self !== 'undefined' ? self : this"
     },
     module: {
         rules: [{

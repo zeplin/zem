@@ -5,7 +5,7 @@ class SimpleCopyPlugin {
         this.copies = copies;
     }
     apply(compiler) {
-        compiler.plugin("emit", (compilation, callback) => {
+        compiler.hooks.emit.tap(this.constructor.name, compilation => {
             compilation.chunks.forEach(chunk => {
                 const copyEntries = this.copies[chunk.name];
                 if (!copyEntries) {
@@ -34,7 +34,6 @@ class SimpleCopyPlugin {
                     };
                 });
             });
-            callback();
         });
     }
 }

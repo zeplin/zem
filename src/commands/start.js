@@ -15,7 +15,7 @@ function createCompiler(config) {
         process.exit(1);
     }
 
-    compiler.plugin("done", stats => {
+    compiler.hooks.done.tap("logStatPlugin", stats => {
         console.log(stats.toString({
             errors: true,
             colors: true
@@ -50,4 +50,7 @@ module.exports = function (host, port, allowedHosts) {
 
     process.on("SIGTERM", closeServer);
     process.on("SIGINT", closeServer);
+    process.on("warning", warning => {
+        console.log(warning.stack);
+    });
 };

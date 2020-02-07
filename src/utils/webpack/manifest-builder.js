@@ -45,7 +45,7 @@ class ManifestBuilder {
     }
 
     apply(compiler) {
-        compiler.plugin("emit", (compilation, callback) => {
+        compiler.hooks.emit.tap(this.constructor.name, compilation => {
             const chunk = compilation.chunks.find(c => c.name === this.bundleName);
 
             if (!chunk) {
@@ -86,7 +86,6 @@ class ManifestBuilder {
                     return content.length;
                 }
             };
-            callback();
         });
     }
 }
