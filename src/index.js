@@ -9,6 +9,7 @@ const { defaultHostName, defaultPort } = require("./config/constants");
 const { name, version } = require(path.join(__dirname, "../package.json"));
 
 const program = new commander.Command(name).version(version);
+const TEST_ARGS_INDEX = 3;
 
 program
     .command("create <dir>")
@@ -50,28 +51,6 @@ program
     });
 
 program
-    .command("exec [function-name]")
-    .description("Execute extension function with sample data.")
-    .option("--no-build", "Use existing build.")
-    .option("--defaults <default-options>", `Set default extension option values (e.g, flag=false,prefix=\\"pre\\")`)
-    .action((fnName, options) => {
-        const exec = require("./commands/exec");
-        let defaultOptions;
-
-        if (options.defaults) {
-            defaultOptions = {};
-
-            options.defaults.split(",").forEach(keyValue => {
-                const [key, value] = keyValue.split("=");
-
-                defaultOptions[key] = JSON.parse(value);
-            });
-        }
-
-        exec(require("./config/webpack.exec"), fnName, defaultOptions, options.build);
-    });
-
-program
     .command("publish")
     .description(`Publish extension, submitting it for review to be listed on ${chalk.underline("https://extensions.zeplin.io.")}`)
     .option("--path <build-path>", `Path for the extension build to be published`)
@@ -79,6 +58,16 @@ program
         const publish = require("./commands/publish");
 
         publish(command.path);
+    });
+
+program
+    .command("test")
+    .description(`Test via jest`)
+    .allowUnknownOption()
+    .action(command => {
+        const test = require("./commands/test");
+
+        test(process.argv.slice(TEST_ARGS_INDEX));
     });
 
 program.on("command:*", () => {
