@@ -2,7 +2,7 @@ const chalk = require("chalk");
 const WebpackDevServer = require("webpack-dev-server");
 const webpack = require("webpack");
 const webpackConfig = require("../config/webpack.dev");
-const devServerConfig = require("../config/webpack.dev.server");
+const devServerConfig = require("../config/dev-server");
 const transformConfig = require("../utils/webpack/transform-config");
 
 function createCompiler(config) {
@@ -15,7 +15,7 @@ function createCompiler(config) {
         process.exit(1);
     }
 
-    compiler.plugin("done", stats => {
+    compiler.hooks.done.tap("logStatPlugin", stats => {
         console.log(stats.toString({
             errors: true,
             colors: true
@@ -50,4 +50,7 @@ module.exports = function (host, port, allowedHosts) {
 
     process.on("SIGTERM", closeServer);
     process.on("SIGINT", closeServer);
+    process.on("warning", warning => {
+        console.log(warning.stack);
+    });
 };

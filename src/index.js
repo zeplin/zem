@@ -68,7 +68,7 @@ program
             });
         }
 
-        exec(require("./config/webpack.dev"), fnName, defaultOptions, options.build);
+        exec(require("./config/webpack.exec"), fnName, defaultOptions, options.build);
     });
 
 program
