@@ -28,7 +28,7 @@
   "dependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
-    "@zeplin/extension-model": "^1.1.1",
+    "@zeplin/extension-model": "^2.5.0",
     "adm-zip": "^0.4.11",
     "babel-loader": "^8.0.6",
     "chalk": "^2.3.1",

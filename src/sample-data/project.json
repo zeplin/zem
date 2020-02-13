@@ -88,5 +88,32 @@
                 "a": 1
             }
         }
+    ],
+    "spacingSections": [
+        {
+            "name": "Simple spacing",
+            "description": "",
+            "baseTokenId": 1,
+            "spacingTokens": [
+                {
+                    "token": "base",
+                    "color": { "r": 127, "b": 127, "g": 127, "a": 1 },
+                    "value": 16,
+                    "_id": 1
+                },
+                {
+                    "token": "double",
+                    "color": { "r": 255, "b": 255, "g": 255, "a": 1 },
+                    "value": 32,
+                    "_id": 2
+                },
+                {
+                    "token": "half",
+                    "color": { "r": 63, "b": 63, "g": 63, "a": 1 },
+                    "value": 8,
+                    "_id": 3
+                }
+            ]
+        }
     ]
 }

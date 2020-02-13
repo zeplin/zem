@@ -6,9 +6,8 @@ const sampleData = require("../sample-data");
 const { bundleName } = require("../config/constants");
 const { resolveBuildPath, resolveExtensionPath } = require("../utils/paths");
 const {
-    Layer,
-    Project,
-    Context
+    Context,
+    Version
 } = require("@zeplin/extension-model");
 
 function getManifestDefaults() {
@@ -64,16 +63,16 @@ function callExtensionFunction(extension, fnName, ...args) {
         });
 }
 
-function executeLayer(extension, context) {
-    const layers = sampleData.layers.map(data => new Layer(data));
-
+function executeLayer(extension, context, version) {
     return Promise.all(
-        layers.map(layer => callExtensionFunction(extension, "layer", context, layer))
+        version
+            .layers
+            .map(layer => callExtensionFunction(extension, "layer", context, layer))
     ).then(results => {
         console.log(chalk.underline.bold("\nLayers:"));
 
         results.forEach((codeData, index) => {
-            printCodeData(codeData, `${layers[index].name}:`);
+            printCodeData(codeData, `${version.layers[index].name}:`);
         });
     });
 }
@@ -94,39 +93,48 @@ function executeTextStyles(extension, context) {
     });
 }
 
+function executeSpacing(extension, context) {
+    return callExtensionFunction(extension, "spacing", context).then(codeData => {
+        console.log(chalk.underline.bold("\nSpacing (Project):"));
+
+        printCodeData(codeData);
+    });
+}
+
 const EXTENSION_FUNCTIONS = {
     layer: executeLayer,
     colors: executeColors,
-    textStyles: executeTextStyles
+    textStyles: executeTextStyles,
+    spacing: executeSpacing
 };
 
-function executeFunction(extension, fnName, context) {
+function executeFunction(extension, fnName, context, version) {
     const fn = EXTENSION_FUNCTIONS[fnName];
 
     if (!fn) {
         console.log(chalk.yellow(`Function “${fnName}” not defined.`));
         return;
     }
-
-    fn(extension, context);
+    fn(extension, context, version);
 }
 
 function executeExtension(extension, fnName, defaultOptions = {}) {
-    const project = new Project(sampleData.project);
     const options = Object.assign(getManifestDefaults(), defaultOptions);
     const context = new Context({
         options,
-        project
+        project: sampleData.project
     });
+    const version = new Version(sampleData.version);
 
     if (fnName) {
-        executeFunction(extension, fnName, context);
+        executeFunction(extension, fnName, context, version);
         return;
     }
 
-    executeFunction(extension, "layer", context);
-    executeFunction(extension, "colors", context);
-    executeFunction(extension, "textStyles", context);
+    executeFunction(extension, "layer", context, version);
+    executeFunction(extension, "colors", context, version);
+    executeFunction(extension, "textStyles", context, version);
+    executeFunction(extension, "spacing", context, version);
 }
 
 module.exports = function (webpackConfig, fnName, defaultOptions, shouldBuild) {
