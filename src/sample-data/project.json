@@ -2,6 +2,7 @@
     "name": "Sample extension project",
     "type": "ios",
     "density": "1x",
+    "rootFontSize": 16,
     "colors": [
         {
             "r": 255,
