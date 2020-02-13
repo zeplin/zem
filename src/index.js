@@ -51,6 +51,28 @@ program
     });
 
 program
+    .command("exec [function-name]")
+    .description("Execute extension function with sample data.")
+    .option("--no-build", "Use existing build.")
+    .option("--defaults <default-options>", `Set default extension option values (e.g, flag=false,prefix=\\"pre\\")`)
+    .action((fnName, options) => {
+        const exec = require("./commands/exec");
+        let defaultOptions;
+
+        if (options.defaults) {
+            defaultOptions = {};
+
+            options.defaults.split(",").forEach(keyValue => {
+                const [key, value] = keyValue.split("=");
+
+                defaultOptions[key] = JSON.parse(value);
+            });
+        }
+
+        exec(require("./config/webpack.exec"), fnName, defaultOptions, options.build);
+    });
+
+program
     .command("publish")
     .description(`Publish extension, submitting it for review to be listed on ${chalk.underline("https://extensions.zeplin.io.")}`)
     .option("--path <build-path>", `Path for the extension build to be published`)

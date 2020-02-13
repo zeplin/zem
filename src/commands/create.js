@@ -39,6 +39,7 @@ function create(root) {
             start: "zem start",
             build: "zem build",
             clean: "zem clean",
+            exec: "zem exec",
             test: "zem test",
             publish: "zem publish"
         },
