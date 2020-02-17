@@ -184,7 +184,7 @@
                 "borders": [],
                 "fills": [
                     {
-                        "type": "color",
+                        "fillType": "color",
                         "blendMode": "normal",
                         "fill": {
                             "r": 0,
@@ -413,7 +413,7 @@
                 "borders": [],
                 "fills": [
                     {
-                        "type": "gradient",
+                        "fillType": "gradient",
                         "blendMode": "normal",
                         "fill": {
                             "type": "linear",
