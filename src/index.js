@@ -2,11 +2,27 @@
 const fs = require("fs-extra");
 const path = require("path");
 const chalk = require("chalk");
-
+const updateNotifier = require("update-notifier");
 const commander = require("commander");
+
 const { resolveBuildPath } = require("./utils/paths");
 const { defaultHostName, defaultPort } = require("./config/constants");
 const { name, version } = require(path.join(__dirname, "../package.json"));
+
+const seconds = 60;
+const minutes = 60;
+const hours = 24;
+const days = 5;
+const updateCheckInterval = days * hours * minutes * seconds;
+
+function beforeCommand() {
+    const notifier = updateNotifier({
+        pkg: { name, version },
+        shouldNotifyInNpmScript: true,
+        updateCheckInterval
+    });
+    notifier.notify();
+}
 
 const program = new commander.Command(name).version(version);
 
@@ -85,4 +101,5 @@ program.on("command:*", () => {
     program.outputHelp();
 });
 
+beforeCommand();
 program.parse(process.argv);

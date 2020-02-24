@@ -3,11 +3,11 @@ const fs = require("fs-extra");
 const path = require("path");
 const { spawn } = require("child_process");
 
-const packageName = "zem";
+const { name } = require("../../package.json");
 
 function installDeps() {
     return new Promise((resolve, reject) => {
-        const npmArgs = ["install", "--save", packageName];
+        const npmArgs = ["install", "--save", name];
         const child = spawn("npm", npmArgs, { stdio: "inherit", shell: true });
 
         child.on("close", exitCode => {
