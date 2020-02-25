@@ -87,6 +87,31 @@ Options:
 
 - Modules are transpiled to target Safari 9.1, as extensions are run both on the Web app and on the Mac app using JavaScriptCore, supporting macOS El Capitan.
 - Add an ESLint configuration and the source code will automatically be linted before building.
+- You can create `webpack.zem.js` at your root to customize webpack config. The module should export a function 
+that takes current webpack config as an argument and return customized webpack config. For example:
+
+```javascript
+module.exports = function({ module: { rules, ...module }, ...webpackConfig }) {
+  return {
+    ...webpackConfig,
+
+    resolve: {
+      extensions: [".ts"]
+    },
+    module: {
+      ...module,
+      rules: [
+        {
+          test: /\.tsx?$/,
+          use: "ts-loader",
+          exclude: /node_modules/,
+        },
+        ...rules,
+      ],
+    },
+  };
+};
+```
 
 ## Community solutions
 
