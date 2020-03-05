@@ -2,10 +2,10 @@ const fs = require("fs-extra");
 const chalk = require("chalk");
 const path = require("path");
 const Zip = require("adm-zip");
-const prompts = require("prompts");
 const paths = require("../../utils/paths");
 const manifestValidator = require("./manifest-validator");
-const apiClient = require("./zeplin-api");
+const ApiClient = require("./apiClient");
+const AuthenticationService = require("./authenticationService");
 const { version: packageVersion } = require(paths.resolveExtensionPath("./package.json"));
 
 const pathResolver = {
@@ -53,52 +53,18 @@ function createArchive() {
     return archive;
 }
 
-function promptLogin() {
-    const questions = [
-        {
-            type: "text",
-            name: "handle",
-            message: "Username or email address: "
-        },
-        {
-            type: "password",
-            name: "password",
-            message: "Password"
-        }
-    ];
-
-    return prompts(questions);
-}
-
-async function login() {
-    const { handle, password } = await promptLogin();
-
-    return apiClient.auth({ handle, password });
-}
-
-async function authenticate() {
-    if (apiClient.hasToken()) {
-        try {
-            return await apiClient.auth();
-        } catch (err) {
-            return login();
-        }
-    }
-
-    return login();
-}
-
 module.exports = async function (buildPath) {
     console.log("Publishing the extension...\n");
 
     pathResolver.init(buildPath);
 
     try {
-        await authenticate();
-
+        const authenticationService = new AuthenticationService();
+        const apiClient = new ApiClient();
+        const { authToken, userId } = await authenticationService.authenticate();
         const manifest = parseManifest();
-        const { extensions } = await apiClient.getExtensions();
-        let extension = extensions.find(e => e.packageName === manifest.packageName);
+        const { extensions } = await apiClient.getExtensions({ authToken, owner: userId });
+        const extension = extensions.find(e => e.packageName === manifest.packageName);
         const packageBuffer = createArchive().toBuffer();
         const {
             packageName,
@@ -109,18 +75,19 @@ module.exports = async function (buildPath) {
         } = manifest;
 
         if (!extension) {
-            extension = await apiClient.createExtension({
+            const data = {
                 packageName,
                 version,
                 name,
                 description,
                 platforms: platforms.join(","),
                 packageBuffer
-            });
-            console.log(`${chalk.bold(name)} (${version}) is now submitted. 🏄‍♂️\n`);
+            };
+            await apiClient.createExtension({ data, authToken });
+            console.log(`${chalk.bold(name)} (${version}) is now submitted. 🏄‍️\n`);
         } else {
-            await apiClient.createExtensionVersion(extension._id, version, packageBuffer);
-            console.log(`Version ${chalk.bold(version)} of ${chalk.bold(name)} is now submitted. 🏄‍♂️\n`);
+            await apiClient.createExtensionVersion({ authToken, extensionId: extension._id, version, packageBuffer });
+            console.log(`Version ${chalk.bold(version)} of ${chalk.bold(name)} is now submitted. 🏄‍️\n`);
         }
 
         console.log(`Big hugs for your contribution, you'll be notified via email once it's published on ${chalk.underline("https://extensions.zeplin.io")}.`);
