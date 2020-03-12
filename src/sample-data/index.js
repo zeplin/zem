@@ -1,7 +1,7 @@
 const project = require("./project.json");
-const layers = require("./layers.json");
+const version = require("./version.json");
 
 module.exports = {
     project,
-    layers
+    version
 };

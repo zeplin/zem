@@ -23,11 +23,19 @@ function textStyles(context) {
 
 }
 
+function spacing(context) {
+
+}
+
 function exportColors(context) {
 
 }
 
 function exportTextStyles(context) {
+
+}
+
+function exportSpacing(context) {
 
 }
 
@@ -63,8 +71,10 @@ export default {
     component,
     colors,
     textStyles,
+    spacing,
     exportColors,
     exportTextStyles,
+    exportSpacing,
     styleguideColors,
     styleguideTextStyles,
     exportStyleguideColors,
