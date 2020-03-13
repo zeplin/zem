@@ -17,6 +17,19 @@ npm install -g zem
 zem create my-extension
 ```
 
+You can also use `-y` option to create package with default configuration.
+
+```sh
+npx zem create my-extension -y
+```
+
+or 
+
+```sh
+npm install -g zem
+zem create my-extension -y
+```
+
 ## Overview
 
 Extensions created using the manager have built-in scripts to ease development, build, test and publish processes. No need to setup tools like Webpack or Babel—they are preconfigured and hidden by the manager.

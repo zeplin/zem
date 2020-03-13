@@ -2,6 +2,8 @@ const fs = require("fs-extra");
 const chalk = require("chalk");
 const path = require("path");
 const Zip = require("adm-zip");
+const prompts = require("prompts");
+
 const paths = require("../../utils/paths");
 const manifestValidator = require("./manifest-validator");
 const ApiClient = require("./apiClient");
@@ -29,10 +31,10 @@ function parseManifest() {
     }
 
     const manifest = JSON.parse(fs.readFileSync(manifestPath));
-    const { valid, validationErrors } = manifestValidator(manifest);
+    const { valid, errors } = manifestValidator(manifest);
 
     if (!valid) {
-        throw new Error(`Validating manifest.json failed:\n${validationErrors}`);
+        throw new Error(`Validating manifest.json failed:\n${errors}\n\nPlease make sure that all fields in "package.json" are valid and you run \`npm run build\``);
     }
 
     if (packageVersion !== manifest.version) {
@@ -53,26 +55,65 @@ function createArchive() {
     return archive;
 }
 
+async function confirm() {
+    const { answer } = await prompts({
+        type: "confirm",
+        name: "answer",
+        message: "Are you sure to continue"
+    });
+    return answer;
+}
+
+async function validateReadme({ hasOptions }) {
+    const readmePath = pathResolver.resolve("./README.md");
+
+    if (!fs.existsSync(readmePath)) {
+        throw new Error("Locating README.md failed. Please make sure that you create a readme file and run `npm run build`!");
+    }
+
+    const readme = (await fs.readFile(readmePath))
+        .toString("utf8")
+        .replace(/<!--(.|\n)*?-->/g, "");
+
+    if (!readme.match(/^## Output/m)) {
+        console.log(chalk.yellow("Output section could not be found in README.md"));
+        if (!await confirm()) {
+            throw new Error("Output section could not be found in README.md. Please make sure that you add this section and run `npm run build`!");
+        }
+    }
+
+    if (hasOptions && !readme.match(/^## Options/m)) {
+        console.log(chalk.yellow("Options section could not be found in README.md"));
+        if (!await confirm()) {
+            throw new Error("Options section could not be found in README.md. Please make sure that you add this section and run `npm run build`!");
+        }
+    }
+}
+
 module.exports = async function (buildPath) {
     console.log("Publishing the extension...\n");
 
     pathResolver.init(buildPath);
 
     try {
-        const authenticationService = new AuthenticationService();
-        const apiClient = new ApiClient();
-        const { authToken, userId } = await authenticationService.authenticate();
-        const manifest = parseManifest();
-        const { extensions } = await apiClient.getExtensions({ authToken, owner: userId });
-        const extension = extensions.find(e => e.packageName === manifest.packageName);
-        const packageBuffer = createArchive().toBuffer();
         const {
             packageName,
             version,
             name,
             description,
-            platforms
-        } = manifest;
+            platforms,
+            options
+        } = parseManifest();
+
+        await validateReadme({ hasOptions: Boolean(options) });
+
+        const authenticationService = new AuthenticationService();
+        const apiClient = new ApiClient();
+        const { authToken, userId } = await authenticationService.authenticate();
+        const { extensions } = await apiClient.getExtensions({ authToken, owner: userId });
+
+        const extension = extensions.find(e => e.packageName === packageName);
+        const packageBuffer = createArchive().toBuffer();
 
         if (!extension) {
             const data = {

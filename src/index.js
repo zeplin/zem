@@ -29,11 +29,12 @@ const program = new commander.Command(name).version(version);
 program
     .command("create <dir>")
     .description("Create empty Zeplin extension at directory.")
-    .action(extensionDir => {
+    .option("-y --yes", "Create extension without prompt for configuration")
+    .action((extensionDir, { yes }) => {
         const create = require("./commands/create");
         const root = path.resolve(process.cwd(), extensionDir);
 
-        create(root);
+        return create({ root, disablePrompt: yes });
     });
 
 program
@@ -94,7 +95,7 @@ program
     .action(command => {
         const publish = require("./commands/publish");
 
-        publish(command.path);
+        return publish(command.path);
     });
 
 program.on("command:*", () => {

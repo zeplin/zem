@@ -57,7 +57,7 @@ const optionsSchema = {
 
 const manifestSchema = {
     type: "object",
-    required: ["packageName", "name", "description", "version", "moduleURL"],
+    required: ["packageName", "name", "description", "version", "moduleURL", "platforms"],
     properties: {
         packageName: { type: "string" },
         name: { type: "string" },
@@ -70,13 +70,13 @@ const manifestSchema = {
             email: { type: "string" },
             url: { type: "string" }
         },
-        projectTypes: {
-            type: "array",
-            items: { enum: ["web", "android", "ios", "osx"] }
-        },
         platforms: {
             type: "array",
-            items: { enum: ["web", "android", "ios", "osx"] }
+            items: {
+                enum: ["web", "android", "ios", "osx"]
+            },
+            uniqueItems: true,
+            minItems: 1
         },
         options: optionsSchema
     }
