@@ -83,6 +83,7 @@ const createPackageJson = (root, { packageName, description, displayName, platfo
             build: "zem build",
             clean: "zem clean",
             exec: "zem exec",
+            test: "zem test",
             publish: "zem publish"
         },
         zeplin: {

@@ -25,6 +25,7 @@ function beforeCommand() {
 }
 
 const program = new commander.Command(name).version(version);
+const TEST_ARGS_INDEX = 3;
 
 program
     .command("create <dir>")
@@ -96,6 +97,16 @@ program
         const publish = require("./commands/publish");
 
         return publish(command.path);
+    });
+
+program
+    .command("test")
+    .description(`Test via jest`)
+    .allowUnknownOption()
+    .action(command => {
+        const test = require("./commands/test");
+
+        test(process.argv.slice(TEST_ARGS_INDEX));
     });
 
 program.on("command:*", () => {

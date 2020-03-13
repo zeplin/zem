@@ -79,6 +79,15 @@ Options:
   --defaults <default-options>  Set default extension option values (e.g, flag=false,prefix=\"pre\")
 ```
 
+#### `npm run test`
+
+Runs test scripts via jest. You can check [jest](https://jestjs.io/docs/en/cli.html) for options.
+
+```
+Usage: npm run test -- [options]
+```
+
+
 #### `npm run clean`
 
 Cleans build directory.

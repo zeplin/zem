@@ -58,9 +58,7 @@ function callExtensionFunction(extension, fnName, ...args) {
             }
 
             return extension[fnName](...args);
-        }).catch(error => {
-            return chalk.red(error.stack);
-        });
+        }).catch(error => chalk.red(error.stack));
 }
 
 function executeLayer(extension, context, version) {
