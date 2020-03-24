@@ -105,14 +105,13 @@ Options:
   --path <build-path>           Path for the extension build to publish (default: Path used by the build command)
 ```
 
-<!---
+
 ##### Usage with access token:
 
 Zeplin Extension Manager can authenticate using an access token instead of your Zeplin credentials which makes it easier to integrate it into your CI workflow.
 
-1. Get a CLI access token from your [Profile](https://app.zeplin.io/profile/connected-apps) in Zeplin.
-2. Set `ZEPLIN_ACCESS_TOKEN` environment variable in your CI.
---->
+1. Get a `zem` access token from your [Profile](https://app.zeplin.io/profile/connected-apps) in Zeplin.
+2. Set `ZEM_ACCESS_TOKEN` environment variable in your CI.
 
 ## Tidbits
 
