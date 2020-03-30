@@ -14,7 +14,7 @@
     "url": "https://github.com/zeplin/zem.git"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "bin": {
     "zem": "./src/index.js"
