@@ -6,7 +6,7 @@ import componentsData from "./components.json";
 import versionData from "./version.json";
 
 
-export const context = new Context({ project });
+export const context = new Context({ project, options: {} });
 export const version = new Version(versionData);
 export const screens = screensData.map(data => new Screen(data));
 export const components = componentsData.map(data => new Component(data));
