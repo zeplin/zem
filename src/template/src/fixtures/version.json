@@ -186,12 +186,6 @@
           {
             "fillType": "color",
             "blendMode": "normal",
-            "fill": {
-              "r": 0,
-              "g": 255,
-              "b": 255,
-              "a": 1
-            },
             "color": {
               "r": 0,
               "g": 255,
@@ -228,12 +222,6 @@
           {
             "fillType": "color",
             "blendMode": "normal",
-            "fill": {
-              "r": 255,
-              "g": 255,
-              "b": 0,
-              "a": 1
-            },
             "color": {
               "r": 255,
               "g": 255,
@@ -266,12 +254,6 @@
           {
             "fillType": "color",
             "blendMode": "normal",
-            "fill": {
-              "r": 255,
-              "g": 0,
-              "b": 0,
-              "a": 1
-            },
             "color": {
               "r": 255,
               "g": 0,
@@ -304,12 +286,6 @@
           {
             "fillType": "color",
             "blendMode": "normal",
-            "fill": {
-              "r": 0,
-              "g": 255,
-              "b": 0,
-              "a": 1
-            },
             "color": {
               "r": 0,
               "g": 255,
@@ -342,12 +318,6 @@
           {
             "fillType": "color",
             "blendMode": "normal",
-            "fill": {
-              "r": 0,
-              "g": 255,
-              "b": 0,
-              "a": 1
-            },
             "color": {
               "r": 0,
               "g": 255,
@@ -415,37 +385,6 @@
           {
             "fillType": "gradient",
             "blendMode": "normal",
-            "fill": {
-              "type": "linear",
-              "from": {
-                "x": 0.5,
-                "y": 0
-              },
-              "to": {
-                "x": 0.5,
-                "y": 1
-              },
-              "colorStops": [
-                {
-                  "color": {
-                    "r": 255,
-                    "g": 255,
-                    "b": 255,
-                    "a": 0.5
-                  },
-                  "position": 0
-                },
-                {
-                  "color": {
-                    "r": 0,
-                    "g": 0,
-                    "b": 0,
-                    "a": 0.5
-                  },
-                  "position": 1
-                }
-              ]
-            },
             "gradient": {
               "type": "linear",
               "from": {
@@ -503,12 +442,6 @@
           {
             "fillType": "color",
             "blendMode": "normal",
-            "fill": {
-              "r": 0,
-              "g": 0,
-              "b": 255,
-              "a": 1
-            },
             "color": {
               "r": 0,
               "g": 0,
@@ -540,71 +473,38 @@
           {
             "position": "outside",
             "thickness": 6,
-            "fill": {
-              "type": "gradient",
-              "blendMode": "normal",
-              "fill": {
-                "type": "radial",
-                "from": {
-                  "x": 0.5,
-                  "y": 0
-                },
-                "to": {
-                  "x": 0.5,
-                  "y": 1
-                },
-                "colorStops": [
-                  {
-                    "color": {
-                      "r": 255,
-                      "g": 0,
-                      "b": 0,
-                      "a": 1
-                    },
-                    "position": 0
-                  },
-                  {
-                    "color": {
-                      "r": 255,
-                      "g": 0,
-                      "b": 0,
-                      "a": 0
-                    },
-                    "position": 1
-                  }
-                ]
+            "fillType": "gradient",
+            "blendMode": "normal",
+            "gradient": {
+              "type": "radial",
+              "from": {
+                "x": 0.5,
+                "y": 0
               },
-              "gradient": {
-                "type": "radial",
-                "from": {
-                  "x": 0.5,
-                  "y": 0
-                },
-                "to": {
-                  "x": 0.5,
-                  "y": 1
-                },
-                "colorStops": [
-                  {
-                    "color": {
-                      "r": 255,
-                      "g": 0,
-                      "b": 0,
-                      "a": 1
-                    },
-                    "position": 0
+              "to": {
+                "x": 0.5,
+                "y": 1
+              },
+              "colorStops": [
+                {
+                  "color": {
+                    "r": 255,
+                    "g": 0,
+                    "b": 0,
+                    "a": 1
                   },
-                  {
-                    "color": {
-                      "r": 255,
-                      "g": 0,
-                      "b": 0,
-                      "a": 0
-                    },
-                    "position": 1
-                  }
-                ]
-              }
+                  "position": 0
+                },
+                {
+                  "color": {
+                    "r": 255,
+                    "g": 0,
+                    "b": 0,
+                    "a": 0
+                  },
+                  "position": 1
+                }
+              ]
             }
           }
         ],
@@ -632,21 +532,13 @@
           {
             "position": "inside",
             "thickness": 2,
-            "fill": {
-              "type": "color",
-              "blendMode": "normal",
-              "fill": {
-                "r": 0,
-                "g": 0,
-                "b": 0,
-                "a": 1
-              },
-              "color": {
-                "r": 0,
-                "g": 0,
-                "b": 0,
-                "a": 1
-              }
+            "fillType": "color",
+            "blendMode": "normal",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 1
             }
           }
         ],
