@@ -4,30 +4,16 @@ Create, test and publish Zeplin extensions with no build configuration. ⚗️�
 
 ## Getting started
 
-If you use npm 5.2+, you can run Zeplin Extension Manager directly to create an extension:
+You can run Zeplin Extension Manager directly to create an extension:
 
 ```sh
 npx zem create my-extension
-```
-
-Otherwise, you can install Zeplin Extension Manager globally and run it right after:
-
-```sh
-npm install -g zem
-zem create my-extension
 ```
 
 You can also use `-y` option to create package with default configuration.
 
 ```sh
 npx zem create my-extension -y
-```
-
-or 
-
-```sh
-npm install -g zem
-zem create my-extension -y
 ```
 
 ## Overview
@@ -81,12 +67,13 @@ Options:
 
 #### `npm run test`
 
-Runs test scripts via jest. You can check [jest](https://jestjs.io/docs/en/cli.html) for options.
+Runs test scripts via Jest. Extension packages created using zem include a boilerplate test module. It uses Jest's snapshot testing feature to match the output of your extensions with the expected results. For example, you can take a look at our [React Native extension](https://github.com/zeplin/react-native-extension/blob/develop/src/index.test.js).
 
 ```
 Usage: npm run test -- [options]
 ```
 
+You can check [Jest's docs](https://jestjs.io/docs/en/cli.html) for options.
 
 #### `npm run clean`
 
@@ -117,7 +104,7 @@ Zeplin Extension Manager can authenticate using an access token instead of your 
 
 - Modules are transpiled to target Safari 9.1, as extensions are run both on the Web app and on the Mac app using JavaScriptCore, supporting macOS El Capitan.
 - Add an ESLint configuration and the source code will automatically be linted before building.
-- You can create `webpack.zem.js` at your root to customize webpack config. The module should export a function 
+- You can create `webpack.zem.js` at your root to customize webpack config. The module should export a function
 that takes current webpack config as an argument and return customized webpack config. For example:
 
 ```javascript
