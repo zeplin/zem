@@ -135,5 +135,6 @@ module.exports = async function (buildPath) {
     } catch (error) {
         console.log(chalk.red("Publishing extension failed:"));
         console.error(error.message || error);
+        throw error;
     }
 };

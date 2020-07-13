@@ -93,10 +93,13 @@ program
     .command("publish")
     .description(`Publish extension, submitting it for review to be listed on ${chalk.underline("https://extensions.zeplin.io.")}`)
     .option("--path <build-path>", `Path for the extension build to be published`)
-    .action(command => {
+    .action(async command => {
         const publish = require("./commands/publish");
-
-        return publish(command.path);
+        try {
+            await publish(command.path);
+        } catch (_) {
+            process.exitCode = 1;
+        }
     });
 
 program
