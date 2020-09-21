@@ -2,22 +2,40 @@
 const fs = require("fs-extra");
 const path = require("path");
 const chalk = require("chalk");
-
+const updateNotifier = require("update-notifier");
 const commander = require("commander");
+
 const { resolveBuildPath } = require("./utils/paths");
 const { defaultHostName, defaultPort } = require("./config/constants");
 const { name, version } = require(path.join(__dirname, "../package.json"));
 
+const seconds = 60;
+const minutes = 60;
+const hours = 24;
+const days = 5;
+const updateCheckInterval = days * hours * minutes * seconds;
+
+function beforeCommand() {
+    const notifier = updateNotifier({
+        pkg: { name, version },
+        shouldNotifyInNpmScript: true,
+        updateCheckInterval
+    });
+    notifier.notify();
+}
+
 const program = new commander.Command(name).version(version);
+const TEST_ARGS_INDEX = 3;
 
 program
     .command("create <dir>")
     .description("Create empty Zeplin extension at directory.")
-    .action(extensionDir => {
+    .option("-y --yes", "Create extension without prompt for configuration")
+    .action((extensionDir, { yes }) => {
         const create = require("./commands/create");
         const root = path.resolve(process.cwd(), extensionDir);
 
-        create(root);
+        return create({ root, disablePrompt: yes });
     });
 
 program
@@ -75,14 +93,28 @@ program
     .command("publish")
     .description(`Publish extension, submitting it for review to be listed on ${chalk.underline("https://extensions.zeplin.io.")}`)
     .option("--path <build-path>", `Path for the extension build to be published`)
-    .action(command => {
+    .action(async command => {
         const publish = require("./commands/publish");
+        try {
+            await publish(command.path);
+        } catch (_) {
+            process.exitCode = 1;
+        }
+    });
 
-        publish(command.path);
+program
+    .command("test")
+    .description(`Test via jest`)
+    .allowUnknownOption()
+    .action(command => {
+        const test = require("./commands/test");
+
+        test(process.argv.slice(TEST_ARGS_INDEX));
     });
 
 program.on("command:*", () => {
     program.outputHelp();
 });
 
+beforeCommand();
 program.parse(process.argv);

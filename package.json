@@ -1,6 +1,6 @@
 {
   "name": "zem",
-  "version": "0.4.4",
+  "version": "1.0.5",
   "description": "Create, test and publish Zeplin extensions with no build configuration",
   "homepage": "https://zeplin.io",
   "keywords": [
@@ -14,7 +14,7 @@
     "url": "https://github.com/zeplin/zem.git"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "bin": {
     "zem": "./src/index.js"
@@ -28,25 +28,35 @@
   "dependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
-    "@zeplin/extension-model": "^1.1.1",
+    "@types/jest": "^25.1.2",
+    "@zeplin/extension-model": "^2.5.1",
     "adm-zip": "^0.4.11",
+    "ajv": "^6.12.0",
+    "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
+    "case": "^1.6.2",
     "chalk": "^2.3.1",
+    "ci-info": "^2.0.0",
     "commander": "^2.14.1",
     "eslint": "^4.18.1",
     "eslint-loader": "^2.0.0",
     "fs-extra": "^5.0.0",
+    "http-status-codes": "^1.4.0",
+    "jest": "^25.1.0",
     "jsonwebtoken": "^8.3.0",
     "prismjs": "^1.11.0",
-    "prompts": "^0.1.14",
+    "prompts": "^2.3.1",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.5",
+    "update-notifier": "^4.0.0",
     "webpack": "^4.41.5",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.1.2"
   },
   "devDependencies": {
-    "@zeplin/eslint-config": "^1.2.2"
+    "@types/fs-extra": "^5.0.0",
+    "@zeplin/eslint-config": "^1.2.2",
+    "npm-merge-driver-install": "^1.1.1"
   },
   "eslintConfig": {
     "extends": "@zeplin/eslint-config/node",

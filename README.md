@@ -4,17 +4,16 @@ Create, test and publish Zeplin extensions with no build configuration. ⚗️�
 
 ## Getting started
 
-If you use npm 5.2+, you can run Zeplin Extension Manager directly to create an extension:
+You can run Zeplin Extension Manager directly to create an extension:
 
 ```sh
 npx zem create my-extension
 ```
 
-Otherwise, you can install Zeplin Extension Manager globally and run it right after:
+You can also use `-y` option to create package with default configuration.
 
 ```sh
-npm install -g zem
-zem create my-extension
+npx zem create my-extension -y
 ```
 
 ## Overview
@@ -66,6 +65,16 @@ Options:
   --defaults <default-options>  Set default extension option values (e.g, flag=false,prefix=\"pre\")
 ```
 
+#### `npm run test`
+
+Runs test scripts via Jest. Extension packages created using zem include a boilerplate test module. It uses Jest's snapshot testing feature to match the output of your extensions with the expected results. For example, you can take a look at our [React Native extension](https://github.com/zeplin/react-native-extension/blob/develop/src/index.test.js).
+
+```
+Usage: npm run test -- [options]
+```
+
+You can check [Jest's docs](https://jestjs.io/docs/en/cli.html) for options.
+
 #### `npm run clean`
 
 Cleans build directory.
@@ -83,10 +92,43 @@ Options:
   --path <build-path>           Path for the extension build to publish (default: Path used by the build command)
 ```
 
+
+##### Usage with access token:
+
+Zeplin Extension Manager can authenticate using an access token instead of your Zeplin credentials which makes it easier to integrate it into your CI workflow.
+
+1. Get a `zem` access token from your [Profile](https://app.zeplin.io/profile/connected-apps) in Zeplin.
+2. Set `ZEM_ACCESS_TOKEN` environment variable in your CI.
+
 ## Tidbits
 
 - Modules are transpiled to target Safari 9.1, as extensions are run both on the Web app and on the Mac app using JavaScriptCore, supporting macOS El Capitan.
 - Add an ESLint configuration and the source code will automatically be linted before building.
+- You can create `webpack.zem.js` at your root to customize webpack config. The module should export a function
+that takes current webpack config as an argument and return customized webpack config. For example:
+
+```javascript
+module.exports = function({ module: { rules, ...module }, ...webpackConfig }) {
+  return {
+    ...webpackConfig,
+
+    resolve: {
+      extensions: [".ts"]
+    },
+    module: {
+      ...module,
+      rules: [
+        {
+          test: /\.tsx?$/,
+          use: "ts-loader",
+          exclude: /node_modules/,
+        },
+        ...rules,
+      ],
+    },
+  };
+};
+```
 
 ## Community solutions
 

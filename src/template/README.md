@@ -1,22 +1,27 @@
-# Sample Zeplin Extension
+# {{displayName}}
 
-[Zeplin](https://zeplin.io) extension that generates sample snippets.
+{{description}}
 
 ## Getting started
 
-Add the extension to your project from extensions.zeplin.io.
+Add the extension to your project from [extensions.zeplin.io](https://extensions.zeplin.io).
 
+<!--- Template for output section
 ## Output
 
 ```
-sample
+sample code snippet
 ```
+-->
 
+<!--- Template for options section
 ## Options
 
 #### Sample option
 
 Sample option providing sample functionality.
+
+--->
 
 ## Development
 
