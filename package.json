@@ -1,6 +1,6 @@
 {
   "name": "zem",
-  "version": "1.0.1",
+  "version": "1.0.6",
   "description": "Create, test and publish Zeplin extensions with no build configuration",
   "homepage": "https://zeplin.io",
   "keywords": [
@@ -51,7 +51,7 @@
     "request-promise-native": "^1.0.5",
     "update-notifier": "^4.0.0",
     "webpack": "^4.41.5",
-    "webpack-dev-server": "^3.10.3",
+    "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.1.2"
   },
   "devDependencies": {

@@ -8,6 +8,7 @@ const paths = require("../../utils/paths");
 const manifestValidator = require("./manifest-validator");
 const ApiClient = require("./apiClient");
 const AuthenticationService = require("./authenticationService");
+const { isCI } = require("../../config/constants");
 const { version: packageVersion } = require(paths.resolveExtensionPath("./package.json"));
 
 const pathResolver = {
@@ -56,6 +57,10 @@ function createArchive() {
 }
 
 async function confirm() {
+    if (isCI) {
+        return true;
+    }
+
     const { answer } = await prompts({
         type: "confirm",
         name: "answer",
@@ -135,5 +140,6 @@ module.exports = async function (buildPath) {
     } catch (error) {
         console.log(chalk.red("Publishing extension failed:"));
         console.error(error.message || error);
+        throw error;
     }
 };
