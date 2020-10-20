@@ -25,7 +25,7 @@ const jsLoaders = [{
                 {
                     useBuiltIns: "usage",
                     corejs: 3,
-                    modules: "commonjs",
+                    modules: false, // Should be false to run tree shaking. See: https://webpack.js.org/guides/tree-shaking/
                     targets: {
                         chrome: 45,
                         safari: "9.1",
