@@ -18,6 +18,7 @@
       {
         "type": "shape",
         "name": "Sample layer",
+        "sourceId": "15b2dbb4-3259-4c8e-a8e3-24b292145d21",
         "opacity": 1,
         "blendMode": "normal",
         "borderRadius": 0,
@@ -37,6 +38,7 @@
       {
         "type": "text",
         "name": "Text layer with multiple styles",
+        "sourceId": "859f1b9e-0437-4408-b84c-ea6c10c37d8f",
         "exportable": false,
         "rotation": 0,
         "opacity": 1,
@@ -125,6 +127,7 @@
       {
         "type": "text",
         "name": "Text layer",
+        "sourceId": "01c469df-4ff5-449d-8d2a-246c0e87f476",
         "exportable": false,
         "rotation": 0,
         "opacity": 1,
@@ -169,6 +172,7 @@
       {
         "type": "shape",
         "name": "Layer with blur",
+        "sourceId": "49ddae53-1bf3-48e4-ae70-b0ff0abcd1cf",
         "exportable": false,
         "rotation": 0,
         "opacity": 1,
@@ -186,6 +190,12 @@
           {
             "fillType": "color",
             "blendMode": "normal",
+            "fill": {
+              "r": 0,
+              "g": 255,
+              "b": 255,
+              "a": 1
+            },
             "color": {
               "r": 0,
               "g": 255,
@@ -205,6 +215,7 @@
       {
         "type": "shape",
         "name": "Exportable layer",
+        "sourceId": "f02c0baf-0353-4080-95a7-3448314b6084",
         "exportable": true,
         "rotation": 0,
         "opacity": 1,
@@ -222,6 +233,12 @@
           {
             "fillType": "color",
             "blendMode": "normal",
+            "fill": {
+              "r": 255,
+              "g": 255,
+              "b": 0,
+              "a": 1
+            },
             "color": {
               "r": 255,
               "g": 255,
@@ -237,6 +254,7 @@
       {
         "type": "shape",
         "name": "Layer with border radius",
+        "sourceId": "66d0761e-246a-4151-87f9-33feb47c6401",
         "exportable": false,
         "rotation": 0,
         "opacity": 1,
@@ -254,6 +272,12 @@
           {
             "fillType": "color",
             "blendMode": "normal",
+            "fill": {
+              "r": 255,
+              "g": 0,
+              "b": 0,
+              "a": 1
+            },
             "color": {
               "r": 255,
               "g": 0,
@@ -269,6 +293,7 @@
       {
         "type": "shape",
         "name": "Rotated layer",
+        "sourceId": "76ef71eb-04df-44fb-8ab8-c4214c2144e4",
         "exportable": false,
         "rotation": -45,
         "opacity": 1,
@@ -286,6 +311,12 @@
           {
             "fillType": "color",
             "blendMode": "normal",
+            "fill": {
+              "r": 0,
+              "g": 255,
+              "b": 0,
+              "a": 1
+            },
             "color": {
               "r": 0,
               "g": 255,
@@ -301,6 +332,7 @@
       {
         "type": "shape",
         "name": "Transparent layer with blend mode",
+        "sourceId": "5267442e-a184-4c0c-b9c1-24eaf2924d51",
         "exportable": false,
         "rotation": 0,
         "opacity": 0.3,
@@ -318,6 +350,12 @@
           {
             "fillType": "color",
             "blendMode": "normal",
+            "fill": {
+              "r": 0,
+              "g": 255,
+              "b": 0,
+              "a": 1
+            },
             "color": {
               "r": 0,
               "g": 255,
@@ -333,6 +371,7 @@
       {
         "type": "shape",
         "name": "Layer with shadow",
+        "sourceId": "e1ca8514-3755-4305-a854-230d25d7af28",
         "exportable": false,
         "rotation": 0,
         "opacity": 1,
@@ -368,6 +407,7 @@
       {
         "type": "shape",
         "name": "Layer with gradient fill",
+        "sourceId": "e156c599-4813-4a96-8516-0173799905c7",
         "exportable": false,
         "rotation": 0,
         "opacity": 1,
@@ -385,6 +425,37 @@
           {
             "fillType": "gradient",
             "blendMode": "normal",
+            "fill": {
+              "type": "linear",
+              "from": {
+                "x": 0.5,
+                "y": 0
+              },
+              "to": {
+                "x": 0.5,
+                "y": 1
+              },
+              "colorStops": [
+                {
+                  "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 0.5
+                  },
+                  "position": 0
+                },
+                {
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0,
+                    "a": 0.5
+                  },
+                  "position": 1
+                }
+              ]
+            },
             "gradient": {
               "type": "linear",
               "from": {
@@ -425,6 +496,7 @@
       {
         "type": "shape",
         "name": "Layer with fill",
+        "sourceId": "fd1c3674-bfca-4b6c-81d6-5033703e8891",
         "exportable": false,
         "rotation": 0,
         "opacity": 1,
@@ -442,6 +514,12 @@
           {
             "fillType": "color",
             "blendMode": "normal",
+            "fill": {
+              "r": 0,
+              "g": 0,
+              "b": 255,
+              "a": 1
+            },
             "color": {
               "r": 0,
               "g": 0,
@@ -457,6 +535,7 @@
       {
         "type": "shape",
         "name": "Layer with gradient border",
+        "sourceId": "e308b2cb-aa94-4294-a5e3-5e37ee0af33c",
         "exportable": false,
         "rotation": 0,
         "opacity": 1,
@@ -473,38 +552,71 @@
           {
             "position": "outside",
             "thickness": 6,
-            "fillType": "gradient",
-            "blendMode": "normal",
-            "gradient": {
-              "type": "radial",
-              "from": {
-                "x": 0.5,
-                "y": 0
-              },
-              "to": {
-                "x": 0.5,
-                "y": 1
-              },
-              "colorStops": [
-                {
-                  "color": {
-                    "r": 255,
-                    "g": 0,
-                    "b": 0,
-                    "a": 1
-                  },
-                  "position": 0
+            "fill": {
+              "type": "gradient",
+              "blendMode": "normal",
+              "fill": {
+                "type": "radial",
+                "from": {
+                  "x": 0.5,
+                  "y": 0
                 },
-                {
-                  "color": {
-                    "r": 255,
-                    "g": 0,
-                    "b": 0,
-                    "a": 0
+                "to": {
+                  "x": 0.5,
+                  "y": 1
+                },
+                "colorStops": [
+                  {
+                    "color": {
+                      "r": 255,
+                      "g": 0,
+                      "b": 0,
+                      "a": 1
+                    },
+                    "position": 0
                   },
-                  "position": 1
-                }
-              ]
+                  {
+                    "color": {
+                      "r": 255,
+                      "g": 0,
+                      "b": 0,
+                      "a": 0
+                    },
+                    "position": 1
+                  }
+                ]
+              },
+              "gradient": {
+                "type": "radial",
+                "from": {
+                  "x": 0.5,
+                  "y": 0
+                },
+                "to": {
+                  "x": 0.5,
+                  "y": 1
+                },
+                "colorStops": [
+                  {
+                    "color": {
+                      "r": 255,
+                      "g": 0,
+                      "b": 0,
+                      "a": 1
+                    },
+                    "position": 0
+                  },
+                  {
+                    "color": {
+                      "r": 255,
+                      "g": 0,
+                      "b": 0,
+                      "a": 0
+                    },
+                    "position": 1
+                  }
+                ]
+              }
             }
           }
         ],
@@ -516,6 +628,7 @@
       {
         "type": "shape",
         "name": "Layer with border",
+        "sourceId": "8713de27-bf05-47d8-bc0f-90e1ce1cdbdc",
         "exportable": false,
         "rotation": 0,
         "opacity": 1,
@@ -532,16 +645,97 @@
           {
             "position": "inside",
             "thickness": 2,
-            "fillType": "color",
-            "blendMode": "normal",
-            "color": {
-              "r": 0,
-              "g": 0,
-              "b": 0,
-              "a": 1
+            "fill": {
+              "type": "color",
+              "blendMode": "normal",
+              "fill": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 1
+              },
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 1
+              }
             }
           }
         ],
+        "fills": [],
+        "shadows": [],
+        "textStyles": [],
+        "assets": []
+      },
+      {
+        "type": "group",
+        "name": "layer with layout",
+        "sourceId": "49478193-d2c9-4aa4-90b1-b06d70dfa9f5",
+        "layout": {
+          "alignment": "min",
+          "direction": "row",
+          "gap": 30,
+          "padding": {
+            "horizontal": 40,
+            "vertical": 20
+          },
+          "sizingMode": "auto"
+        },
+        "opacity": 1,
+        "blendMode": "normal",
+        "borderRadius": 0,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 310,
+          "height": 140
+        },
+        "content": "",
+        "layers": [
+          {
+            "type": "shape",
+            "name": "first child",
+            "sourceId": "51081349-b540-4f27-997b-5fb405d286ff",
+            "opacity": 1,
+            "blendMode": "normal",
+            "borderRadius": 0,
+            "rect": {
+              "x": 40,
+              "y": 20,
+              "width": 100,
+              "height": 100
+            },
+            "content": "",
+            "borders": [],
+            "fills": [],
+            "shadows": [],
+            "textStyles": [],
+            "assets": []
+          },
+          {
+            "type": "shape",
+            "name": "second child",
+            "sourceId": "98535715-30ee-4ffd-acbf-04a0be34d73d",
+            "opacity": 1,
+            "blendMode": "normal",
+            "borderRadius": 0,
+            "rect": {
+              "x": 170,
+              "y": 20,
+              "width": 100,
+              "height": 100
+            },
+
+            "content": "",
+            "borders": [],
+            "fills": [],
+            "shadows": [],
+            "textStyles": [],
+            "assets": []
+          }
+        ],
+        "borders": [],
         "fills": [],
         "shadows": [],
         "textStyles": [],
