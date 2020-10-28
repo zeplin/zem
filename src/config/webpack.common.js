@@ -39,7 +39,7 @@ const jsLoaders = [{
 }];
 
 if (eslintEnabled) {
-    jsLoaders.push(require.resolve("eslint-loader"));
+    jsLoaders.push("eslint-loader");
 }
 
 module.exports = {
