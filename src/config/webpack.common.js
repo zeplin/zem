@@ -17,22 +17,29 @@ const copies = {
 const { eslintConfig, main: entryPoint } = require(resolveExtensionPath("package.json"));
 const eslintEnabled = eslintConfig || fs.readdirSync(extensionPath).find(f => f.startsWith(".eslintrc"));
 const jsLoaders = [{
-    loader: require.resolve("babel-loader"),
+    loader: "babel-loader",
     options: {
         presets: [
-            [require.resolve("@babel/preset-env"), {
-                targets: {
-                    chrome: 45,
-                    safari: "9.1",
-                    firefox: 45
+            [
+                "@babel/preset-env",
+                {
+                    useBuiltIns: "usage",
+                    corejs: 3,
+                    modules: false, // Should be false to run tree shaking. See: https://webpack.js.org/guides/tree-shaking/
+                    targets: {
+                        chrome: 62,
+                        safari: 11,
+                        firefox: 59,
+                        edge: 15
+                    }
                 }
-            }]
+            ]
         ]
     }
 }];
 
 if (eslintEnabled) {
-    jsLoaders.push(require.resolve("eslint-loader"));
+    jsLoaders.push("eslint-loader");
 }
 
 module.exports = {

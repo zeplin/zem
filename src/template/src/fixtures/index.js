@@ -6,7 +6,7 @@ import componentsData from "./components.json";
 import versionData from "./version.json";
 import { zeplin } from "../../package.json";
 
-const defaultOptions = zeplin.options.reduce((options, option) => {
+const defaultOptions = zeplin.options?.reduce((options, option) => {
     options[option.id] = option.default;
     return options;
 }, {});

@@ -78,6 +78,7 @@ const createPackageJson = (root, { packageName, description, displayName, platfo
         name: packageName,
         version: "0.1.0",
         description,
+        sideEffects: false,
         scripts: {
             start: "zem start",
             build: "zem build",
