@@ -7,6 +7,9 @@ const { bundleName } = require("../config/constants");
 const { resolveBuildPath, resolveExtensionPath } = require("../utils/paths");
 const {
     Context,
+    Screen,
+    Component,
+    ComponentVariant,
     Version
 } = require("@zeplin/extension-model");
 
@@ -61,7 +64,42 @@ function callExtensionFunction(extension, fnName, ...args) {
         }).catch(error => chalk.red(error.stack));
 }
 
-function executeLayer(extension, context, version) {
+function executeScreen(extension, context) {
+    const version = new Version(sampleData.screenVersion);
+    const screens = sampleData.screens.map(s => new Screen(s));
+
+    return Promise.all(
+        screens.map(screen => callExtensionFunction(extension, "screen", context, version, screen))
+    ).then(results => {
+        console.log(chalk.underline.bold("\nScreens:"));
+
+        results.forEach((codeData, index) => {
+            printCodeData(codeData, `${screens[index].name}:`);
+        });
+    });
+}
+
+function executeComponent(extension, context) {
+    const singleComponents = sampleData.components.map(c => new Component(c));
+    const variantComponents = sampleData.componentVariants.map(
+        variantData => new ComponentVariant(variantData)
+    ).reduce((cs, variant) => cs.concat(variant.components), []);
+    const components = singleComponents.concat(variantComponents);
+
+    return Promise.all(
+        components.map(component => callExtensionFunction(extension, "component", context, component.latestVersion, component))
+    ).then(results => {
+        console.log(chalk.underline.bold("\nComponents:"));
+
+        results.forEach((codeData, index) => {
+            printCodeData(codeData, `${components[index].name}:`);
+        });
+    });
+}
+
+function executeLayer(extension, context) {
+    const version = new Version(sampleData.screenVersion);
+
     return Promise.all(
         version
             .layers
@@ -103,17 +141,19 @@ const EXTENSION_FUNCTIONS = {
     layer: executeLayer,
     colors: executeColors,
     textStyles: executeTextStyles,
-    spacing: executeSpacing
+    spacing: executeSpacing,
+    screen: executeScreen,
+    component: executeComponent
 };
 
-function executeFunction(extension, fnName, context, version) {
+function executeFunction(extension, fnName, context) {
     const fn = EXTENSION_FUNCTIONS[fnName];
 
     if (!fn) {
         console.log(chalk.yellow(`Function “${fnName}” not defined.`));
         return;
     }
-    fn(extension, context, version);
+    fn(extension, context);
 }
 
 function executeExtension(extension, fnName, defaultOptions = {}) {
@@ -122,17 +162,18 @@ function executeExtension(extension, fnName, defaultOptions = {}) {
         options,
         project: sampleData.project
     });
-    const version = new Version(sampleData.version);
 
     if (fnName) {
-        executeFunction(extension, fnName, context, version);
+        executeFunction(extension, fnName, context);
         return;
     }
 
-    executeFunction(extension, "layer", context, version);
-    executeFunction(extension, "colors", context, version);
-    executeFunction(extension, "textStyles", context, version);
-    executeFunction(extension, "spacing", context, version);
+    executeFunction(extension, "colors", context);
+    executeFunction(extension, "textStyles", context);
+    executeFunction(extension, "spacing", context);
+    executeFunction(extension, "component", context);
+    executeFunction(extension, "screen", context);
+    executeFunction(extension, "layer", context);
 }
 
 module.exports = function (webpackConfig, fnName, defaultOptions, shouldBuild) {

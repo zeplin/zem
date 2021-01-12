@@ -1,0 +1,2495 @@
+[
+    {
+        "name": "Button",
+        "propertyDescriptors": [
+            {
+                "id": "5fdd6c74f4da870b63352c04",
+                "name": "Type",
+                "values": [
+                    "error",
+                    "default"
+                ]
+            },
+            {
+                "id": "5fdd6c74f4da870b63352c05",
+                "name": "Ghost",
+                "values": [
+                    "yes",
+                    "no"
+                ]
+            },
+            {
+                "id": "5fdd6c74f4da870b63352c06",
+                "name": "State",
+                "values": [
+                    "disabled",
+                    "default",
+                    "hover"
+                ]
+            }
+        ],
+        "components": [
+            {
+                "id": "5fdd6c7513adb90b6a199307",
+                "name": "Button / error / yes / default",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "figma",
+                        "height": 34,
+                        "layers": [
+                            {
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 56,
+                                    "height": 34
+                                },
+                                "rotation": 0,
+                                "layers": [
+                                    {
+                                        "shadows": [],
+                                        "name": "Button Text",
+                                        "rotation": 0,
+                                        "blendMode": "normal",
+                                        "content": "Button",
+                                        "type": "text",
+                                        "opacity": 1,
+                                        "sourceId": "140:8",
+                                        "fills": [],
+                                        "textStyles": [
+                                            {
+                                                "range": {
+                                                    "location": 0,
+                                                    "length": 6
+                                                },
+                                                "style": {
+                                                    "fontSize": 12,
+                                                    "letterSpacing": 0,
+                                                    "fontFace": "Roboto-Regular",
+                                                    "textAlign": "left",
+                                                    "color": {
+                                                        "r": 235,
+                                                        "b": 21,
+                                                        "g": 21,
+                                                        "a": 1
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "exportable": false,
+                                        "borders": [],
+                                        "borderRadius": 0,
+                                        "rect": {
+                                            "y": 10,
+                                            "x": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        },
+                                        "_id": "5fdd6c7513adb90b6a19930b",
+                                        "absoluteRect": {
+                                            "x": 10,
+                                            "y": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        }
+                                    }
+                                ],
+                                "blendMode": "normal",
+                                "interactionLevel": "bottom",
+                                "type": "group",
+                                "opacity": 1,
+                                "sourceId": "140:7",
+                                "fills": [],
+                                "exportable": false,
+                                "borders": [
+                                    {
+                                        "blendMode": "normal",
+                                        "fillType": "color",
+                                        "position": "inside",
+                                        "thickness": 1,
+                                        "opacity": 1,
+                                        "color": {
+                                            "r": 235,
+                                            "b": 21,
+                                            "g": 21,
+                                            "a": 1
+                                        }
+                                    }
+                                ],
+                                "borderRadius": 5,
+                                "shadows": [],
+                                "_id": "5fdd6c7513adb90b6a19930a",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 56,
+                                    "height": 34
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 56,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/56/34"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fdd6c74f4da870b63352c04",
+                        "value": "error"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c05",
+                        "value": "yes"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c06",
+                        "value": "default"
+                    }
+                ]
+            },
+            {
+                "id": "5fdd6c754cb3f47caf4b9ac3",
+                "name": "Button / default / no / hover",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "figma",
+                        "height": 34,
+                        "layers": [
+                            {
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 56,
+                                    "height": 34
+                                },
+                                "rotation": 0,
+                                "layers": [
+                                    {
+                                        "shadows": [],
+                                        "name": "Button Text",
+                                        "rotation": 0,
+                                        "blendMode": "normal",
+                                        "content": "Button",
+                                        "type": "text",
+                                        "opacity": 1,
+                                        "sourceId": "140:32",
+                                        "fills": [],
+                                        "textStyles": [
+                                            {
+                                                "range": {
+                                                    "location": 0,
+                                                    "length": 6
+                                                },
+                                                "style": {
+                                                    "fontSize": 12,
+                                                    "letterSpacing": 0,
+                                                    "fontFace": "Roboto-Regular",
+                                                    "textAlign": "left",
+                                                    "color": {
+                                                        "r": 255,
+                                                        "b": 255,
+                                                        "g": 255,
+                                                        "a": 1
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "exportable": false,
+                                        "borders": [],
+                                        "borderRadius": 0,
+                                        "rect": {
+                                            "y": 10,
+                                            "x": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        },
+                                        "_id": "5fdd6c754cb3f47caf4b9ac7",
+                                        "absoluteRect": {
+                                            "x": 10,
+                                            "y": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        }
+                                    }
+                                ],
+                                "blendMode": "normal",
+                                "interactionLevel": "bottom",
+                                "type": "group",
+                                "opacity": 1,
+                                "sourceId": "140:31",
+                                "fills": [
+                                    {
+                                        "color": {
+                                            "r": 165,
+                                            "b": 165,
+                                            "g": 165,
+                                            "a": 1
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [
+                                    {
+                                        "blendMode": "normal",
+                                        "fillType": "color",
+                                        "position": "inside",
+                                        "thickness": 4,
+                                        "opacity": 1,
+                                        "color": {
+                                            "r": 48,
+                                            "b": 255,
+                                            "g": 168,
+                                            "a": 1
+                                        }
+                                    }
+                                ],
+                                "borderRadius": 5,
+                                "shadows": [],
+                                "_id": "5fdd6c754cb3f47caf4b9ac6",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 56,
+                                    "height": 34
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 56,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/56/34"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fdd6c74f4da870b63352c04",
+                        "value": "default"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c05",
+                        "value": "no"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c06",
+                        "value": "hover"
+                    }
+                ]
+            },
+            {
+                "id": "5fdd6c754cb3f47caf4b9acc",
+                "name": "Button / default / no / disabled",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "figma",
+                        "height": 34,
+                        "layers": [
+                            {
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 56,
+                                    "height": 34
+                                },
+                                "rotation": 0,
+                                "layers": [
+                                    {
+                                        "shadows": [],
+                                        "name": "Button Text",
+                                        "rotation": 0,
+                                        "blendMode": "normal",
+                                        "content": "Button",
+                                        "type": "text",
+                                        "opacity": 1,
+                                        "sourceId": "140:35",
+                                        "fills": [],
+                                        "textStyles": [
+                                            {
+                                                "range": {
+                                                    "location": 0,
+                                                    "length": 6
+                                                },
+                                                "style": {
+                                                    "fontSize": 12,
+                                                    "letterSpacing": 0,
+                                                    "fontFace": "Roboto-Regular",
+                                                    "textAlign": "left",
+                                                    "color": {
+                                                        "r": 255,
+                                                        "b": 255,
+                                                        "g": 255,
+                                                        "a": 1
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "exportable": false,
+                                        "borders": [],
+                                        "borderRadius": 0,
+                                        "rect": {
+                                            "y": 10,
+                                            "x": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        },
+                                        "_id": "5fdd6c754cb3f47caf4b9ad0",
+                                        "absoluteRect": {
+                                            "x": 10,
+                                            "y": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        }
+                                    }
+                                ],
+                                "blendMode": "normal",
+                                "interactionLevel": "bottom",
+                                "type": "group",
+                                "opacity": 1,
+                                "sourceId": "140:34",
+                                "fills": [
+                                    {
+                                        "color": {
+                                            "r": 165,
+                                            "b": 165,
+                                            "g": 165,
+                                            "a": 0.5
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "borderRadius": 5,
+                                "shadows": [],
+                                "_id": "5fdd6c754cb3f47caf4b9acf",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 56,
+                                    "height": 34
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 56,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/56/34"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fdd6c74f4da870b63352c04",
+                        "value": "default"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c05",
+                        "value": "no"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c06",
+                        "value": "disabled"
+                    }
+                ]
+            },
+            {
+                "id": "5fdd6c7513adb90b6a19930f",
+                "name": "Button / default / yes / disabled",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "figma",
+                        "height": 34,
+                        "layers": [
+                            {
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 56,
+                                    "height": 34
+                                },
+                                "rotation": 0,
+                                "layers": [
+                                    {
+                                        "shadows": [],
+                                        "name": "Button Text",
+                                        "rotation": 0,
+                                        "blendMode": "normal",
+                                        "content": "Button",
+                                        "type": "text",
+                                        "opacity": 1,
+                                        "sourceId": "140:17",
+                                        "fills": [],
+                                        "textStyles": [
+                                            {
+                                                "range": {
+                                                    "location": 0,
+                                                    "length": 6
+                                                },
+                                                "style": {
+                                                    "fontSize": 12,
+                                                    "letterSpacing": 0,
+                                                    "fontFace": "Roboto-Regular",
+                                                    "textAlign": "left",
+                                                    "color": {
+                                                        "r": 165,
+                                                        "b": 165,
+                                                        "g": 165,
+                                                        "a": 0.5
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "exportable": false,
+                                        "borders": [],
+                                        "borderRadius": 0,
+                                        "rect": {
+                                            "y": 10,
+                                            "x": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        },
+                                        "_id": "5fdd6c7513adb90b6a199313",
+                                        "absoluteRect": {
+                                            "x": 10,
+                                            "y": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        }
+                                    }
+                                ],
+                                "blendMode": "normal",
+                                "interactionLevel": "bottom",
+                                "type": "group",
+                                "opacity": 1,
+                                "sourceId": "140:16",
+                                "fills": [],
+                                "exportable": false,
+                                "borders": [
+                                    {
+                                        "blendMode": "normal",
+                                        "fillType": "color",
+                                        "position": "inside",
+                                        "thickness": 1,
+                                        "opacity": 1,
+                                        "color": {
+                                            "r": 165,
+                                            "b": 165,
+                                            "g": 165,
+                                            "a": 0.5
+                                        }
+                                    }
+                                ],
+                                "borderRadius": 5,
+                                "shadows": [],
+                                "_id": "5fdd6c7513adb90b6a199312",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 56,
+                                    "height": 34
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 56,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/56/34"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fdd6c74f4da870b63352c04",
+                        "value": "default"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c05",
+                        "value": "yes"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c06",
+                        "value": "disabled"
+                    }
+                ]
+            },
+            {
+                "id": "5fdd6c756340307cb62bae8b",
+                "name": "Button / error / yes / hover",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "figma",
+                        "height": 34,
+                        "layers": [
+                            {
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 56,
+                                    "height": 34
+                                },
+                                "rotation": 0,
+                                "layers": [
+                                    {
+                                        "shadows": [],
+                                        "name": "Button Text",
+                                        "rotation": 0,
+                                        "blendMode": "normal",
+                                        "content": "Button",
+                                        "type": "text",
+                                        "opacity": 1,
+                                        "sourceId": "140:14",
+                                        "fills": [],
+                                        "textStyles": [
+                                            {
+                                                "range": {
+                                                    "location": 0,
+                                                    "length": 6
+                                                },
+                                                "style": {
+                                                    "fontSize": 12,
+                                                    "letterSpacing": 0,
+                                                    "fontFace": "Roboto-Regular",
+                                                    "textAlign": "left",
+                                                    "color": {
+                                                        "r": 235,
+                                                        "b": 21,
+                                                        "g": 21,
+                                                        "a": 1
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "exportable": false,
+                                        "borders": [],
+                                        "borderRadius": 0,
+                                        "rect": {
+                                            "y": 10,
+                                            "x": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        },
+                                        "_id": "5fdd6c756340307cb62bae8f",
+                                        "absoluteRect": {
+                                            "x": 10,
+                                            "y": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        }
+                                    }
+                                ],
+                                "blendMode": "normal",
+                                "interactionLevel": "bottom",
+                                "type": "group",
+                                "opacity": 1,
+                                "sourceId": "140:13",
+                                "fills": [],
+                                "exportable": false,
+                                "borders": [
+                                    {
+                                        "blendMode": "normal",
+                                        "fillType": "color",
+                                        "position": "inside",
+                                        "thickness": 4,
+                                        "opacity": 1,
+                                        "color": {
+                                            "r": 48,
+                                            "b": 255,
+                                            "g": 168,
+                                            "a": 1
+                                        }
+                                    }
+                                ],
+                                "borderRadius": 5,
+                                "shadows": [],
+                                "_id": "5fdd6c756340307cb62bae8e",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 56,
+                                    "height": 34
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 56,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/56/34"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fdd6c74f4da870b63352c04",
+                        "value": "error"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c05",
+                        "value": "yes"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c06",
+                        "value": "hover"
+                    }
+                ]
+            },
+            {
+                "id": "5fdd6c756340307cb62bae90",
+                "name": "Button / error / no / disabled",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "figma",
+                        "height": 34,
+                        "layers": [
+                            {
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 56,
+                                    "height": 34
+                                },
+                                "rotation": 0,
+                                "layers": [
+                                    {
+                                        "shadows": [],
+                                        "name": "Button Text",
+                                        "rotation": 0,
+                                        "blendMode": "normal",
+                                        "content": "Button",
+                                        "type": "text",
+                                        "opacity": 1,
+                                        "sourceId": "140:26",
+                                        "fills": [],
+                                        "textStyles": [
+                                            {
+                                                "range": {
+                                                    "location": 0,
+                                                    "length": 6
+                                                },
+                                                "style": {
+                                                    "fontSize": 12,
+                                                    "letterSpacing": 0,
+                                                    "fontFace": "Roboto-Regular",
+                                                    "textAlign": "left",
+                                                    "color": {
+                                                        "r": 255,
+                                                        "b": 255,
+                                                        "g": 255,
+                                                        "a": 1
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "exportable": false,
+                                        "borders": [],
+                                        "borderRadius": 0,
+                                        "rect": {
+                                            "y": 10,
+                                            "x": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        },
+                                        "_id": "5fdd6c756340307cb62bae94",
+                                        "absoluteRect": {
+                                            "x": 10,
+                                            "y": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        }
+                                    }
+                                ],
+                                "blendMode": "normal",
+                                "interactionLevel": "bottom",
+                                "type": "group",
+                                "opacity": 1,
+                                "sourceId": "140:25",
+                                "fills": [
+                                    {
+                                        "color": {
+                                            "r": 235,
+                                            "b": 21,
+                                            "g": 21,
+                                            "a": 0.5
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "borderRadius": 5,
+                                "shadows": [],
+                                "_id": "5fdd6c756340307cb62bae93",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 56,
+                                    "height": 34
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 56,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/56/34"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fdd6c74f4da870b63352c04",
+                        "value": "error"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c05",
+                        "value": "no"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c06",
+                        "value": "disabled"
+                    }
+                ]
+            },
+            {
+                "id": "5fdd6c7513adb90b6a199314",
+                "name": "Button / error / no / default",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "figma",
+                        "height": 34,
+                        "layers": [
+                            {
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 56,
+                                    "height": 34
+                                },
+                                "rotation": 0,
+                                "layers": [
+                                    {
+                                        "shadows": [],
+                                        "name": "Button Text",
+                                        "rotation": 0,
+                                        "blendMode": "normal",
+                                        "content": "Button",
+                                        "type": "text",
+                                        "opacity": 1,
+                                        "sourceId": "140:29",
+                                        "fills": [],
+                                        "textStyles": [
+                                            {
+                                                "range": {
+                                                    "location": 0,
+                                                    "length": 6
+                                                },
+                                                "style": {
+                                                    "fontSize": 12,
+                                                    "letterSpacing": 0,
+                                                    "fontFace": "Roboto-Regular",
+                                                    "textAlign": "left",
+                                                    "color": {
+                                                        "r": 255,
+                                                        "b": 255,
+                                                        "g": 255,
+                                                        "a": 1
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "exportable": false,
+                                        "borders": [],
+                                        "borderRadius": 0,
+                                        "rect": {
+                                            "y": 10,
+                                            "x": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        },
+                                        "_id": "5fdd6c7513adb90b6a199318",
+                                        "absoluteRect": {
+                                            "x": 10,
+                                            "y": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        }
+                                    }
+                                ],
+                                "blendMode": "normal",
+                                "interactionLevel": "bottom",
+                                "type": "group",
+                                "opacity": 1,
+                                "sourceId": "140:28",
+                                "fills": [
+                                    {
+                                        "color": {
+                                            "r": 235,
+                                            "b": 21,
+                                            "g": 21,
+                                            "a": 1
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "borderRadius": 5,
+                                "shadows": [],
+                                "_id": "5fdd6c7513adb90b6a199317",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 56,
+                                    "height": 34
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 56,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/56/34"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fdd6c74f4da870b63352c04",
+                        "value": "error"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c05",
+                        "value": "no"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c06",
+                        "value": "default"
+                    }
+                ]
+            },
+            {
+                "id": "5fdd6c75f4da870b63352c15",
+                "name": "Button / default / no / default",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "figma",
+                        "height": 34,
+                        "layers": [
+                            {
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 56,
+                                    "height": 34
+                                },
+                                "rotation": 0,
+                                "layers": [
+                                    {
+                                        "shadows": [],
+                                        "name": "Button Text",
+                                        "rotation": 0,
+                                        "blendMode": "normal",
+                                        "content": "Button",
+                                        "type": "text",
+                                        "opacity": 1,
+                                        "sourceId": "140:38",
+                                        "fills": [],
+                                        "textStyles": [
+                                            {
+                                                "range": {
+                                                    "location": 0,
+                                                    "length": 6
+                                                },
+                                                "style": {
+                                                    "fontSize": 12,
+                                                    "letterSpacing": 0,
+                                                    "fontFace": "Roboto-Regular",
+                                                    "textAlign": "left",
+                                                    "color": {
+                                                        "r": 255,
+                                                        "b": 255,
+                                                        "g": 255,
+                                                        "a": 1
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "exportable": false,
+                                        "borders": [],
+                                        "borderRadius": 0,
+                                        "rect": {
+                                            "y": 10,
+                                            "x": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        },
+                                        "_id": "5fdd6c75f4da870b63352c19",
+                                        "absoluteRect": {
+                                            "x": 10,
+                                            "y": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        }
+                                    }
+                                ],
+                                "blendMode": "normal",
+                                "interactionLevel": "bottom",
+                                "type": "group",
+                                "opacity": 1,
+                                "sourceId": "140:37",
+                                "fills": [
+                                    {
+                                        "color": {
+                                            "r": 165,
+                                            "b": 165,
+                                            "g": 165,
+                                            "a": 1
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "borderRadius": 5,
+                                "shadows": [],
+                                "_id": "5fdd6c75f4da870b63352c18",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 56,
+                                    "height": 34
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 56,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/56/34"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fdd6c74f4da870b63352c04",
+                        "value": "default"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c05",
+                        "value": "no"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c06",
+                        "value": "default"
+                    }
+                ]
+            },
+            {
+                "id": "5fdd6c75f4da870b63352c10",
+                "name": "Button / default / yes / default",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "figma",
+                        "height": 34,
+                        "layers": [
+                            {
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 56,
+                                    "height": 34
+                                },
+                                "rotation": 0,
+                                "layers": [
+                                    {
+                                        "shadows": [],
+                                        "name": "Button Text",
+                                        "rotation": 0,
+                                        "blendMode": "normal",
+                                        "content": "Button",
+                                        "type": "text",
+                                        "opacity": 1,
+                                        "sourceId": "140:20",
+                                        "fills": [],
+                                        "textStyles": [
+                                            {
+                                                "range": {
+                                                    "location": 0,
+                                                    "length": 6
+                                                },
+                                                "style": {
+                                                    "fontSize": 12,
+                                                    "letterSpacing": 0,
+                                                    "fontFace": "Roboto-Regular",
+                                                    "textAlign": "left",
+                                                    "color": {
+                                                        "r": 165,
+                                                        "b": 165,
+                                                        "g": 165,
+                                                        "a": 1
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "exportable": false,
+                                        "borders": [],
+                                        "borderRadius": 0,
+                                        "rect": {
+                                            "y": 10,
+                                            "x": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        },
+                                        "_id": "5fdd6c75f4da870b63352c14",
+                                        "absoluteRect": {
+                                            "x": 10,
+                                            "y": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        }
+                                    }
+                                ],
+                                "blendMode": "normal",
+                                "interactionLevel": "bottom",
+                                "type": "group",
+                                "opacity": 1,
+                                "sourceId": "140:19",
+                                "fills": [],
+                                "exportable": false,
+                                "borders": [
+                                    {
+                                        "blendMode": "normal",
+                                        "fillType": "color",
+                                        "position": "inside",
+                                        "thickness": 1,
+                                        "opacity": 1,
+                                        "color": {
+                                            "r": 165,
+                                            "b": 165,
+                                            "g": 165,
+                                            "a": 1
+                                        }
+                                    }
+                                ],
+                                "borderRadius": 5,
+                                "shadows": [],
+                                "_id": "5fdd6c75f4da870b63352c13",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 56,
+                                    "height": 34
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 56,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/56/34"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fdd6c74f4da870b63352c04",
+                        "value": "default"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c05",
+                        "value": "yes"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c06",
+                        "value": "default"
+                    }
+                ]
+            },
+            {
+                "id": "5fdd6c754cb3f47caf4b9abe",
+                "name": "Button / default / yes / hover",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "figma",
+                        "height": 34,
+                        "layers": [
+                            {
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 56,
+                                    "height": 34
+                                },
+                                "rotation": 0,
+                                "layers": [
+                                    {
+                                        "shadows": [],
+                                        "name": "Button Text",
+                                        "rotation": 0,
+                                        "blendMode": "normal",
+                                        "content": "Button",
+                                        "type": "text",
+                                        "opacity": 1,
+                                        "sourceId": "140:11",
+                                        "fills": [],
+                                        "textStyles": [
+                                            {
+                                                "range": {
+                                                    "location": 0,
+                                                    "length": 6
+                                                },
+                                                "style": {
+                                                    "fontSize": 12,
+                                                    "letterSpacing": 0,
+                                                    "fontFace": "Roboto-Regular",
+                                                    "textAlign": "left",
+                                                    "color": {
+                                                        "r": 165,
+                                                        "b": 165,
+                                                        "g": 165,
+                                                        "a": 1
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "exportable": false,
+                                        "borders": [],
+                                        "borderRadius": 0,
+                                        "rect": {
+                                            "y": 10,
+                                            "x": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        },
+                                        "_id": "5fdd6c754cb3f47caf4b9ac2",
+                                        "absoluteRect": {
+                                            "x": 10,
+                                            "y": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        }
+                                    }
+                                ],
+                                "blendMode": "normal",
+                                "interactionLevel": "bottom",
+                                "type": "group",
+                                "opacity": 1,
+                                "sourceId": "140:10",
+                                "fills": [],
+                                "exportable": false,
+                                "borders": [
+                                    {
+                                        "blendMode": "normal",
+                                        "fillType": "color",
+                                        "position": "inside",
+                                        "thickness": 4,
+                                        "opacity": 1,
+                                        "color": {
+                                            "r": 48,
+                                            "b": 255,
+                                            "g": 168,
+                                            "a": 1
+                                        }
+                                    }
+                                ],
+                                "borderRadius": 5,
+                                "shadows": [],
+                                "_id": "5fdd6c754cb3f47caf4b9ac1",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 56,
+                                    "height": 34
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 56,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/56/34"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fdd6c74f4da870b63352c04",
+                        "value": "default"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c05",
+                        "value": "yes"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c06",
+                        "value": "hover"
+                    }
+                ]
+            },
+            {
+                "id": "5fdd6c754cb3f47caf4b9ab9",
+                "name": "Button / error / no / hover",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "figma",
+                        "height": 34,
+                        "layers": [
+                            {
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 56,
+                                    "height": 34
+                                },
+                                "rotation": 0,
+                                "layers": [
+                                    {
+                                        "shadows": [],
+                                        "name": "Button Text",
+                                        "rotation": 0,
+                                        "blendMode": "normal",
+                                        "content": "Button",
+                                        "type": "text",
+                                        "opacity": 1,
+                                        "sourceId": "140:23",
+                                        "fills": [],
+                                        "textStyles": [
+                                            {
+                                                "range": {
+                                                    "location": 0,
+                                                    "length": 6
+                                                },
+                                                "style": {
+                                                    "fontSize": 12,
+                                                    "letterSpacing": 0,
+                                                    "fontFace": "Roboto-Regular",
+                                                    "textAlign": "left",
+                                                    "color": {
+                                                        "r": 255,
+                                                        "b": 255,
+                                                        "g": 255,
+                                                        "a": 1
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "exportable": false,
+                                        "borders": [],
+                                        "borderRadius": 0,
+                                        "rect": {
+                                            "y": 10,
+                                            "x": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        },
+                                        "_id": "5fdd6c754cb3f47caf4b9abd",
+                                        "absoluteRect": {
+                                            "x": 10,
+                                            "y": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        }
+                                    }
+                                ],
+                                "blendMode": "normal",
+                                "interactionLevel": "bottom",
+                                "type": "group",
+                                "opacity": 1,
+                                "sourceId": "140:22",
+                                "fills": [
+                                    {
+                                        "color": {
+                                            "r": 235,
+                                            "b": 21,
+                                            "g": 21,
+                                            "a": 1
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [
+                                    {
+                                        "blendMode": "normal",
+                                        "fillType": "color",
+                                        "position": "inside",
+                                        "thickness": 4,
+                                        "opacity": 1,
+                                        "color": {
+                                            "r": 48,
+                                            "b": 255,
+                                            "g": 168,
+                                            "a": 1
+                                        }
+                                    }
+                                ],
+                                "borderRadius": 5,
+                                "shadows": [],
+                                "_id": "5fdd6c754cb3f47caf4b9abc",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 56,
+                                    "height": 34
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 56,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/56/34"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fdd6c74f4da870b63352c04",
+                        "value": "error"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c05",
+                        "value": "no"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c06",
+                        "value": "hover"
+                    }
+                ]
+            },
+            {
+                "id": "5fdd6c7513adb90b6a199302",
+                "name": "Button / error / yes / disabled",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "figma",
+                        "height": 34,
+                        "layers": [
+                            {
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 56,
+                                    "height": 34
+                                },
+                                "rotation": 0,
+                                "layers": [
+                                    {
+                                        "shadows": [],
+                                        "name": "Button Text",
+                                        "rotation": 0,
+                                        "blendMode": "normal",
+                                        "content": "Button",
+                                        "type": "text",
+                                        "opacity": 1,
+                                        "sourceId": "140:5",
+                                        "fills": [],
+                                        "textStyles": [
+                                            {
+                                                "range": {
+                                                    "location": 0,
+                                                    "length": 6
+                                                },
+                                                "style": {
+                                                    "fontSize": 12,
+                                                    "letterSpacing": 0,
+                                                    "fontFace": "Roboto-Regular",
+                                                    "textAlign": "left",
+                                                    "color": {
+                                                        "r": 235,
+                                                        "b": 21,
+                                                        "g": 21,
+                                                        "a": 0.5
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "exportable": false,
+                                        "borders": [],
+                                        "borderRadius": 0,
+                                        "rect": {
+                                            "y": 10,
+                                            "x": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        },
+                                        "_id": "5fdd6c7513adb90b6a199306",
+                                        "absoluteRect": {
+                                            "x": 10,
+                                            "y": 10,
+                                            "width": 36,
+                                            "height": 14
+                                        }
+                                    }
+                                ],
+                                "blendMode": "normal",
+                                "interactionLevel": "bottom",
+                                "type": "group",
+                                "opacity": 1,
+                                "sourceId": "140:4",
+                                "fills": [],
+                                "exportable": false,
+                                "borders": [
+                                    {
+                                        "blendMode": "normal",
+                                        "fillType": "color",
+                                        "position": "inside",
+                                        "thickness": 1,
+                                        "opacity": 1,
+                                        "color": {
+                                            "r": 235,
+                                            "b": 21,
+                                            "g": 21,
+                                            "a": 0.5
+                                        }
+                                    }
+                                ],
+                                "borderRadius": 5,
+                                "shadows": [],
+                                "_id": "5fdd6c7513adb90b6a199305",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 56,
+                                    "height": 34
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 56,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/56/34"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fdd6c74f4da870b63352c04",
+                        "value": "error"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c05",
+                        "value": "yes"
+                    },
+                    {
+                        "id": "5fdd6c74f4da870b63352c06",
+                        "value": "disabled"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Button",
+        "propertyDescriptors": [
+            {
+                "id": "5fd9432d2909e35cb5a9e995",
+                "name": "Type",
+                "values": [
+                    "Secondary",
+                    "Default"
+                ]
+            },
+            {
+                "id": "5fd943832909e35cb5a9e997",
+                "name": "State",
+                "values": [
+                    "Default",
+                    "Hover",
+                    "Pressed",
+                    "Disabled"
+                ]
+            }
+        ],
+        "components": [
+            {
+                "id": "5fd942b92909e35cb5a9e8f7",
+                "name": "Button / Secondary / Hover",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "sketch",
+                        "height": 28,
+                        "layers": [
+                            {
+                                "styleSourceId": "E90102D9-71DE-4F1F-85EA-53C94A73F909",
+                                "borderRadius": 2,
+                                "rotation": 0,
+                                "blendMode": "normal",
+                                "shadows": [],
+                                "styleName": "Secondary button/Secondary button Hover",
+                                "type": "shape",
+                                "opacity": 1,
+                                "sourceId": "3A7B6997-3D1E-4BEF-9F1C-1310E795A677",
+                                "fills": [
+                                    {
+                                        "color": {
+                                            "r": 237,
+                                            "b": 237,
+                                            "g": 236,
+                                            "a": 1
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    },
+                                    {
+                                        "color": {
+                                            "r": 151,
+                                            "b": 151,
+                                            "g": 145,
+                                            "a": 0.15
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 69,
+                                    "height": 28
+                                },
+                                "_id": "5fd942b92909e35cb5a9e8fa",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 69,
+                                    "height": 28
+                                }
+                            },
+                            {
+                                "shadows": [],
+                                "name": "Title",
+                                "rotation": 0,
+                                "blendMode": "normal",
+                                "content": "Button",
+                                "type": "text",
+                                "opacity": 1,
+                                "sourceId": "A7458FD3-9E7C-4C9E-93D2-CC27D1CAA2B8",
+                                "fills": [],
+                                "textStyles": [
+                                    {
+                                        "range": {
+                                            "location": 0,
+                                            "length": 6
+                                        },
+                                        "style": {
+                                            "fontSize": 15,
+                                            "fontFace": "Roboto-Regular",
+                                            "textAlign": "center",
+                                            "color": {
+                                                "r": 85,
+                                                "b": 86,
+                                                "g": 77,
+                                                "a": 1
+                                            }
+                                        }
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "borderRadius": 0,
+                                "rect": {
+                                    "y": 5,
+                                    "x": 12,
+                                    "width": 45,
+                                    "height": 18
+                                },
+                                "_id": "5fd942b92909e35cb5a9e8fb",
+                                "absoluteRect": {
+                                    "x": 12,
+                                    "y": 5,
+                                    "width": 45,
+                                    "height": 18
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 69,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/69/28"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fd9432d2909e35cb5a9e995",
+                        "value": "Secondary"
+                    },
+                    {
+                        "id": "5fd943832909e35cb5a9e997",
+                        "value": "Hover"
+                    }
+                ]
+            },
+            {
+                "id": "5fd942b92909e35cb5a9e8e8",
+                "name": "Button / Primary button",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "sketch",
+                        "height": 28,
+                        "layers": [
+                            {
+                                "styleSourceId": "0F3C2A8D-3244-4185-839E-635D9D6D74BD",
+                                "borderRadius": 2,
+                                "rotation": 0,
+                                "blendMode": "normal",
+                                "shadows": [],
+                                "styleName": "Primary button/Primary button Default",
+                                "type": "shape",
+                                "opacity": 1,
+                                "sourceId": "C1460302-45FB-4FA6-BA89-5946ACF01C05",
+                                "fills": [
+                                    {
+                                        "color": {
+                                            "r": 65,
+                                            "b": 249,
+                                            "g": 155,
+                                            "a": 1
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 69,
+                                    "height": 28
+                                },
+                                "_id": "5ff4f229f77862308a36e32b",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 69,
+                                    "height": 28
+                                }
+                            },
+                            {
+                                "shadows": [],
+                                "name": "Title",
+                                "rotation": 0,
+                                "blendMode": "normal",
+                                "content": "Button",
+                                "type": "text",
+                                "opacity": 1,
+                                "sourceId": "5E4286B8-70D7-4E84-ADA3-BFED75842248",
+                                "fills": [],
+                                "textStyles": [
+                                    {
+                                        "range": {
+                                            "location": 0,
+                                            "length": 6
+                                        },
+                                        "style": {
+                                            "fontSize": 15,
+                                            "fontFace": "Roboto-Bold",
+                                            "textAlign": "center",
+                                            "color": {
+                                                "r": 255,
+                                                "b": 255,
+                                                "g": 255,
+                                                "a": 1
+                                            }
+                                        }
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "borderRadius": 0,
+                                "rect": {
+                                    "y": 5,
+                                    "x": 12,
+                                    "width": 45,
+                                    "height": 18
+                                },
+                                "_id": "5ff4f229f77862308a36e32c",
+                                "absoluteRect": {
+                                    "x": 12,
+                                    "y": 5,
+                                    "width": 45,
+                                    "height": 18
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 69,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/69/28"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fd9432d2909e35cb5a9e995",
+                        "value": "Default"
+                    },
+                    {
+                        "id": "5fd943832909e35cb5a9e997",
+                        "value": "Default"
+                    }
+                ]
+            },
+            {
+                "id": "5fd942b92909e35cb5a9e907",
+                "name": "Button / Primary / Hover",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "sketch",
+                        "height": 28,
+                        "layers": [
+                            {
+                                "styleSourceId": "EC47CAF0-CC43-4174-9495-3311291D2CBE",
+                                "borderRadius": 2,
+                                "rotation": 0,
+                                "blendMode": "normal",
+                                "shadows": [],
+                                "styleName": "Primary button/Primary button Hover",
+                                "type": "shape",
+                                "opacity": 1,
+                                "sourceId": "9F774FAF-227C-4812-B189-9760FB819605",
+                                "fills": [
+                                    {
+                                        "color": {
+                                            "r": 65,
+                                            "b": 249,
+                                            "g": 155,
+                                            "a": 1
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    },
+                                    {
+                                        "color": {
+                                            "r": 85,
+                                            "b": 86,
+                                            "g": 77,
+                                            "a": 0.15
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 69,
+                                    "height": 28
+                                },
+                                "_id": "5fd942b92909e35cb5a9e90a",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 69,
+                                    "height": 28
+                                }
+                            },
+                            {
+                                "shadows": [],
+                                "name": "Title",
+                                "rotation": 0,
+                                "blendMode": "normal",
+                                "content": "Button",
+                                "type": "text",
+                                "opacity": 1,
+                                "sourceId": "C5B7F95B-B9F7-4399-86E0-FA39F1380BC7",
+                                "fills": [],
+                                "textStyles": [
+                                    {
+                                        "range": {
+                                            "location": 0,
+                                            "length": 6
+                                        },
+                                        "style": {
+                                            "fontSize": 15,
+                                            "fontFace": "Roboto-Regular",
+                                            "textAlign": "center",
+                                            "color": {
+                                                "r": 255,
+                                                "b": 255,
+                                                "g": 255,
+                                                "a": 1
+                                            }
+                                        }
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "borderRadius": 0,
+                                "rect": {
+                                    "y": 5,
+                                    "x": 12,
+                                    "width": 45,
+                                    "height": 18
+                                },
+                                "_id": "5fd942b92909e35cb5a9e90b",
+                                "absoluteRect": {
+                                    "x": 12,
+                                    "y": 5,
+                                    "width": 45,
+                                    "height": 18
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 69,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/69/28"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fd9432d2909e35cb5a9e995",
+                        "value": "Default"
+                    },
+                    {
+                        "id": "5fd943832909e35cb5a9e997",
+                        "value": "Hover"
+                    }
+                ]
+            },
+            {
+                "id": "5fd942b92909e35cb5a9e90c",
+                "name": "Button / Primary / Pressed",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "sketch",
+                        "height": 28,
+                        "layers": [
+                            {
+                                "styleSourceId": "D7F655CE-89DE-49B1-B0D1-117277F0A1F0",
+                                "borderRadius": 2,
+                                "rotation": 0,
+                                "blendMode": "normal",
+                                "shadows": [],
+                                "styleName": "Primary button/Primary button Pressed",
+                                "type": "shape",
+                                "opacity": 1,
+                                "sourceId": "3D5A92C9-F520-4EB1-B564-4F4B0C3825C3",
+                                "fills": [
+                                    {
+                                        "color": {
+                                            "r": 65,
+                                            "b": 249,
+                                            "g": 155,
+                                            "a": 1
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    },
+                                    {
+                                        "color": {
+                                            "r": 85,
+                                            "b": 86,
+                                            "g": 77,
+                                            "a": 0.3
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 69,
+                                    "height": 28
+                                },
+                                "_id": "5fd942b92909e35cb5a9e90f",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 69,
+                                    "height": 28
+                                }
+                            },
+                            {
+                                "shadows": [],
+                                "name": "Title",
+                                "rotation": 0,
+                                "blendMode": "normal",
+                                "content": "Button",
+                                "type": "text",
+                                "opacity": 1,
+                                "sourceId": "9E27FEE2-EB7C-4AAE-BD68-1FE02B485B1B",
+                                "fills": [],
+                                "textStyles": [
+                                    {
+                                        "range": {
+                                            "location": 0,
+                                            "length": 6
+                                        },
+                                        "style": {
+                                            "fontSize": 15,
+                                            "fontFace": "Roboto-Regular",
+                                            "textAlign": "center",
+                                            "color": {
+                                                "r": 255,
+                                                "b": 255,
+                                                "g": 255,
+                                                "a": 1
+                                            }
+                                        }
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "borderRadius": 0,
+                                "rect": {
+                                    "y": 5,
+                                    "x": 12,
+                                    "width": 45,
+                                    "height": 18
+                                },
+                                "_id": "5fd942b92909e35cb5a9e910",
+                                "absoluteRect": {
+                                    "x": 12,
+                                    "y": 5,
+                                    "width": 45,
+                                    "height": 18
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 69,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/69/28"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fd9432d2909e35cb5a9e995",
+                        "value": "Default"
+                    },
+                    {
+                        "id": "5fd943832909e35cb5a9e997",
+                        "value": "Pressed"
+                    }
+                ]
+            },
+            {
+                "id": "5fd942b92909e35cb5a9e8ed",
+                "name": "Button / Primary / Disabled",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "sketch",
+                        "height": 28,
+                        "layers": [
+                            {
+                                "styleSourceId": "73727270-1C5C-4FD2-B06E-0D13EF0A2682",
+                                "borderRadius": 2,
+                                "rotation": 0,
+                                "blendMode": "normal",
+                                "shadows": [],
+                                "styleName": "Primary button/Primary button Disabled",
+                                "type": "shape",
+                                "opacity": 1,
+                                "sourceId": "0018722C-44E3-4EC4-88C9-403967345745",
+                                "fills": [
+                                    {
+                                        "color": {
+                                            "r": 65,
+                                            "b": 249,
+                                            "g": 155,
+                                            "a": 0.6
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 69,
+                                    "height": 28
+                                },
+                                "_id": "5fd942b92909e35cb5a9e8f0",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 69,
+                                    "height": 28
+                                }
+                            },
+                            {
+                                "shadows": [],
+                                "name": "Title",
+                                "rotation": 0,
+                                "blendMode": "normal",
+                                "content": "Button",
+                                "type": "text",
+                                "opacity": 0.6,
+                                "sourceId": "B36449EB-30AD-40F5-856D-018677A7E48D",
+                                "fills": [],
+                                "textStyles": [
+                                    {
+                                        "range": {
+                                            "location": 0,
+                                            "length": 6
+                                        },
+                                        "style": {
+                                            "fontSize": 15,
+                                            "fontFace": "Roboto-Regular",
+                                            "textAlign": "center",
+                                            "color": {
+                                                "r": 255,
+                                                "b": 255,
+                                                "g": 255,
+                                                "a": 1
+                                            }
+                                        }
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "borderRadius": 0,
+                                "rect": {
+                                    "y": 5,
+                                    "x": 12,
+                                    "width": 45,
+                                    "height": 18
+                                },
+                                "_id": "5fd942b92909e35cb5a9e8f1",
+                                "absoluteRect": {
+                                    "x": 12,
+                                    "y": 5,
+                                    "width": 45,
+                                    "height": 18
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 69,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/69/28"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fd9432d2909e35cb5a9e995",
+                        "value": "Default"
+                    },
+                    {
+                        "id": "5fd943832909e35cb5a9e997",
+                        "value": "Disabled"
+                    }
+                ]
+            },
+            {
+                "id": "5fd942b92909e35cb5a9e911",
+                "name": "Button / Secondary / Pressed",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "sketch",
+                        "height": 28,
+                        "layers": [
+                            {
+                                "styleSourceId": "9043FFBA-7EE3-4C87-999A-21F7FB748195",
+                                "borderRadius": 2,
+                                "rotation": 0,
+                                "blendMode": "normal",
+                                "shadows": [],
+                                "styleName": "Secondary button/Secondary button Pressed",
+                                "type": "shape",
+                                "opacity": 1,
+                                "sourceId": "4E109532-B169-4895-AC7A-57BFCA36BFD7",
+                                "fills": [
+                                    {
+                                        "color": {
+                                            "r": 237,
+                                            "b": 237,
+                                            "g": 236,
+                                            "a": 1
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    },
+                                    {
+                                        "color": {
+                                            "r": 151,
+                                            "b": 151,
+                                            "g": 145,
+                                            "a": 0.3
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 69,
+                                    "height": 28
+                                },
+                                "_id": "5fd942b92909e35cb5a9e914",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 69,
+                                    "height": 28
+                                }
+                            },
+                            {
+                                "shadows": [],
+                                "name": "Title",
+                                "rotation": 0,
+                                "blendMode": "normal",
+                                "content": "Button",
+                                "type": "text",
+                                "opacity": 1,
+                                "sourceId": "79DB950D-0397-497A-8548-534DB9119B23",
+                                "fills": [],
+                                "textStyles": [
+                                    {
+                                        "range": {
+                                            "location": 0,
+                                            "length": 6
+                                        },
+                                        "style": {
+                                            "fontSize": 15,
+                                            "fontFace": "Roboto-Regular",
+                                            "textAlign": "center",
+                                            "color": {
+                                                "r": 85,
+                                                "b": 86,
+                                                "g": 77,
+                                                "a": 1
+                                            }
+                                        }
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "borderRadius": 0,
+                                "rect": {
+                                    "y": 5,
+                                    "x": 12,
+                                    "width": 45,
+                                    "height": 18
+                                },
+                                "_id": "5fd942b92909e35cb5a9e915",
+                                "absoluteRect": {
+                                    "x": 12,
+                                    "y": 5,
+                                    "width": 45,
+                                    "height": 18
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 69,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/69/28"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fd9432d2909e35cb5a9e995",
+                        "value": "Secondary"
+                    },
+                    {
+                        "id": "5fd943832909e35cb5a9e997",
+                        "value": "Pressed"
+                    }
+                ]
+            },
+            {
+                "id": "5fd942b92909e35cb5a9e8fd",
+                "name": "Button / Secondary / Default",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "sketch",
+                        "height": 28,
+                        "layers": [
+                            {
+                                "styleSourceId": "9B9568A0-C340-420D-A741-80591C706FB7",
+                                "borderRadius": 2,
+                                "rotation": 0,
+                                "blendMode": "normal",
+                                "shadows": [],
+                                "styleName": "Secondary button/Secondary button Default",
+                                "type": "shape",
+                                "opacity": 1,
+                                "sourceId": "0CADAD41-0131-48E7-9256-1AC681B4115E",
+                                "fills": [
+                                    {
+                                        "color": {
+                                            "r": 237,
+                                            "b": 237,
+                                            "g": 236,
+                                            "a": 1
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 69,
+                                    "height": 28
+                                },
+                                "_id": "5fd942b92909e35cb5a9e900",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 69,
+                                    "height": 28
+                                }
+                            },
+                            {
+                                "shadows": [],
+                                "name": "Title",
+                                "rotation": 0,
+                                "blendMode": "normal",
+                                "content": "Button",
+                                "type": "text",
+                                "opacity": 1,
+                                "sourceId": "2DC26014-60CA-4F5A-B147-FFD659F74034",
+                                "fills": [],
+                                "textStyles": [
+                                    {
+                                        "range": {
+                                            "location": 0,
+                                            "length": 6
+                                        },
+                                        "style": {
+                                            "fontSize": 15,
+                                            "fontFace": "Roboto-Regular",
+                                            "textAlign": "center",
+                                            "color": {
+                                                "r": 85,
+                                                "b": 86,
+                                                "g": 77,
+                                                "a": 1
+                                            }
+                                        }
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "borderRadius": 0,
+                                "rect": {
+                                    "y": 5,
+                                    "x": 12,
+                                    "width": 45,
+                                    "height": 18
+                                },
+                                "_id": "5fd942b92909e35cb5a9e901",
+                                "absoluteRect": {
+                                    "x": 12,
+                                    "y": 5,
+                                    "width": 45,
+                                    "height": 18
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 69,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/69/28"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fd9432d2909e35cb5a9e995",
+                        "value": "Secondary"
+                    },
+                    {
+                        "id": "5fd943832909e35cb5a9e997",
+                        "value": "Default"
+                    }
+                ]
+            },
+            {
+                "id": "5fd942b92909e35cb5a9e902",
+                "name": "Button / Secondary / Disabled 🐣",
+                "latestVersion": {
+                    "snapshot": {
+                        "assets": [],
+                        "source": "sketch",
+                        "height": 28,
+                        "layers": [
+                            {
+                                "styleSourceId": "CC4E61B6-5C0F-4A46-A098-4214146A339E",
+                                "borderRadius": 2,
+                                "rotation": 0,
+                                "blendMode": "normal",
+                                "shadows": [],
+                                "styleName": "Secondary button/Secondary button Disabled",
+                                "type": "shape",
+                                "opacity": 1,
+                                "sourceId": "8E3B2FC0-E710-41BE-A6F5-B343D536F16F",
+                                "fills": [
+                                    {
+                                        "color": {
+                                            "r": 237,
+                                            "b": 237,
+                                            "g": 236,
+                                            "a": 1
+                                        },
+                                        "fillType": "color",
+                                        "blendMode": "normal",
+                                        "opacity": 1
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "name": "Button bg",
+                                "rect": {
+                                    "y": 0,
+                                    "x": 0,
+                                    "width": 69,
+                                    "height": 28
+                                },
+                                "_id": "5fd942b92909e35cb5a9e905",
+                                "absoluteRect": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 69,
+                                    "height": 28
+                                }
+                            },
+                            {
+                                "shadows": [],
+                                "name": "Title",
+                                "rotation": 0,
+                                "blendMode": "normal",
+                                "content": "Button",
+                                "type": "text",
+                                "opacity": 0.5,
+                                "sourceId": "1C63B7AC-5FD6-4647-971A-D725EBB4CF45",
+                                "fills": [],
+                                "textStyles": [
+                                    {
+                                        "range": {
+                                            "location": 0,
+                                            "length": 6
+                                        },
+                                        "style": {
+                                            "fontSize": 15,
+                                            "fontFace": "Roboto-Regular",
+                                            "textAlign": "center",
+                                            "color": {
+                                                "r": 151,
+                                                "b": 151,
+                                                "g": 145,
+                                                "a": 1
+                                            }
+                                        }
+                                    }
+                                ],
+                                "exportable": false,
+                                "borders": [],
+                                "borderRadius": 0,
+                                "rect": {
+                                    "y": 5,
+                                    "x": 12,
+                                    "width": 45,
+                                    "height": 18
+                                },
+                                "_id": "5fd942b92909e35cb5a9e906",
+                                "absoluteRect": {
+                                    "x": 12,
+                                    "y": 5,
+                                    "width": 45,
+                                    "height": 18
+                                }
+                            }
+                        ],
+                        "componentNames": [],
+                        "width": 69,
+                        "links": [],
+                        "densityScale": 1,
+                        "url": "https://placekitten.com/69/28"
+                    }
+                },
+                "properties": [
+                    {
+                        "id": "5fd9432d2909e35cb5a9e995",
+                        "value": "Secondary"
+                    },
+                    {
+                        "id": "5fd943832909e35cb5a9e997",
+                        "value": "Disabled"
+                    }
+                ]
+            }
+        ]
+    }
+]

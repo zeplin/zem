@@ -64,7 +64,7 @@ screens.map(screen => {
 components.map(component => {
     describe(`Component \`${component.name}\``, () => {
         it("should generate code snippet", async () => {
-            const code = extension.component(context, version, component);
+            const code = extension.component(context, component.latestVersion, component);
             return expect(Promise.resolve(code)).resolves.toMatchSnapshot();
         });
     });
