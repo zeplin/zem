@@ -93,10 +93,11 @@ program
     .command("publish")
     .description(`Publish extension, submitting it for review to be listed on ${chalk.underline("https://extensions.zeplin.io.")}`)
     .option("--path <build-path>", `Path for the extension build to be published`)
-    .action(async command => {
+    .option("--verbose", "Enables verbose logs")
+    .action(async ({ path: buildPath, verbose }) => {
         const publish = require("./commands/publish");
         try {
-            await publish(command.path);
+            await publish({ buildPath, verbose });
         } catch (_) {
             process.exitCode = 1;
         }

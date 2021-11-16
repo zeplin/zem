@@ -95,7 +95,7 @@ async function validateReadme({ hasOptions }) {
     }
 }
 
-module.exports = async function (buildPath) {
+module.exports = async function ({ buildPath, verbose }) {
     console.log("Publishing the extension...\n");
 
     pathResolver.init(buildPath);
@@ -140,6 +140,9 @@ module.exports = async function (buildPath) {
     } catch (error) {
         console.log(chalk.red("Publishing extension failed:"));
         console.error(error.message || error);
+        if (verbose && error.extra) {
+            console.error(JSON.stringify(error.extra, null, 2));
+        }
         throw error;
     }
 };

@@ -6,8 +6,14 @@ const { apiBaseUrl, apiClientId } = require("../../config/constants");
 const { ClientError, ServerError } = require("../../errors");
 
 function createError(response) {
-    const { statusCode, body } = response;
-    const extra = { response: response.toJSON() };
+    const { statusCode, body, headers } = response;
+    const extra = {
+        response: {
+            statusCode,
+            body,
+            headers
+        }
+    };
 
     if (statusCode >= BAD_REQUEST && statusCode < INTERNAL_SERVER_ERROR) {
         const { message, title } = body;
