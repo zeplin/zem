@@ -1,22 +1,24 @@
 const { URL } = require("url");
 const { BAD_REQUEST, INTERNAL_SERVER_ERROR, MOVED_TEMPORARILY } = require("http-status-codes");
-const request = require("request-promise-native");
+const undici = require("undici");
+const qs = require("qs");
 
 const { apiBaseUrl, apiClientId } = require("../../config/constants");
 const { ClientError, ServerError } = require("../../errors");
 
-function createError(response) {
+async function createError(response) {
     const { statusCode, body, headers } = response;
+    const responseBody = await body.text();
     const extra = {
         response: {
             statusCode,
-            body,
+            body: responseBody,
             headers
         }
     };
 
     if (statusCode >= BAD_REQUEST && statusCode < INTERNAL_SERVER_ERROR) {
-        const { message, title } = body;
+        const { message, title } = JSON.parse(responseBody);
 
         return new ClientError(statusCode, `${title}${message ? `: ${message}` : ""}`, extra);
     }
@@ -28,76 +30,69 @@ function createError(response) {
     return new Error("Zeplin API error");
 }
 
-module.exports = class ApiClient {
-    constructor() {
-        this.requestor = request.defaults({
-            baseUrl: apiBaseUrl,
-            simple: false,
-            resolveWithFullResponse: true,
-            json: true
-        });
+function getUrl(path) {
+    return `${apiBaseUrl}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
+async function request(path, opts) {
+    const response = await undici.request(getUrl(path), opts);
+
+    if (response.statusCode >= BAD_REQUEST) {
+        throw await createError(response);
     }
 
-    async request(opts) {
-        const response = await this.requestor(opts);
-        const { body } = response;
+    return {
+        body: await response.body.json(),
+        statusCode: response.statusCode,
+        headers: response.headers
+    };
+}
 
-        if (response.statusCode >= BAD_REQUEST) {
-            throw createError(response);
-        }
-
-        return body;
-    }
-
-    async login({ handle, password }) {
-        const { token } = await this.request({
+module.exports = {
+    login: async ({ handle, password }) => {
+        const { body: { token } } = await request("/users/login", {
             method: "POST",
-            uri: "/users/login",
-            body: {
+            body: JSON.stringify({
                 handle,
                 password
-            }
+            }),
+            headers: { "Content-Type": "application/json" }
         });
 
         return token;
-    }
-
-    async generateAuthToken(loginToken) {
-        const response = await this.requestor({
+    },
+    generateAuthToken: async loginToken => {
+        const queryString = qs.stringify({
+            client_id: apiClientId,
+            response_type: "token",
+            scope: "write"
+        });
+        const response = await request(`/oauth/authorize?${queryString}`, {
             method: "GET",
-            uri: "/oauth/authorize",
-            qs: {
-                client_id: apiClientId,
-                response_type: "token",
-                scope: "write"
+            headers: {
+                "Zeplin-Token": loginToken
             },
-            headers: { "Zeplin-Token": loginToken },
-            followRedirect: false
+            maxRedirections: 0
         });
 
         const { headers: { location }, statusCode } = response;
 
         if (statusCode !== MOVED_TEMPORARILY) {
-            throw createError(response);
+            throw await createError(response);
         }
 
         const { searchParams } = new URL(location);
 
         return searchParams.get("access_token");
-    }
-
-    getExtensions({ authToken, owner }) {
-        return this.request({
+    },
+    getExtensions: ({ authToken, owner }) => {
+        const queryString = qs.stringify({ owner });
+        return request(`/extensions${queryString}`, {
             method: "GET",
-            uri: `/extensions`,
-            qs: {
-                owner
-            },
             headers: { "Zeplin-Access-Token": authToken }
         });
-    }
-
-    createExtension({ authToken, data }) {
+    },
+    createExtension: ({ authToken, data }) => {
         const {
             packageName,
             name,
@@ -107,40 +102,45 @@ module.exports = class ApiClient {
             packageBuffer
         } = data;
 
-        return this.request({
-            method: "POST",
-            uri: "/extensions",
-            formData: {
-                version,
-                packageName,
-                name,
-                description,
-                projectTypes: platforms,
-                package: {
-                    options: {
-                        filename: "package.zip"
-                    },
-                    value: packageBuffer
-                }
-            },
-            headers: { "Zeplin-Access-Token": authToken }
+        const formData = qs.stringify({
+            version,
+            packageName,
+            name,
+            description,
+            projectTypes: platforms,
+            package: {
+                options: {
+                    filename: "package.zip"
+                },
+                value: packageBuffer
+            }
         });
-    }
-
-    createExtensionVersion({ authToken, extensionId, version, packageBuffer }) {
-        return this.request({
+        return request("/extensions", {
             method: "POST",
-            uri: `/extensions/${extensionId}/versions`,
-            formData: {
-                version,
-                package: {
-                    options: {
-                        filename: "package.zip"
-                    },
-                    value: packageBuffer
-                }
-            },
-            headers: { "Zeplin-Access-Token": authToken }
+            body: formData,
+            headers: {
+                "Zeplin-Access-Token": authToken,
+                "Content-Type": "application/x-www-form-urlencoded"
+            }
+        });
+    },
+    createExtensionVersion: ({ authToken, extensionId, version, packageBuffer }) => {
+        const formData = qs.stringify({
+            version,
+            package: {
+                options: {
+                    filename: "package.zip"
+                },
+                value: packageBuffer
+            }
+        });
+        return request(`/extensions/${extensionId}/versions`, {
+            method: "POST",
+            body: formData,
+            headers: {
+                "Zeplin-Access-Token": authToken,
+                "Content-Type": "application/x-www-form-urlencoded"
+            }
         });
     }
 };

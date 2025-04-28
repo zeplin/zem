@@ -4,7 +4,7 @@ const prompts = require("prompts");
 
 const paths = require("../../utils/paths");
 const { accessToken, isCI } = require("../../config/constants");
-const ApiClient = require("./apiClient");
+const apiClient = require("./apiClient");
 
 const EXIT_CODE_FOR_SIGTERM = 130;
 
@@ -12,7 +12,7 @@ function readToken() {
     const rcFilePath = paths.getRcFilePath();
 
     if (fs.existsSync(rcFilePath)) {
-        const rcFile = JSON.parse(fs.readFileSync(rcFilePath));
+        const rcFile = JSON.parse(fs.readFileSync(rcFilePath, "utf-8"));
 
         return rcFile.token;
     }
@@ -20,7 +20,7 @@ function readToken() {
 
 function updateRCFile(token) {
     const rcFilePath = paths.getRcFilePath();
-    const rcContent = fs.existsSync(rcFilePath) ? JSON.parse(fs.readFileSync(rcFilePath)) : {};
+    const rcContent = fs.existsSync(rcFilePath) ? JSON.parse(fs.readFileSync(rcFilePath, "utf-8")) : {};
 
     rcContent.token = token;
     fs.writeFileSync(rcFilePath, JSON.stringify(rcContent));
@@ -48,10 +48,6 @@ function getAuthInfo(authToken) {
 }
 
 module.exports = class AuthenticationService {
-    constructor() {
-        this.apiClient = new ApiClient();
-    }
-
     authenticate() {
         if (isCI || accessToken) {
             return getAuthInfo(accessToken);
@@ -84,8 +80,8 @@ module.exports = class AuthenticationService {
             process.exit(EXIT_CODE_FOR_SIGTERM);
         }
 
-        const token = await this.apiClient.login({ handle, password });
-        const authToken = await this.apiClient.generateAuthToken(token);
+        const token = await apiClient.login({ handle, password });
+        const authToken = await apiClient.generateAuthToken(token);
 
         const authInfo = getAuthInfo(authToken);
 

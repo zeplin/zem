@@ -6,7 +6,7 @@ const prompts = require("prompts");
 
 const paths = require("../../utils/paths");
 const manifestValidator = require("./manifest-validator");
-const ApiClient = require("./apiClient");
+const apiClient = require("./apiClient");
 const AuthenticationService = require("./authenticationService");
 const { isCI } = require("../../config/constants");
 const { version: packageVersion } = require(paths.resolveExtensionPath("./package.json"));
@@ -113,7 +113,6 @@ module.exports = async function ({ buildPath, verbose }) {
         await validateReadme({ hasOptions: Boolean(options) });
 
         const authenticationService = new AuthenticationService();
-        const apiClient = new ApiClient();
         const { authToken, userId } = await authenticationService.authenticate();
         const { extensions } = await apiClient.getExtensions({ authToken, owner: userId });
 
