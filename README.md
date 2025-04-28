@@ -65,12 +65,12 @@ Options:
   --defaults <default-options>  Set default extension option values (e.g, flag=false,prefix=\"pre\")
 ```
 
-#### `npm run test`
+#### `npm test`
 
 Runs test scripts via Jest. Extension packages created using zem include a boilerplate test module. It uses Jest's snapshot testing feature to match the output of your extensions with the expected results. For example, you can take a look at our [React Native extension](https://github.com/zeplin/react-native-extension/blob/develop/src/index.test.js).
 
 ```
-Usage: npm run test -- [options]
+Usage: npm test -- [options]
 ```
 
 You can check [Jest's docs](https://jestjs.io/docs/en/cli.html) for options.
