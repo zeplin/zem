@@ -56,7 +56,7 @@
   "devDependencies": {
     "@types/fs-extra": "^5.0.0",
     "@types/jest": "^29.5.14",
-    "@zeplin/eslint-config": "^1.2.2",
+    "@zeplin/eslint-config": "^2.3.2",
     "npm-merge-driver-install": "^1.1.1"
   },
   "eslintConfig": {
