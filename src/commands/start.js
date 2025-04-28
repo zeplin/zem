@@ -2,7 +2,6 @@ const chalk = require("chalk");
 const WebpackDevServer = require("webpack-dev-server");
 const webpack = require("webpack");
 const webpackConfig = require("../config/webpack.dev");
-const devServerConfig = require("../config/dev-server");
 const transformConfig = require("../utils/webpack/transform-config");
 
 function createCompiler(config) {
@@ -27,24 +26,27 @@ function createCompiler(config) {
 
 module.exports = function (host, port, allowedHosts) {
     const compiler = createCompiler(transformConfig(webpackConfig));
-    const serverConfig = Object.assign({}, devServerConfig);
-
-    if (allowedHosts) {
-        serverConfig.allowedHosts = allowedHosts.split(",");
-    }
-
-    const server = new WebpackDevServer(compiler, devServerConfig);
-
-    server.listen(port, host, err => {
-        if (err) {
-            return console.log(err);
-        }
-
-        console.log(`Extension is served from ${chalk.blue.bold(`http://${host}:${port}/manifest.json`)}\n`);
+    const serverConfig = Object.assign({}, webpackConfig.devServer, {
+        host: host || webpackConfig.devServer.host,
+        port: port || webpackConfig.devServer.port,
+        allowedHosts: allowedHosts ? allowedHosts.split(",") : webpackConfig.devServer.allowedHosts
     });
 
-    const closeServer = () => {
-        server.close();
+    const server = new WebpackDevServer(serverConfig, compiler);
+
+    const startServer = async () => {
+        try {
+            await server.start();
+            console.log(`Extension is served from ${chalk.blue.bold(`http://${serverConfig.host}:${serverConfig.port}/manifest.json`)}\n`);
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+    startServer();
+
+    const closeServer = async () => {
+        await server.stop();
         process.exit();
     };
 

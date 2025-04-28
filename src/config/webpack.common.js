@@ -1,7 +1,7 @@
 const fs = require("fs");
+const ESLintPlugin = require("eslint-webpack-plugin");
 const ManifestBuilder = require("../utils/webpack/manifest-builder");
 const SimpleCopyPlugin = require("../utils/webpack/simple-copy-plugin");
-const WatchExtraFilesPlugin = require("../utils/webpack/watch-extra-files");
 const { resolveBuildPath, resolveExtensionPath } = require("../utils/paths");
 const { bundleName } = require("./constants");
 
@@ -38,18 +38,16 @@ const jsLoaders = [{
     }
 }];
 
-if (eslintEnabled) {
-    jsLoaders.push("eslint-loader");
-}
-
 module.exports = {
     mode: "none",
     entry: { [bundleName]: entryPoint || "./src/index.js" },
     output: {
         path: buildPath,
-        library: "extension",
-        libraryExport: "default",
-        libraryTarget: "umd",
+        library: {
+            name: "extension",
+            type: "umd",
+            export: "default"
+        },
         globalObject: "typeof self !== 'undefined' ? self : this"
     },
     module: {
@@ -60,10 +58,8 @@ module.exports = {
         }]
     },
     plugins: [
+        ...(eslintEnabled ? [new ESLintPlugin()] : []),
         new SimpleCopyPlugin(copies),
-        new WatchExtraFilesPlugin({
-            files: [resolveExtensionPath("package.json"), readmePath]
-        }),
         new ManifestBuilder(extensionPath, bundleName)
     ]
 };
