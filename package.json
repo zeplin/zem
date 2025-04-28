@@ -28,7 +28,6 @@
   "dependencies": {
     "@babel/core": "^7.26.10",
     "@babel/preset-env": "^7.26.9",
-    "@types/jest": "^25.1.2",
     "@zeplin/extension-model": "^2.18.1",
     "adm-zip": "^0.5.16",
     "ajv": "^8.17.1",
@@ -43,7 +42,7 @@
     "eslint-webpack-plugin": "^5.0.1",
     "fs-extra": "^11.3.0",
     "http-status-codes": "^2.3.0",
-    "jest": "^25.1.0",
+    "jest": "^29.7.0",
     "jsonwebtoken": "^9.0.2",
     "prismjs": "^1.30.0",
     "prompts": "^2.4.2",
@@ -56,6 +55,7 @@
   },
   "devDependencies": {
     "@types/fs-extra": "^5.0.0",
+    "@types/jest": "^29.5.14",
     "@zeplin/eslint-config": "^1.2.2",
     "npm-merge-driver-install": "^1.1.1"
   },
