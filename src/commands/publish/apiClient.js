@@ -17,21 +17,25 @@ async function createError(response) {
         }
     };
 
-    if (statusCode >= BAD_REQUEST && statusCode < INTERNAL_SERVER_ERROR) {
-        const { message, title } = JSON.parse(responseBody);
+    let errorMessage;
+    if (headers["content-type"].startsWith("application/json")) {
+        const { message, title } = JSON.parse(extra.response.body);
+        errorMessage = `${title}${message ? `: ${message}` : ""}`;
+    }
 
-        return new ClientError(statusCode, `${title}${message ? `: ${message}` : ""}`, extra);
+    if (statusCode >= BAD_REQUEST && statusCode < INTERNAL_SERVER_ERROR) {
+        return new ClientError(statusCode, extra, errorMessage);
     }
 
     if (statusCode >= INTERNAL_SERVER_ERROR) {
-        return new ServerError(statusCode, extra);
+        return new ServerError(statusCode, extra, errorMessage);
     }
 
     return new Error("Zeplin API error");
 }
 
 function getUrl(path) {
-    return `${apiBaseUrl}${path.startsWith("/") ? path : `/${path}`}`;
+    return `${apiBaseUrl}${path}`;
 }
 
 async function request(path, opts) {
