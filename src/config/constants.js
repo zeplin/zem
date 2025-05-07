@@ -1,8 +1,6 @@
 
 const { isCI } = require("ci-info");
 
-/* eslint-disable no-process-env */
-
 module.exports = {
     defaultHostName: "localhost",
     defaultPort: 7070,

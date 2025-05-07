@@ -38,7 +38,6 @@
     "ci-info": "^4.2.0",
     "commander": "^2.14.1",
     "core-js": "^3.41.0",
-    "eslint": "^9.25.1",
     "eslint-webpack-plugin": "^5.0.1",
     "fs-extra": "^11.3.0",
     "http-status-codes": "^2.3.0",
@@ -54,9 +53,12 @@
     "webpack-merge": "^6.0.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.26.0",
     "@types/fs-extra": "^11.0.4",
     "@types/jest": "^29.5.14",
-    "@zeplin/eslint-config": "^2.3.2"
+    "@zeplin/eslint-config": "^2.3.2",
+    "eslint": "^9.26.0",
+    "globals": "^16.1.0"
   },
   "eslintConfig": {
     "extends": "@zeplin/eslint-config/node",

@@ -107,7 +107,7 @@ program
     .command("test")
     .description(`Test via jest`)
     .allowUnknownOption()
-    .action(command => {
+    .action(() => {
         const test = require("./commands/test");
 
         test(process.argv.slice(TEST_ARGS_INDEX));

@@ -55,7 +55,7 @@ function isSupported(language) {
     return !!Prism.languages[language];
 }
 
-module.exports = function (code, language, customMapping = {}) {
+module.exports = function (code, language) {
     if (!isSupported(language)) {
         return code;
     }
