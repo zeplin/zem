@@ -9,12 +9,10 @@ const extensionPath = resolveExtensionPath();
 const buildPath = resolveBuildPath();
 const readmePath = resolveExtensionPath("README.md");
 
-const copies = {
-    [bundleName]: [
-        { from: readmePath, to: "README.md" }
-    ]
-};
-const { eslintConfig, main: entryPoint } = require(resolveExtensionPath("package.json"));
+const { eslintConfig, main, exports: _exports } = require(resolveExtensionPath("package.json"));
+
+const entryPoint = _exports?.["."]?.import ?? _exports?.["."] ?? _exports ?? main;
+
 const eslintEnabled = eslintConfig || fs.readdirSync(extensionPath).find(f => f.startsWith(".eslintrc"));
 const jsLoaders = [{
     loader: "babel-loader",
