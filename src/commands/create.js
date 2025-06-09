@@ -78,15 +78,33 @@ const createPackageJson = (root, { packageName, description, displayName, platfo
         name: packageName,
         version: "0.1.0",
         description,
+        type: "module",
+        exports: "./dist/index.js",
         sideEffects: false,
         scripts: {
-            start: "zem start",
-            build: "zem build",
+            start: "tsc && zem start",
+            build: "tsc && zem build",
             clean: "zem clean",
-            exec: "zem exec",
-            test: "zem test",
-            publish: "zem publish"
+            exec: "tsc && zem exec",
+            test: "tsc && zem test",
+            publish: "tsc && zem publish"
         },
+        dependencies: {
+            "@zeplin/extension-model": "^3.0.0",
+        },
+        devDependencies: {
+            "@eslint/js": "^9.26.0",
+            "eslint": "^9.26.0",
+            "globals": "^16.1.0",
+            "typescript": "^5.8.3"
+        },
+        engines: {
+            "node": ">=20"
+        },
+        keywords: [
+            "zeplin",
+            "extension",
+        ],
         zeplin: {
             displayName,
             platforms

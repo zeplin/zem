@@ -2,6 +2,7 @@
   {
     "name": "Header",
     "description": "",
+    "sourceId": "95b6fa48-decd-44f2-b878-ba3d2fbf25df",
     "latestVersion": {
       "snapshot": {
         "assets": [
@@ -727,6 +728,7 @@
   {
     "name": "Search field",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus magna, elementum vel orci a, ornare molestie augue. Fusce semper pharetra augue ac condimentum. Suspendisse eget varius nulla. Vivamus feugiat ligula nec volutpat tincidunt. Curabitur iaculis purus convallis, scelerisque nulla vitae, condimentum ante. Curabitur vehicula nunc in massa congue, quis varius metus placerat. Integer feugiat, orci eu sagittis interdum, tortor nulla pulvinar mauris, egestas suscipit eros orci sit amet sem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "sourceId": "95b6fa48-decd-44f2-b878-ba3d2fbf25df",
     "latestVersion": {
       "snapshot": {
         "assets": [

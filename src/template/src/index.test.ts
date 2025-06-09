@@ -1,4 +1,4 @@
-import extension from "./index";
+import { MyZeplinExtension } from "./index.js";
 import { context, version, screens, components } from "./fixtures";
 
 
