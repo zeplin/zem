@@ -1,9 +1,9 @@
 const fs = require("fs");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const ManifestBuilder = require("../utils/webpack/manifest-builder");
-const SimpleCopyPlugin = require("../utils/webpack/simple-copy-plugin");
 const { resolveBuildPath, resolveExtensionPath } = require("../utils/paths");
 const { bundleName } = require("./constants");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const extensionPath = resolveExtensionPath();
 const buildPath = resolveBuildPath();
@@ -59,7 +59,12 @@ module.exports = {
     },
     plugins: [
         ...(eslintEnabled ? [new ESLintPlugin()] : []),
-        new SimpleCopyPlugin(copies),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: readmePath, to: "README.md" },
+                { from: "src/**", to : "src/" }
+            ]
+        }),
         new ManifestBuilder(extensionPath, bundleName)
     ]
 };
