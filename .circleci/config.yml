@@ -25,6 +25,17 @@ jobs:
               echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
               npm publish --access public
 
+  publish_beta:
+      docker:
+      - image: zeplin/amazon-linux-ami:cci-node20
+      steps:
+        - checkout
+        - run:
+            name: Publish to NPM
+            command: |
+              echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+              npm publish --access public --tag beta
+
 workflows:
   version: 2
   build_test_and_publish:
@@ -44,3 +55,9 @@ workflows:
             # Run the job only on version tags
             tags:
               only: /v[0-9]+(\.[0-9]+)*/
+      - publish_beta:
+          requires:
+            - build_and_test
+          filters:
+            branches:
+              only: beta
