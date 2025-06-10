@@ -1,5 +1,5 @@
-import { MyZeplinExtension } from "./index.js";
-import { context, version, screens, components } from "./fixtures";
+import extension from '../src/index.js';
+import { components, context, screens, version } from './fixtures/index.js';
 
 
 describe("Colors", () => {

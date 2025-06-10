@@ -38,7 +38,7 @@ const extension: Extension = {
         throw new Error('Not implemented yet.');
     },
 
-    layer(context: Context, selectedLayer: Layer): CodeObject {
+    layer(context: Context, selectedLayer: Layer, version: Version): CodeObject {
         throw new Error('Not implemented yet.');
     },
 

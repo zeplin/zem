@@ -79,7 +79,7 @@ const createPackageJson = (root, { packageName, description, displayName, platfo
         version: "0.1.0",
         description,
         type: "module",
-        exports: "./dist/index.js",
+        exports: `./${constants.buildDirName}/${constants.bundleName}.js`,
         sideEffects: false,
         scripts: {
             start: "tsc && zem start",
@@ -87,16 +87,22 @@ const createPackageJson = (root, { packageName, description, displayName, platfo
             clean: "zem clean",
             exec: "tsc && zem exec",
             test: "tsc && zem test",
-            publish: "tsc && zem publish"
+            publish: "tsc && zem publish",
+            lint: "eslint src/ --ext .js,.ts"
         },
         dependencies: {
             "@zeplin/extension-model": "^3.0.0",
+            "zem": "^2.0.0"
         },
         devDependencies: {
             "@eslint/js": "^9.26.0",
+            "@types/jest": "^29.5.14",
             "eslint": "^9.26.0",
             "globals": "^16.1.0",
-            "typescript": "^5.8.3"
+            "jest": "^29.7.0",
+            "ts-jest": "^29.3.4",
+            "typescript": "^5.8.3",
+            "typescript-eslint": "^8.34.0"
         },
         engines: {
             "node": ">=20"

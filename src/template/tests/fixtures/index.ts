@@ -1,9 +1,12 @@
 import {
     Component,
+    ComponentData,
     ComponentVariant,
+    ComponentVariantData,
     Context,
     ContextData,
     Screen,
+    ScreenData,
     Version,
     VersionData,
 } from '@zeplin/extension-model';
@@ -23,12 +26,12 @@ const defaultOptions = pkg.zeplin.options?.reduce((options: ContextData['options
     return options;
 }, {} as ContextData['options']);
 
-const singleComponents = componentsData.map(data => new Component(data));
-const variantComponents = componentVariantsData.map(data => new ComponentVariant(data)).reduce(
-    (cs, variant) => cs.concat(variant.components!), [] as Component[],
+const singleComponents = componentsData.map((data: ComponentData) => new Component(data));
+const variantComponents = componentVariantsData.map((data: ComponentVariantData) => new ComponentVariant(data)).reduce(
+    (cs: Component[], variant: ComponentVariant) => cs.concat(variant.components!), [] as Component[],
 );
 
 export const context = new Context({ project, options: defaultOptions });
 export const version = new Version(versionData as VersionData);
-export const screens = screensData.map(data => new Screen(data));
+export const screens = screensData.map((data: ScreenData) => new Screen(data));
 export const components = singleComponents.concat(variantComponents);
