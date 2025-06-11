@@ -1,5 +1,5 @@
-const Prism = require("prismjs");
-const colorize = require("./colorize");
+import Prism from "prismjs";
+import colorize from "./colorize.js";
 
 function flattenToken(token, type = "literal") {
     if (typeof token === "string") {
@@ -55,7 +55,7 @@ function isSupported(language) {
     return !!Prism.languages[language];
 }
 
-module.exports = function (code, language) {
+export default function (code, language) {
     if (!isSupported(language)) {
         return code;
     }

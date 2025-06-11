@@ -1,4 +1,4 @@
-module.exports = class ServerError extends Error {
+export class ServerError extends Error {
     constructor(status, extra, msg) {
         const message =  `${msg || `(${status}) Server error`}`;
         super(message);

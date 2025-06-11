@@ -1,6 +1,6 @@
-const jest = require("jest");
+import jest from "jest";
 
-module.exports = function (args) {
+export default function (args) {
     args.push(
         "--config",
         JSON.stringify({

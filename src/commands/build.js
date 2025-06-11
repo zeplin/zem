@@ -1,9 +1,10 @@
-const chalk = require("chalk");
-const webpack = require("webpack");
-const transformConfig = require("../utils/webpack/transform-config");
+import chalk from "chalk";
+import webpack from "webpack";
+import transformConfig from "../utils/webpack/transform-config.js";
 
-module.exports = function (webpackConfig, { throwOnError = false, printStats = true } = {}) {
-    const compiler = webpack(transformConfig(webpackConfig));
+export default async function (webpackConfig, { throwOnError = false, printStats = true } = {}) {
+    const options = await transformConfig(webpackConfig);
+    const compiler = webpack(options);
 
     console.log("Building extension...\n");
 

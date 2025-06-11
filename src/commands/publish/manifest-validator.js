@@ -1,5 +1,8 @@
-const Ajv = require("ajv");
+import Ajv from "ajv";
+import addFormats from "ajv-formats"
+
 const ajv = new Ajv({ allErrors: true });
+addFormats(ajv);
 
 const pickerOptionSchema = {
     type: "object",
@@ -128,7 +131,7 @@ const manifestSchema = {
 
 const validate = ajv.compile(manifestSchema);
 
-module.exports = function (manifestObj) {
+export default function (manifestObj) {
     const valid = validate(manifestObj);
 
     if (!valid) {

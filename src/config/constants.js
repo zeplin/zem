@@ -1,10 +1,9 @@
+import { isCI } from "ci-info";
 
-const { isCI } = require("ci-info");
-
-module.exports = {
+export const constants = {
     defaultHostName: "localhost",
     defaultPort: 7070,
-    buildDirName: "dist",
+    buildDirName: "build",
     bundleName: "main",
     isCI,
     accessToken: process.env.ZEM_ACCESS_TOKEN,

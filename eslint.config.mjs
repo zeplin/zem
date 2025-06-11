@@ -16,7 +16,7 @@ export default defineConfig([
             "no-unused-vars": ["error", { "caughtErrors": "none" }]
         }
     },
-    { files: ["**/*.js"], languageOptions: { sourceType: "commonjs" } },
+    { files: ["**/*.js"], languageOptions: { sourceType: "module" } },
     { files: ["**/*.{js,mjs,cjs}"], languageOptions: { globals: globals.node } },
     { ignores: ["src/template/*"] },
 ]);

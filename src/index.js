@@ -1,13 +1,23 @@
-#!/usr/bin/env node
-const fs = require("fs-extra");
-const path = require("path");
-const chalk = require("chalk");
-const updateNotifier = require("update-notifier");
-const commander = require("commander");
+#!/usr/bin/env node --no-warnings=ExperimentalWarning
+import fs from "fs-extra";
+import path from "node:path";
+import chalk from "chalk";
+import updateNotifier from "update-notifier";
+import commander from "commander";
+import { resolveBuildPath } from "./utils/paths.js";
+import { constants } from "./config/constants.js";
+import packageJson from "../package.json" with { type: "json" };
+import build from "./commands/build.js";
+import start from "./commands/start.js";
+import exec from "./commands/exec.js";
+import publish from "./commands/publish/index.js";
+import create from "./commands/create.js";
+import test from "./commands/test.js";
+import execWebpackConfig from "./config/webpack.exec.mjs";
+import prodWebpackConfig from "./config/webpack.prod.mjs";
+import devWebpackConfig from "./config/webpack.dev.mjs";
 
-const { resolveBuildPath } = require("./utils/paths");
-const { defaultHostName, defaultPort } = require("./config/constants");
-const { name, version } = require(path.join(__dirname, "../package.json"));
+const { name, version } = packageJson;
 
 const seconds = 60;
 const minutes = 60;
@@ -32,7 +42,6 @@ program
     .description("Create empty Zeplin extension at directory.")
     .option("-y --yes", "Create extension without prompt for configuration")
     .action((extensionDir, { yes }) => {
-        const create = require("./commands/create");
         const root = path.resolve(process.cwd(), extensionDir);
 
         return create({ root, disablePrompt: yes });
@@ -42,10 +51,8 @@ program
     .command("build")
     .description("Create build, targeting production environment.")
     .option("-d --dev", "Target development environment")
-    .action(options => {
-        const build = require("./commands/build");
-
-        build(require(`./config/webpack.${options.dev ? "dev" : "prod"}`));
+    .action(async options => {
+        await build(options.dev ? devWebpackConfig : prodWebpackConfig);
     });
 
 program
@@ -58,13 +65,11 @@ program
 program
     .command("start")
     .description("Start local server, serving the extension.")
-    .option("-h --host <host>", "Host name", defaultHostName)
-    .option("-p --port <port>", "Port", defaultPort)
+    .option("-h --host <host>", "Host name", constants.defaultHostName)
+    .option("-p --port <port>", "Port", constants.defaultPort)
     .option("-a --allowed-hosts <allowed-hosts>", "Allowed hosts")
-    .action(command => {
-        const start = require("./commands/start");
-
-        start(command.host, command.port, command.allowedHosts);
+    .action(async command => {
+        await start(command.host, command.port, command.allowedHosts);
     });
 
 program
@@ -73,7 +78,6 @@ program
     .option("--no-build", "Use existing build.")
     .option("--defaults <default-options>", `Set default extension option values (e.g, flag=false,prefix=\\"pre\\")`)
     .action((fnName, options) => {
-        const exec = require("./commands/exec");
         let defaultOptions;
 
         if (options.defaults) {
@@ -86,7 +90,7 @@ program
             });
         }
 
-        exec(require("./config/webpack.exec"), fnName, defaultOptions, options.build);
+        exec(execWebpackConfig, fnName, defaultOptions, options.build);
     });
 
 program
@@ -95,7 +99,6 @@ program
     .option("--path <build-path>", `Path for the extension build to be published`)
     .option("--verbose", "Enables verbose logs")
     .action(async ({ path: buildPath, verbose }) => {
-        const publish = require("./commands/publish");
         try {
             await publish({ buildPath, verbose });
         } catch (_) {
@@ -108,8 +111,6 @@ program
     .description(`Test via jest`)
     .allowUnknownOption()
     .action(() => {
-        const test = require("./commands/test");
-
         test(process.argv.slice(TEST_ARGS_INDEX));
     });
 

@@ -1,4 +1,4 @@
-module.exports = class ClientError extends Error {
+export class ClientError extends Error {
     constructor(status, extra, msg) {
         const message = `${msg || "Client error"}`;
         super(message);

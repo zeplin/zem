@@ -1,24 +1,18 @@
-const fs = require("fs");
-const os = require("os");
-const path = require("path");
-const { buildDirName } = require("../config/constants");
+import fs from "fs-extra";
+import os from "os";
+import path from "path";
+import { constants } from "../config/constants.js";
 
 const extensionRoot = fs.realpathSync(process.cwd());
 
-function resolveExtensionPath(relativePath = "") {
+export function resolveExtensionPath(relativePath = "") {
     return path.resolve(extensionRoot, relativePath);
 }
 
-function resolveBuildPath(relativePath = "") {
-    return path.resolve(extensionRoot, buildDirName, relativePath);
+export function resolveBuildPath(relativePath = "") {
+    return path.resolve(extensionRoot, constants.buildDirName, relativePath);
 }
 
-function getRcFilePath() {
+export function getRcFilePath() {
     return path.resolve(os.homedir(), ".zemrc");
 }
-
-module.exports = {
-    getRcFilePath,
-    resolveExtensionPath,
-    resolveBuildPath
-};

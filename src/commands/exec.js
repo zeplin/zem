@@ -1,20 +1,15 @@
-const fs = require("fs");
-const chalk = require("chalk");
-const build = require("./build");
-const highlightSyntax = require("../utils/highlight-syntax");
-const sampleData = require("../sample-data");
-const { bundleName } = require("../config/constants");
-const { resolveBuildPath, resolveExtensionPath } = require("../utils/paths");
-const {
-    Context,
-    Screen,
-    Component,
-    ComponentVariant,
-    Version
-} = require("@zeplin/extension-model");
+import fs from "fs-extra";
+import chalk from "chalk";
+import build from "./build.js";
+import highlightSyntax from "../utils/highlight-syntax/index.js";
+import sampleData from "../sample-data/index.js";
+import { constants } from "../config/constants.js";
+import { resolveBuildPath } from "../utils/paths.js";
+
+import { Component, ComponentVariant, Context, Screen, Version } from "@zeplin/extension-model";
 
 function getManifestDefaults() {
-    const manifest = require(resolveExtensionPath("dist/manifest.json"));
+    const manifest = fs.readJSONSync(resolveBuildPath("manifest.json"));
 
     if (!manifest.options) {
         return {};
@@ -176,19 +171,19 @@ function executeExtension(extension, fnName, defaultOptions = {}) {
     executeFunction(extension, "layer", context);
 }
 
-module.exports = function (webpackConfig, fnName, defaultOptions, shouldBuild) {
-    const extensionModulePath = resolveBuildPath(bundleName);
+export default async function (webpackConfig, fnName, defaultOptions, shouldBuild) {
+    const extensionModulePath = resolveBuildPath(`${constants.bundleName}.js`);
     let moduleBuild;
 
-    if (!shouldBuild && fs.existsSync(`${extensionModulePath}.js`)) {
+    if (!shouldBuild && fs.existsSync(extensionModulePath)) {
         moduleBuild = Promise.resolve();
     } else {
         moduleBuild = build(webpackConfig, { throwOnError: true, printStats: false });
     }
 
-    return moduleBuild.then(() => {
+    return moduleBuild.then(async () => {
         try {
-            const extension = require(extensionModulePath);
+            const extension = (await import(extensionModulePath)).default;
 
             console.log(`Executing extension${fnName ? ` function ${chalk.blue(fnName)}` : ""} with sample data...`);
 
@@ -198,6 +193,7 @@ module.exports = function (webpackConfig, fnName, defaultOptions, shouldBuild) {
         }
     }).catch(error => {
         console.log(chalk.red("Execution failed: cannot build the extension"));
-        console.error(error.stats.toJson().errors.join("\n"));
+        console.log(error)
+        error.stats.toJson().errors.map(e=> JSON.stringify(e)).forEach(e => console.error(e));
     });
 };

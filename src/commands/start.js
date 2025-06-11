@@ -1,8 +1,8 @@
-const chalk = require("chalk");
-const WebpackDevServer = require("webpack-dev-server");
-const webpack = require("webpack");
-const webpackConfig = require("../config/webpack.dev");
-const transformConfig = require("../utils/webpack/transform-config");
+import chalk from "chalk";
+import WebpackDevServer from "webpack-dev-server";
+import webpack from "webpack";
+import transformConfig from "../utils/webpack/transform-config.js";
+import devWebpackConfig from "../config/webpack.dev.mjs";
 
 function createCompiler(config) {
     let compiler;
@@ -24,12 +24,13 @@ function createCompiler(config) {
     return compiler;
 }
 
-module.exports = function (host, port, allowedHosts) {
-    const compiler = createCompiler(transformConfig(webpackConfig));
-    const serverConfig = Object.assign({}, webpackConfig.devServer, {
-        host: host || webpackConfig.devServer.host,
-        port: port || webpackConfig.devServer.port,
-        allowedHosts: allowedHosts ? allowedHosts.split(",") : webpackConfig.devServer.allowedHosts
+export default async function (host, port, allowedHosts) {
+    let config = await transformConfig(devWebpackConfig);
+    const compiler = createCompiler(config);
+    const serverConfig = Object.assign({}, devWebpackConfig.devServer, {
+        host: host || devWebpackConfig.devServer.host,
+        port: port || devWebpackConfig.devServer.port,
+        allowedHosts: allowedHosts ? allowedHosts.split(",") : devWebpackConfig.devServer.allowedHosts
     });
 
     const server = new WebpackDevServer(serverConfig, compiler);

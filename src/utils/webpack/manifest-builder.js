@@ -1,6 +1,8 @@
-const fs = require("fs");
-const path = require("path");
-const { Compilation, sources } = require("webpack");
+import fs from "fs-extra";
+import path from "node:path";
+import webpack from "webpack";
+
+const { Compilation, sources } = webpack;
 
 function parseShortcutRepoUrl(shortcutUrl) {
     if (shortcutUrl.startsWith("http")) {
@@ -39,7 +41,7 @@ function parseRepository(repoInfo) {
     return repoInfo.url;
 }
 
-class ManifestBuilder {
+export default class ManifestBuilder {
     constructor(extensionPath, bundleName) {
         this.extensionPath = extensionPath;
         this.bundleName = bundleName;
@@ -61,16 +63,16 @@ class ManifestBuilder {
                 const pkgInfoPath = path.join(this.extensionPath, "package.json");
 
                 // Invalidate cached package.json content
-                delete require.cache[require.resolve(pkgInfoPath)];
-                const pkgInfo = require(pkgInfoPath);
+                // delete require.cache[require.resolve(pkgInfoPath)];
+                const pkgInfo = fs.readJSONSync(pkgInfoPath);
 
                 manifest.packageName = pkgInfo.name;
-                manifest.name = pkgInfo.zeplin.displayName || pkgInfo.name;
+                manifest.name = pkgInfo.zeplin && pkgInfo.zeplin.displayName || pkgInfo.name;
                 manifest.description = pkgInfo.description;
                 manifest.version = pkgInfo.version;
                 manifest.author = pkgInfo.author;
-                manifest.options = pkgInfo.zeplin.options;
-                manifest.platforms = pkgInfo.zeplin.platforms || pkgInfo.zeplin.projectTypes;
+                manifest.options = pkgInfo.zeplin && pkgInfo.zeplin.options;
+                manifest.platforms = pkgInfo.zeplin && (pkgInfo.zeplin.platforms || pkgInfo.zeplin.projectTypes);
                 manifest.moduleURL = `./${chunk.files.keys().next().value}`;
 
                 if (pkgInfo.repository) {
@@ -88,5 +90,3 @@ class ManifestBuilder {
         });
     }
 }
-
-module.exports = ManifestBuilder;

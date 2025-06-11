@@ -1,10 +1,10 @@
-const project = require("./project.json");
-const version = require("./version.json");
-const screens = require("./screens.json");
-const components = require("./components.json");
-const componentVariants = require("./componentVariants.json");
+import project from "./project.json" with { type: "json" };
+import componentVariants from "./componentVariants.json" with { type: "json" };
+import components from "./components.json" with { type: "json" };
+import screens from "./screens.json" with { type: "json" };
+import version from "./version.json" with { type: "json" };
 
-module.exports = {
+export default {
     componentVariants,
     components,
     project,

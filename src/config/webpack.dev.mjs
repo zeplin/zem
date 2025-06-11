@@ -1,11 +1,11 @@
-const { merge } = require("webpack-merge");
-const common = require("./webpack.common");
-const { resolveExtensionPath } = require("../utils/paths");
+import { merge } from "webpack-merge";
+import common from "./webpack.common.mjs";
+import { resolveExtensionPath } from "../utils/paths.js";
 
 const readmePath = resolveExtensionPath("README.md");
 const packageJsonPath = resolveExtensionPath("package.json");
 
-module.exports = merge(common, {
+export default merge(common, {
     output: {
         filename: "[name].js",
         publicPath: "/"

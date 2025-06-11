@@ -1,4 +1,2 @@
-module.exports = {
-    ClientError: require("./clientError"),
-    ServerError: require("./serverError")
-};
+export * from './clientError.js';
+export * from './serverError.js';

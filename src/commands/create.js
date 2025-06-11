@@ -1,11 +1,17 @@
-const chalk = require("chalk");
-const fs = require("fs-extra");
-const path = require("path");
-const { spawn } = require("child_process");
-const prompts = require("prompts");
-const { title } = require("case");
+import chalk from "chalk";
+import fs from "fs-extra";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { spawn } from "node:child_process";
+import prompts from "prompts";
+import caseLib from "case";
+import packageJson from "../../package.json" with { type: "json" };
+import { constants } from "../config/constants.js";
 
-const { name } = require("../../package.json");
+const { name } = packageJson;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const JSON_INDENT = 2;
 const EXIT_CODE_FOR_SIGTERM = 130;
@@ -27,7 +33,7 @@ const installDeps = () => new Promise((resolve, reject) => {
 const getDefaultConfig = packageName => ({
     packageName,
     description: "",
-    displayName: title(packageName),
+    displayName: caseLib.title(packageName),
     platforms: []
 });
 
@@ -48,7 +54,7 @@ const getConfig = async defaultPackageName => {
             type: "text",
             name: "displayName",
             message: "Display name:",
-            initial: title(defaultPackageName)
+            initial: caseLib.title(defaultPackageName)
         },
         {
             type: "multiselect",
@@ -167,4 +173,4 @@ const create = async ({ root, disablePrompt }) => {
     console.log(`To get started, see documentation at ${chalk.underline("https://github.com/zeplin/zeplin-extension-documentation")}.`);
 };
 
-module.exports = create;
+export default create;

@@ -1,13 +1,13 @@
-const chalk = require("chalk");
-const fs = require("fs");
-const { resolveExtensionPath } = require("../paths");
+import chalk from "chalk";
+import fs from "fs-extra";
+import { resolveExtensionPath } from "../paths.js";
 
-module.exports = function (config) {
+export default async function (config) {
     const userConfigPath = resolveExtensionPath("webpack.zem.js");
 
     try {
         if (fs.existsSync(userConfigPath)) {
-            const transformer = require(userConfigPath);
+            const transformer =  (await import(userConfigPath)).default;
 
             return transformer(config);
         }

@@ -1,15 +1,17 @@
-const fs = require("fs");
-const ESLintPlugin = require("eslint-webpack-plugin");
-const ManifestBuilder = require("../utils/webpack/manifest-builder");
-const { resolveBuildPath, resolveExtensionPath } = require("../utils/paths");
-const { bundleName } = require("./constants");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+import fs from "fs-extra";
+import ESLintPlugin from "eslint-webpack-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
+import ManifestBuilder from "../utils/webpack/manifest-builder.js";
+import { resolveBuildPath, resolveExtensionPath } from "../utils/paths.js";
+import { constants } from "./constants.js";
 
 const extensionPath = resolveExtensionPath();
 const buildPath = resolveBuildPath();
 const readmePath = resolveExtensionPath("README.md");
 
-const { eslintConfig, main, exports: _exports } = require(resolveExtensionPath("package.json"));
+const path = resolveExtensionPath("package.json");
+
+const { eslintConfig, main, exports: _exports } = fs.readJSONSync(path);
 
 const entryPoint = _exports?.["."]?.import ?? _exports?.["."] ?? _exports ?? main;
 
@@ -36,9 +38,9 @@ const jsLoaders = [{
     }
 }];
 
-module.exports = {
+export default {
     mode: "none",
-    entry: { [bundleName]: entryPoint || "./src/index.js" },
+    entry: { [constants.bundleName]: entryPoint || "./src/index.js" },
     output: {
         path: buildPath,
         library: {
@@ -50,7 +52,7 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.js$/,
+            test: /\.(?:js|mjs|cjs)$/,
             exclude: /node_modules/,
             use: jsLoaders
         }]
@@ -60,9 +62,9 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 { from: readmePath, to: "README.md" },
-                { from: "src/**", to : "src/" }
+                { from: "src/**" }
             ]
         }),
-        new ManifestBuilder(extensionPath, bundleName)
+        new ManifestBuilder(extensionPath, constants.bundleName)
     ]
 };

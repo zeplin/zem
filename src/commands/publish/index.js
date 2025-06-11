@@ -1,15 +1,15 @@
-const fs = require("fs-extra");
-const chalk = require("chalk");
-const path = require("path");
-const Zip = require("adm-zip");
-const prompts = require("prompts");
+import fs from "fs-extra";
+import chalk from "chalk";
+import path from "path";
+import Zip from "adm-zip";
+import prompts from "prompts";
+import * as paths from "../../utils/paths.js";
+import manifestValidator from "./manifest-validator.js";
+import { constants } from "../../config/constants.js";
+import AuthenticationService from "./authenticationService.js";
+import { createExtension, createExtensionVersion, getExtensions } from "./apiClient.js";
 
-const paths = require("../../utils/paths");
-const manifestValidator = require("./manifest-validator");
-const apiClient = require("./apiClient");
-const AuthenticationService = require("./authenticationService");
-const { isCI } = require("../../config/constants");
-const { version: packageVersion } = require(paths.resolveExtensionPath("./package.json"));
+const { version: packageVersion } = fs.readJSONSync(paths.resolveExtensionPath("./package.json"));
 
 const pathResolver = {
     init(root) {
@@ -31,7 +31,7 @@ function parseManifest() {
         throw new Error("Locating manifest.json failed. Please make sure that you run `npm run build` first!");
     }
 
-    const manifest = JSON.parse(fs.readFileSync(manifestPath));
+    const manifest = fs.readJSONSync(manifestPath);
     const { valid, errors } = manifestValidator(manifest);
 
     if (!valid) {
@@ -57,7 +57,7 @@ function createArchive() {
 }
 
 async function confirm() {
-    if (isCI) {
+    if (constants.isCI) {
         return true;
     }
 
@@ -95,7 +95,7 @@ async function validateReadme({ hasOptions }) {
     }
 }
 
-module.exports = async function ({ buildPath, verbose }) {
+export default async function ({ buildPath, verbose }) {
     console.log("Publishing the extension...\n");
 
     pathResolver.init(buildPath);
@@ -114,7 +114,7 @@ module.exports = async function ({ buildPath, verbose }) {
 
         const authenticationService = new AuthenticationService();
         const { authToken, userId } = await authenticationService.authenticate();
-        const { extensions } = await apiClient.getExtensions({ authToken, owner: userId });
+        const extensions = await getExtensions({ authToken, owner: userId });
 
         const extension = extensions.find(e => e.packageName === packageName);
         const packageBuffer = createArchive().toBuffer();
@@ -128,10 +128,10 @@ module.exports = async function ({ buildPath, verbose }) {
                 platforms: platforms.join(","),
                 packageBuffer
             };
-            await apiClient.createExtension({ data, authToken });
+            await createExtension({ data, authToken });
             console.log(`${chalk.bold(name)} (${version}) is now submitted. 🏄‍️\n`);
         } else {
-            await apiClient.createExtensionVersion({ authToken, extensionId: extension._id, version, packageBuffer });
+            await createExtensionVersion({ authToken, extensionId: extension._id, version, packageBuffer });
             console.log(`Version ${chalk.bold(version)} of ${chalk.bold(name)} is now submitted. 🏄‍️\n`);
         }
 

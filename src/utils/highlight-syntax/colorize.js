@@ -1,4 +1,4 @@
-const chalk = require("chalk");
+import chalk from "chalk";
 
 function lightTheme(type) {
     switch (type) {
@@ -89,7 +89,7 @@ function tokenColor(type, light) {
     return theme(type);
 }
 
-module.exports = function colorize(token, type, light = false) {
+export default function colorize(token, type, light = false) {
     const color = tokenColor(type, light);
 
     if (!color) {
