@@ -6,7 +6,6 @@ import { spawn } from "node:child_process";
 import prompts from "prompts";
 import caseLib from "case";
 import packageJson from "../../package.json" with { type: "json" };
-import { constants } from "../config/constants.js";
 
 const { name } = packageJson;
 
@@ -85,15 +84,15 @@ const createPackageJson = (root, { packageName, description, displayName, platfo
         version: "0.1.0",
         description,
         type: "module",
-        exports: `./${constants.buildDirName}/${constants.bundleName}.js`,
+        exports: "./dist/index.js",
         sideEffects: false,
         scripts: {
             start: "tsc && zem start",
-            build: "tsc && zem build",
+            build: "npm run clean && tsc && zem build",
             clean: "zem clean",
-            exec: "tsc && zem exec",
-            test: "tsc && zem test",
-            publish: "tsc && zem publish",
+            exec: "npm run build && zem exec",
+            test: "npm run build && zem test",
+            publish: "npm run build && zem publish",
             lint: "eslint src/ --ext .js,.ts"
         },
         dependencies: {
@@ -119,7 +118,8 @@ const createPackageJson = (root, { packageName, description, displayName, platfo
         ],
         zeplin: {
             displayName,
-            platforms
+            platforms,
+            options: []
         }
     };
 
