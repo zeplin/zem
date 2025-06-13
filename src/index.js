@@ -59,7 +59,7 @@ program
     .command("clean")
     .description("Clean build directory.")
     .action(() => {
-        fs.remove(resolveBuildPath());
+        fs.removeSync(resolveBuildPath());
     });
 
 program
