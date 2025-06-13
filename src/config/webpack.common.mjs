@@ -4,6 +4,7 @@ import ManifestBuilder from "../utils/webpack/manifest-builder.js";
 import { resolveBuildPath, resolveExtensionPath } from "../utils/paths.js";
 import { constants } from "./constants.js";
 import { getPackageJson } from "../utils/package.js";
+import { findESLintConfig } from "../utils/eslint.js";
 
 const extensionPath = resolveExtensionPath();
 const buildPath = resolveBuildPath();
@@ -13,28 +14,7 @@ const { main, exports: _exports } = getPackageJson() || {};
 
 const entryPoint = (_exports?.["."]?.import ?? _exports?.["."] ?? _exports ?? main) || "./src/index.js";
 
-const eslintEnabled = eslintConfig || fs.readdirSync(extensionPath).find(f => f.startsWith(".eslintrc"));
-const jsLoaders = [{
-    loader: "babel-loader",
-    options: {
-        presets: [
-            [
-                "@babel/preset-env",
-                {
-                    useBuiltIns: "usage",
-                    corejs: 3,
-                    modules: false, // Should be false to run tree shaking. See: https://webpack.js.org/guides/tree-shaking/
-                    targets: {
-                        chrome: 62,
-                        safari: 11,
-                        firefox: 59,
-                        edge: 15
-                    }
-                }
-            ]
-        ]
-    }
-}];
+const eslintConfig = findESLintConfig(entryPoint);
 
 export default {
     mode: "none",
@@ -52,11 +32,31 @@ export default {
         rules: [{
             test: /\.(?:js|mjs|cjs)$/,
             exclude: /node_modules/,
-            use: jsLoaders
+            use: [{
+                loader: "babel-loader",
+                options: {
+                    presets: [
+                        [
+                            "@babel/preset-env",
+                            {
+                                useBuiltIns: "usage",
+                                corejs: 3,
+                                modules: false, // Should be false to run tree shaking. See: https://webpack.js.org/guides/tree-shaking/
+                                targets: {
+                                    chrome: 62,
+                                    safari: 11,
+                                    firefox: 59,
+                                    edge: 15
+                                }
+                            }
+                        ]
+                    ]
+                }
+            }]
         }]
     },
     plugins: [
-        ...(eslintEnabled ? [new ESLintPlugin()] : []),
+        ...(eslintConfig ? [new ESLintPlugin(eslintConfig)] : []),
         new CopyWebpackPlugin({
             patterns: [
                 { from: readmePath, to: "README.md" },

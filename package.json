@@ -45,6 +45,7 @@
     "fs-extra": "^11.3.0",
     "http-status-codes": "^2.3.0",
     "jest": "^29.7.0",
+    "jest-config": "^30.0.0",
     "jsonwebtoken": "^9.0.2",
     "prismjs": "^1.30.0",
     "prompts": "^2.4.2",
