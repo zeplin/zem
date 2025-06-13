@@ -110,8 +110,8 @@ program
     .command("test")
     .description(`Test via jest`)
     .allowUnknownOption()
-    .action(() => {
-        test(process.argv.slice(TEST_ARGS_INDEX));
+    .action(async () => {
+        await test(process.argv.slice(TEST_ARGS_INDEX));
     });
 
 program.on("command:*", () => {

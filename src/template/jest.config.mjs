@@ -17,7 +17,7 @@ export default {
     moduleDirectories: ["node_modules"],
     transform: {
         [ESM_TS_TRANSFORM_PATTERN]: ["ts-jest", {
-            tsconfig: "<rootDir>/tsconfig.json",
+            tsconfig: "<rootDir>/tsconfig.test.json",
             useESM: true
         }]
     },
