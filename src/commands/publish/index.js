@@ -8,8 +8,7 @@ import manifestValidator from "./manifest-validator.js";
 import { constants } from "../../config/constants.js";
 import AuthenticationService from "./authenticationService.js";
 import { createExtension, createExtensionVersion, getExtensions } from "./apiClient.js";
-
-const { version: packageVersion } = fs.readJSONSync(paths.resolveExtensionPath("./package.json"));
+import { getPackageVersion } from "../../utils/package.js";
 
 const pathResolver = {
     init(root) {
@@ -38,7 +37,7 @@ function parseManifest() {
         throw new Error(`Validating manifest.json failed:\n${errors}\n\nPlease make sure that all fields in "package.json" are valid and you run \`npm run build\``);
     }
 
-    if (packageVersion !== manifest.version) {
+    if (getPackageVersion() !== manifest.version) {
         throw new Error(
             "Validating manifest.json failed: Extension version does not match the version in manifest.json.\n" +
             "Please make sure that you run `npm run build` first!"

@@ -1,19 +1,17 @@
-import fs from "fs-extra";
 import ESLintPlugin from "eslint-webpack-plugin";
 import CopyWebpackPlugin from "copy-webpack-plugin";
 import ManifestBuilder from "../utils/webpack/manifest-builder.js";
 import { resolveBuildPath, resolveExtensionPath } from "../utils/paths.js";
 import { constants } from "./constants.js";
+import { getPackageJson } from "../utils/package.js";
 
 const extensionPath = resolveExtensionPath();
 const buildPath = resolveBuildPath();
 const readmePath = resolveExtensionPath("README.md");
 
-const path = resolveExtensionPath("package.json");
+const { main, exports: _exports } = getPackageJson() || {};
 
-const { eslintConfig, main, exports: _exports } = fs.readJSONSync(path);
-
-const entryPoint = _exports?.["."]?.import ?? _exports?.["."] ?? _exports ?? main;
+const entryPoint = (_exports?.["."]?.import ?? _exports?.["."] ?? _exports ?? main) || "./src/index.js";
 
 const eslintEnabled = eslintConfig || fs.readdirSync(extensionPath).find(f => f.startsWith(".eslintrc"));
 const jsLoaders = [{
@@ -40,7 +38,7 @@ const jsLoaders = [{
 
 export default {
     mode: "none",
-    entry: { [constants.bundleName]: entryPoint || "./src/index.js" },
+    entry: { [constants.bundleName]: entryPoint },
     output: {
         path: buildPath,
         library: {
