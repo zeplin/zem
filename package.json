@@ -1,6 +1,6 @@
 {
   "name": "zem",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Create, test and publish Zeplin extensions with no build configuration",
   "homepage": "https://zeplin.io",
   "type": "module",
