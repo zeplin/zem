@@ -13,7 +13,7 @@ export default merge(common, {
     devtool: "inline-source-map",
     devServer: {
         hot: true,
-        host: "local-ip",
+        host: "127.0.0.1",
         port: 7070,
         allowedHosts: "all",
         watchFiles: [packageJsonPath, readmePath],

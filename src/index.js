@@ -3,9 +3,8 @@ import fs from "fs-extra";
 import path from "node:path";
 import chalk from "chalk";
 import updateNotifier from "update-notifier";
-import commander from "commander";
+import { Command } from "commander";
 import { resolveBuildPath } from "./utils/paths.js";
-import { constants } from "./config/constants.js";
 import packageJson from "../package.json" with { type: "json" };
 import build from "./commands/build.js";
 import start from "./commands/start.js";
@@ -34,7 +33,7 @@ function beforeCommand() {
     notifier.notify();
 }
 
-const program = new commander.Command(name).version(version);
+const program = new Command(name).version(version);
 const TEST_ARGS_INDEX = 3;
 
 program
@@ -65,9 +64,9 @@ program
 program
     .command("start")
     .description("Start local server, serving the extension.")
-    .option("-h --host <host>", "Host name", constants.defaultHostName)
-    .option("-p --port <port>", "Port", constants.defaultPort)
-    .option("-a --allowed-hosts <allowed-hosts>", "Allowed hosts")
+    .option("-h --host <host>", "Host name (Default: \"127.0.0.1\")")
+    .option("-p --port <port>", "Port (Default: 7070)")
+    .option("-a --allowed-hosts <allowed-hosts>", "Allowed hosts, comma-separated (e.g., localhost,127.0.0.1,example.com,*.example.com) (Default: \"all\")")
     .action(async command => {
         await start(command.host, command.port, command.allowedHosts);
     });
