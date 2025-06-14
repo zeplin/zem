@@ -1,8 +1,6 @@
 import { isCI } from "ci-info";
 
 export const constants = {
-    defaultHostName: "localhost",
-    defaultPort: 7070,
     buildDirName: "build",
     bundleName: "main",
     isCI,

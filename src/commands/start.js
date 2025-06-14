@@ -25,13 +25,15 @@ function createCompiler(config) {
 }
 
 export default async function (host, port, allowedHosts) {
-    let config = await transformConfig(devWebpackConfig);
+    const config = await transformConfig(devWebpackConfig);
     const compiler = createCompiler(config);
-    const serverConfig = Object.assign({}, devWebpackConfig.devServer, {
+
+    const serverConfig = {
+        ...devWebpackConfig.devServer,
         host: host || devWebpackConfig.devServer.host,
         port: port || devWebpackConfig.devServer.port,
         allowedHosts: allowedHosts ? allowedHosts.split(",") : devWebpackConfig.devServer.allowedHosts
-    });
+    };
 
     const server = new WebpackDevServer(serverConfig, compiler);
 
