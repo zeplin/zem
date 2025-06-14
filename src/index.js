@@ -3,7 +3,7 @@ import fs from "fs-extra";
 import path from "node:path";
 import chalk from "chalk";
 import updateNotifier from "update-notifier";
-import commander from "commander";
+import { Command } from "commander";
 import { resolveBuildPath } from "./utils/paths.js";
 import { constants } from "./config/constants.js";
 import packageJson from "../package.json" with { type: "json" };
@@ -34,7 +34,7 @@ function beforeCommand() {
     notifier.notify();
 }
 
-const program = new commander.Command(name).version(version);
+const program = new Command(name).version(version);
 const TEST_ARGS_INDEX = 3;
 
 program
