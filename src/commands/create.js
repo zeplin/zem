@@ -87,9 +87,10 @@ const createPackageJson = (root, { packageName, description, displayName, platfo
         exports: "./dist/index.js",
         sideEffects: false,
         scripts: {
-            start: "tsc && zem start",
-            build: "npm run clean && tsc && zem build",
+            start: "zem start",
             clean: "zem clean",
+            prebuild: "npm run clean",
+            build: "tsc && zem build",
             exec: "npm run build && zem exec",
             test: "npm run build && zem test",
             publish: "npm run build && zem publish",
