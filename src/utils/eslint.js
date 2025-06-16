@@ -3,7 +3,12 @@ import fs from "fs-extra";
 
 export function findESLintConfig(cwd = process.cwd()) {
     const configFiles = [
-        "eslint.config.js", // Flat config (ESLint ≥ 8.21)
+        "eslint.config.js",
+        "eslint.config.mjs",
+        "eslint.config.cjs",
+        "eslint.config.ts",
+        "eslint.config.mts",
+        "eslint.config.cts",
         ".eslintrc.js",
         ".eslintrc.cjs",
         ".eslintrc.yaml",
