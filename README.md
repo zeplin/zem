@@ -24,9 +24,9 @@ Extensions created using the manager have built-in scripts to ease development, 
 
 #### `npm start`
 
-Starts a local server, serving the extension (by default, at http://localhost:7070). Hostname, port and the list of hosts allowed to access the local server can be provided as options.
+Starts a local server, serving the extension (by default, at http://127.0.0.1:7070). Hostname, port and the list of hosts allowed to access the local server can be provided as options.
 
-Follow the [tutorial](https://github.com/zeplin/zeplin-extension-documentation/blob/master/tutorial.md#adding-a-local-extension) to learn how to add a local extension to a Zeplin project.
+Follow the [tutorial](https://zeplin.github.io/extension-model/documents/Tutorial.html) to learn how to add a local extension to a Zeplin project.
 
 ```
 Usage: npm start -- [options]
