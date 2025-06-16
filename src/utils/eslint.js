@@ -27,7 +27,7 @@ export function findESLintConfig(cwd = process.cwd()) {
                     return pkg.eslintConfig;
                 }
             } else {
-                return fs.readJSONSync(fullPath, "utf8");
+                return fullPath;
             }
         }
     }

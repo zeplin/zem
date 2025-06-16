@@ -14,7 +14,7 @@ const { main, exports: _exports } = getPackageJson() || {};
 
 const entryPoint = (_exports?.["."]?.import ?? _exports?.["."] ?? _exports ?? main) || "./src/index.js";
 
-const eslintConfig = findESLintConfig(entryPoint);
+const eslintConfigFile = findESLintConfig(entryPoint) || findESLintConfig();
 
 export default {
     mode: "none",
@@ -56,7 +56,9 @@ export default {
         }]
     },
     plugins: [
-        ...(eslintConfig ? [new ESLintPlugin(eslintConfig)] : []),
+        ...(eslintConfigFile ? [new ESLintPlugin({
+            overrideConfigFile: eslintConfigFile ?? undefined
+        })] : []),
         new CopyWebpackPlugin({
             patterns: [
                 { from: readmePath, to: "README.md" },
