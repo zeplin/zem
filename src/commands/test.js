@@ -1,6 +1,7 @@
 import { spawn } from "node:child_process";
 import { readConfig } from "jest-config";
 import { getPackageJson } from "../utils/package.js";
+import resolve from "resolve";
 
 async function getJestConfig(cwd = process.cwd()) {
     try {
@@ -12,6 +13,22 @@ async function getJestConfig(cwd = process.cwd()) {
     }
 }
 
+function findJestBin(cwd = process.cwd()) {
+    return new Promise((resolvePath, reject) => {
+        resolve(
+            "jest/bin/jest.js",
+            {
+                basedir: cwd,
+                preserveSymlinks: false
+            },
+            (err, res) => {
+                if (err) return reject(err);
+                resolvePath(res);
+            }
+        );
+    });
+}
+
 export default async function (args) {
     const packageJson = getPackageJson();
     let nodeOptions = process.env.NODE_OPTIONS;
@@ -21,8 +38,10 @@ export default async function (args) {
 
     const configFile = (await getJestConfig()).configPath;
 
+    const jestBin = await findJestBin();
+
     const subprocess = spawn("node", [
-        "node_modules/jest/bin/jest.js",
+        jestBin,
         "--config",
         configFile,
         ...args
