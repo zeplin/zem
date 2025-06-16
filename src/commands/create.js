@@ -97,8 +97,8 @@ const createPackageJson = (root, { packageName, description, displayName, platfo
             lint: "eslint src/ --ext .js,.ts"
         },
         dependencies: {
-            "@zeplin/extension-model": "^3.0.0",
-            "zem": "^2.0.0"
+            "@zeplin/extension-model": "^3.0.3",
+            "zem": "^2.0.4"
         },
         devDependencies: {
             "@eslint/js": "^9.26.0",
