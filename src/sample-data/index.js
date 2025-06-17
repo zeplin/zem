@@ -1,8 +1,15 @@
-import project from "./project.json" with { type: "json" };
-import componentVariants from "./componentVariants.json" with { type: "json" };
-import components from "./components.json" with { type: "json" };
-import screens from "./screens.json" with { type: "json" };
-import version from "./version.json" with { type: "json" };
+import { fileURLToPath } from "node:url";
+import path from "node:path";
+import fs from "fs-extra";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const project = fs.readJSONSync(`${__dirname}/project.json`);
+const componentVariants = fs.readJSONSync(`${__dirname}/componentVariants.json`);
+const components = fs.readJSONSync(`${__dirname}/components.json`);
+const screens = fs.readJSONSync(`${__dirname}/screens.json`);
+const version = fs.readJSONSync(`${__dirname}/version.json`);
 
 export default {
     componentVariants,

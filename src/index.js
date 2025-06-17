@@ -1,11 +1,11 @@
-#!/usr/bin/env node --no-warnings=ExperimentalWarning
+#!/usr/bin/env node
 import fs from "fs-extra";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import chalk from "chalk";
 import updateNotifier from "update-notifier";
 import { Command } from "commander";
 import { resolveBuildPath } from "./utils/paths.js";
-import packageJson from "../package.json" with { type: "json" };
 import build from "./commands/build.js";
 import start from "./commands/start.js";
 import exec from "./commands/exec.js";
@@ -16,7 +16,10 @@ import execWebpackConfig from "./config/webpack.exec.mjs";
 import prodWebpackConfig from "./config/webpack.prod.mjs";
 import devWebpackConfig from "./config/webpack.dev.mjs";
 
-const { name, version } = packageJson;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const { name, version } = fs.readJsonSync(`${__dirname}/../package.json`)
 
 const seconds = 60;
 const minutes = 60;
