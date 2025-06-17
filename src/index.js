@@ -113,7 +113,11 @@ program
     .description(`Test via jest`)
     .allowUnknownOption()
     .action(async () => {
-        await test(process.argv.slice(TEST_ARGS_INDEX));
+        const testSuccess = await test(process.argv.slice(TEST_ARGS_INDEX));
+        if (!testSuccess) {
+            console.log("Tests failed.");
+            process.exitCode = 1;
+        }
     });
 
 program.on("command:*", () => {
