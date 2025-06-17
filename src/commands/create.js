@@ -5,12 +5,11 @@ import { fileURLToPath } from "node:url";
 import { spawn } from "node:child_process";
 import prompts from "prompts";
 import caseLib from "case";
-import packageJson from "../../package.json" with { type: "json" };
-
-const { name } = packageJson;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+const { name } = fs.readJSONSync(`${__dirname}/../../package.json`)
 
 const JSON_INDENT = 2;
 const EXIT_CODE_FOR_SIGTERM = 130;
