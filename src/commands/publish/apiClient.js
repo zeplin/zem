@@ -1,6 +1,6 @@
 import { URL } from "node:url";
 import { StatusCodes } from "http-status-codes";
-import undici from "undici";
+import { FormData, request as undiciRequest } from "undici";
 import qs from "qs";
 import { constants } from "../../config/constants.js";
 import { ClientError, ServerError } from "../../errors/index.js";
@@ -40,7 +40,7 @@ function getUrl(path) {
 }
 
 async function request(path, opts) {
-    const response = await undici.request(getUrl(path), opts);
+    const response = await undiciRequest(getUrl(path), opts);
 
     if (response.statusCode >= StatusCodes.BAD_REQUEST) {
         throw await createError(response);
@@ -116,45 +116,34 @@ export const createExtension = ({ authToken, data }) => {
         packageBuffer
     } = data;
 
-    const formData = qs.stringify({
-        version,
-        packageName,
-        name,
-        description,
-        projectTypes: platforms,
-        package: {
-            options: {
-                filename: "package.zip"
-            },
-            value: packageBuffer
-        }
-    });
+
+    const formData = new FormData();
+    formData.set("version", version);
+    formData.set("packageName", packageName);
+    formData.set("name", name);
+    formData.set("description", description);
+    formData.set("projectTypes", platforms);
+    formData.set("package", new Blob([packageBuffer], { type: "application/zip" }), "package.zip");
+
     return request("/extensions", {
         method: "POST",
         body: formData,
         headers: {
-            "Zeplin-Access-Token": authToken,
-            "Content-Type": "application/x-www-form-urlencoded"
+            "Zeplin-Access-Token": authToken
         }
     });
 };
 
 export const createExtensionVersion = ({ authToken, extensionId, version, packageBuffer }) => {
-    const formData = qs.stringify({
-        version,
-        package: {
-            options: {
-                filename: "package.zip"
-            },
-            value: packageBuffer
-        }
-    });
+    const formData = new FormData();
+    formData.set("version", version);
+    formData.set("package", new Blob([packageBuffer], { type: "application/zip" }), "package.zip");
+
     return request(`/extensions/${extensionId}/versions`, {
         method: "POST",
         body: formData,
         headers: {
-            "Zeplin-Access-Token": authToken,
-            "Content-Type": "application/x-www-form-urlencoded"
+            "Zeplin-Access-Token": authToken
         }
     });
 };
